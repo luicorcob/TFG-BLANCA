@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mapa interactivo del patrimonio bodeguero de La Palma del Condado." />
+    <title>Mapa | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a></nav>
+    </header>
+
+    <main class="map-stage" data-bodega-map>
+      <div class="wide-shell map-shell">
+        <aside class="map-sidebar" aria-label="Panel de cartografía patrimonial">
+          <div class="map-heading">
+            <p class="eyebrow">Cartografía</p>
+            <h1>Mapa del patrimonio bodeguero</h1>
+            <p>
+              La Palma del Condado como archivo urbano: bodegas activas, desapariciones documentadas y capas
+              territoriales preparadas para QGIS.
+            </p>
+          </div>
+
+          <div class="map-summary" aria-label="Estado de datos cartográficos">
+            <span><strong data-map-total>2</strong> fichas</span>
+            <span><strong data-map-located>1</strong> georreferenciadas</span>
+            <span><strong data-map-pending>1</strong> pendientes</span>
+          </div>
+
+          <label class="map-search">
+            <span>Buscar bodega</span>
+            <input data-map-search type="search" placeholder="Nombre o calle" autocomplete="off" />
+          </label>
+
+          <fieldset class="map-control-group">
+            <legend>Capas base</legend>
+            <div class="layer-buttons" aria-label="Capas base">
+              <button type="button" data-base-layer="cartodb" aria-pressed="true">CartoDB</button>
+              <button type="button" data-base-layer="osm" aria-pressed="false">OSM</button>
+              <button type="button" data-base-layer="pnoa" aria-pressed="false">PNOA</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="map-control-group">
+            <legend>Capas patrimoniales</legend>
+            <label><input type="checkbox" data-marker-toggle value="activa" checked /><span>Bodegas actuales</span></label>
+            <label><input type="checkbox" data-marker-toggle value="desaparecida" checked /><span>Bodegas desaparecidas</span></label>
+            <label><input type="checkbox" data-overlay-toggle value="bic" /><span>Conjunto histórico BIC</span></label>
+            <label><input type="checkbox" data-overlay-toggle value="rail" /><span>Ferrocarril histórico</span></label>
+          </fieldset>
+
+          <div class="map-actions" aria-label="Descargas cartográficas">
+            <a href="public/mapas/bodegas.geojson" download>GeoJSON bodegas</a>
+            <a href="public/qgis/bodegas-verdier-qgis.zip" download>QGIS Verdier</a>
+          </div>
+
+          <section class="map-list-section" aria-labelledby="visible-bodegas-title">
+            <h2 id="visible-bodegas-title">Bodegas en vista</h2>
+            <div class="map-list" data-map-visible-list></div>
+            <p class="map-empty" data-map-empty hidden>Sin bodegas visibles con los filtros activos.</p>
+          </section>
+
+          <section class="map-list-section" aria-labelledby="pending-bodegas-title">
+            <h2 id="pending-bodegas-title">Pendientes de georreferenciar</h2>
+            <div class="map-list compact" data-map-pending-list></div>
+          </section>
+        </aside>
+
+        <div class="map-canvas-wrap">
+          <div class="map-canvas" data-map-canvas role="region" aria-label="Mapa interactivo de bodegas de La Palma del Condado"></div>
+          <div class="map-credit"><span>Leaflet</span><span>EPSG:4326 para GeoJSON QGIS</span></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

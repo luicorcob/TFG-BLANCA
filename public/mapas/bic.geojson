@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "name": "conjunto_historico_bic",
+  "metadata": {
+    "title": "Conjunto historico BIC",
+    "source": "Pendiente de exportacion vectorial desde QGIS.",
+    "crs": "EPSG:4326"
+  },
+  "features": []
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Imagen documental pendiente</title>
+  <desc id="desc">Marcador visual temporal para fichas de bodegas sin imagen definitiva.</desc>
+  <rect width="1200" height="800" fill="#3d0f18"/>
+  <rect x="84" y="84" width="1032" height="632" rx="20" fill="#6b1a2b" opacity="0.92"/>
+  <path d="M156 606H1044" stroke="#c9a84c" stroke-width="4" opacity="0.75"/>
+  <path d="M214 606V342L600 184L986 342V606" fill="none" stroke="#f5f0e8" stroke-width="18" stroke-linejoin="round" opacity="0.84"/>
+  <path d="M318 606V410H496V606M704 606V410H882V606" fill="none" stroke="#f5f0e8" stroke-width="14" opacity="0.72"/>
+  <path d="M566 606V372H634V606" fill="none" stroke="#c9a84c" stroke-width="14" opacity="0.9"/>
+  <text x="600" y="676" text-anchor="middle" fill="#fafaf8" font-family="Georgia, serif" font-size="42" font-weight="700">Patrimonio bodeguero</text>
+  <text x="600" y="724" text-anchor="middle" fill="#c9a84c" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">IMAGEN PENDIENTE</text>
+</svg>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero de La Palma del Condado."
+    />
+    <meta name="theme-color" content="#351018" />
+    <title>Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <span>Arquitectura</span>
+          <strong>Memoria del vino</strong>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu>
+        <a href="index.html" data-nav-link>Inicio</a>
+        <a href="historia.html" data-nav-link>Historia</a>
+        <a href="catalogo.html" data-nav-link>Catálogo</a>
+        <a href="mapa.html" data-nav-link>Mapa</a>
+        <a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a>
+        <a href="contacto.html" data-nav-link>Contacto</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero" data-animate>
+        <div class="page-shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Patrimonio bodeguero · La Palma del Condado</p>
+            <h1 class="hero-title">Arquitectura y memoria perdida del vino</h1>
+            <p class="lead">Análisis y catalogación del patrimonio bodeguero de La Palma del Condado.</p>
+            <div class="hero-actions" aria-label="Accesos principales">
+              <a class="button-link primary" href="catalogo.html">Ver catálogo</a>
+              <a class="button-link ghost" href="historia.html">Leer historia</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Ficha académica">
+            <figure>
+              <img
+                src="public/bodegas/placeholder-bodega.svg"
+                alt="Representación temporal del patrimonio bodeguero documentado"
+              />
+            </figure>
+            <div class="hero-meta">
+              <p>Trabajo de Fin de Grado</p>
+              <dl>
+                <div>
+                  <dt>Autora</dt>
+                  <dd>Blanca Rubio García</dd>
+                </div>
+                <div>
+                  <dt>Tutora</dt>
+                  <dd>Rocío Romero</dd>
+                </div>
+                <div>
+                  <dt>Escuela</dt>
+                  <dd>ETSA, Universidad de Sevilla</dd>
+                </div>
+                <div>
+                  <dt>Año</dt>
+                  <dd>2026</dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+
+        <a class="scroll-cue" href="#datos-clave" aria-label="Ir a datos clave">
+          <span aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section class="stats-section" id="datos-clave" aria-labelledby="stats-title">
+        <div class="page-shell stats-shell">
+          <div class="section-heading" data-animate>
+            <p class="eyebrow">Datos clave</p>
+            <h2 id="stats-title" class="section-title">
+              Una memoria urbana medida en permanencias y ausencias.
+            </h2>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card" data-animate>
+              <strong data-count="6">6</strong>
+              <h3>Bodegas activas hoy</h3>
+              <p>Firmas que mantienen la continuidad vitivinícola local.</p>
+            </article>
+            <article class="stat-card" data-animate>
+              <strong data-count="18" data-prefix="+">+18</strong>
+              <h3>Bodegas históricas documentadas</h3>
+              <p>Estructuras, nombres y trazas pendientes de volcado completo.</p>
+            </article>
+            <article class="stat-card" data-animate>
+              <strong data-count="1871" data-grouping="false">1871</strong>
+              <h3>Primera máquina de vapor</h3>
+              <p>Hito industrial asociado a La Palma del Condado.</p>
+            </article>
+            <article class="stat-card" data-animate>
+              <strong data-count="82" data-suffix="%">82%</strong>
+              <h3>Patrimonio perdido en el siglo XX</h3>
+              <p>Indicador de pérdida patrimonial para orientar el relato.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-shell intro-section" aria-labelledby="intro-title" data-animate>
+        <div>
+          <p class="eyebrow">Publicación digital</p>
+          <h2 id="intro-title" class="section-title">Una base sobria para un archivo cultural abierto.</h2>
+        </div>
+        <p class="body-copy">
+          La web se plantea como una pieza institucional y académica: una narración histórica, un catálogo
+          consultable y una cartografía digital del patrimonio bodeguero de La Palma del Condado.
+        </p>
+      </section>
+
+      <section class="timeline-section" aria-labelledby="timeline-title">
+        <div class="page-shell timeline-shell">
+          <div class="section-heading" data-animate>
+            <p class="eyebrow">Línea de tiempo</p>
+            <h2 id="timeline-title" class="section-title">La columna vertebral del paisaje bodeguero.</h2>
+            <p class="body-copy">
+              Seis momentos ordenan la lectura histórica de La Palma del Condado: del origen urbano a las
+              permanencias actuales.
+            </p>
+          </div>
+
+          <div class="timeline-track" aria-label="Fases históricas del patrimonio bodeguero">
+            <span class="timeline-line" aria-hidden="true"><span></span></span>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>S. XIV-XV</p>
+                <h3>Origen y formación del núcleo urbano</h3>
+                <p>
+                  La lectura territorial arranca en la consolidación del asentamiento y en la relación temprana
+                  entre arquitectura, caminos y producción agraria.
+                </p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>S. XVI-XVIII</p>
+                <h3>Consolidación de la historia vinícola</h3>
+                <p>
+                  La cultura del vino se incorpora a la identidad local y prepara el tejido económico que más
+                  tarde impulsará la arquitectura bodeguera.
+                </p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>1871-1880</p>
+                <h3>Revolución industrial y Cuna del Brandy</h3>
+                <p>
+                  La mecanización y la actividad destiladora transforman la escala productiva y abren un ciclo de
+                  expansión urbana.
+                </p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>1877-1924</p>
+                <h3>Edad de oro y revolución arquitectónica</h3>
+                <p>Las bodegas adquieren presencia urbana, complejidad espacial y valor representativo.</p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>1925-1990</p>
+                <h3>Crisis, cooperativismo y desmantelamiento</h3>
+                <p>
+                  La pérdida de actividad y los cambios de propiedad explican buena parte de las desapariciones y
+                  alteraciones del patrimonio construido.
+                </p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+
+            <article class="timeline-node" data-animate>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p>Hoy</p>
+                <h3>Las seis firmas supervivientes</h3>
+                <p>
+                  El relato contemporáneo se apoya en las bodegas activas y en las huellas de aquellas que ya solo
+                  permanecen en archivos, parcelas y memoria oral.
+                </p>
+              </div>
+              <figure class="timeline-visual">
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen documental pendiente" loading="lazy" />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" aria-label="Cita histórica">
+        <div class="page-shell quote-shell" data-animate>
+          <blockquote>
+            <p>“El vino de La Palma del Condado es reconocido como muy bueno para la salud y nada nocivo.”</p>
+            <cite>Carta al Gobernador de Santo Domingo, s. XVI</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="page-shell discovery-section" aria-labelledby="discovery-title">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Exploración</p>
+          <h2 id="discovery-title" class="section-title">Del territorio a la ficha documental.</h2>
+        </div>
+
+        <div class="discovery-grid">
+          <article class="map-preview" aria-labelledby="map-preview-title" data-animate>
+            <div class="preview-copy">
+              <p class="eyebrow">Mapa preview</p>
+              <h3 id="map-preview-title">La Palma como archivo urbano.</h3>
+              <p>
+                Una primera lectura territorial separa bodegas activas y desaparecidas hasta que el GeoJSON
+                definitivo se exporte desde QGIS.
+              </p>
+              <a class="button-link ghost" href="mapa.html">Ver mapa completo</a>
+            </div>
+
+            <div class="map-drawing" aria-hidden="true">
+              <svg viewBox="0 0 620 420" role="img">
+                <path
+                  d="M75 238 C124 176 172 155 235 165 C289 173 307 109 374 101 C453 91 519 142 545 214 C575 297 497 352 403 342 C332 335 305 384 224 359 C151 337 39 304 75 238Z"
+                  fill="#e7e2d3"
+                />
+                <path
+                  d="M112 268 C174 248 225 233 286 238 C356 243 415 271 504 251"
+                  fill="none"
+                  stroke="#7d936f"
+                  stroke-width="14"
+                  stroke-linecap="round"
+                  opacity="0.75"
+                />
+                <path
+                  d="M167 155 L232 229 L223 356 M301 120 L286 238 L356 340 M454 137 L414 235 L505 252"
+                  fill="none"
+                  stroke="#c9a84c"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  opacity="0.8"
+                />
+                <g fill="#c9a84c" stroke="#351018" stroke-width="4">
+                  <circle cx="218" cy="223" r="10" />
+                  <circle cx="278" cy="240" r="10" />
+                  <circle cx="343" cy="260" r="10" />
+                  <circle cx="410" cy="231" r="10" />
+                </g>
+                <g fill="#817976" stroke="#351018" stroke-width="3" opacity="0.88">
+                  <circle cx="168" cy="269" r="8" />
+                  <circle cx="374" cy="318" r="8" />
+                  <circle cx="488" cy="257" r="8" />
+                </g>
+              </svg>
+              <div class="map-legend">
+                <span><i class="legend-dot activa"></i>Activas</span>
+                <span><i class="legend-dot desaparecida"></i>Desaparecidas</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="catalog-preview" aria-labelledby="catalog-preview-title">
+            <div class="preview-copy" data-animate>
+              <p class="eyebrow">Catálogo preview</p>
+              <h3 id="catalog-preview-title">Primeras fichas enlazadas.</h3>
+              <a class="button-link ghost" href="catalogo.html">Abrir catálogo</a>
+            </div>
+
+            <div class="home-catalog-grid">
+              <article class="preview-card" data-animate>
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen de Bodegas Rubio 1893 SL" loading="lazy" />
+                <div>
+                  <span class="status-pill activa">Activa</span>
+                  <h3>Bodegas Rubio 1893 SL</h3>
+                  <p>Cronología pendiente de completar.</p>
+                  <a href="bodegas-rubio.html">Ver ficha</a>
+                </div>
+              </article>
+
+              <article class="preview-card" data-animate>
+                <img src="public/bodegas/placeholder-bodega.svg" alt="Imagen de Bodegas Verdier" loading="lazy" />
+                <div>
+                  <span class="status-pill desaparecida">Desaparecida</span>
+                  <h3>Bodegas Verdier</h3>
+                  <p>Huella poligonal procedente del shapefile exportado desde QGIS.</p>
+                  <a href="bodegas-verdier.html">Ver ficha</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="eyebrow">La Palma del Condado</p>
+          <strong>Arquitectura y memoria perdida del vino</strong>
+          <p>
+            Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual del
+            municipio.
+          </p>
+        </div>
+        <div class="footer-meta" aria-label="Créditos académicos">
+          <p><span>Autora</span> Blanca Rubio García</p>
+          <p><span>Tutora</span> Rocío Romero</p>
+          <p><span>Institución</span> ETSA, Universidad de Sevilla</p>
+        </div>
+        <nav class="footer-links" aria-label="Navegación secundaria">
+          <a href="historia.html">Historia</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="mapa.html">Mapa</a>
+          <a href="sobre-el-proyecto.html">Metodología</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>ETSA, Universidad de Sevilla · 2026</span>
+        <span>Patrimonio bodeguero de La Palma del Condado</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "name": "bodegas",
+  "metadata": {
+    "title": "Patrimonio bodeguero de La Palma del Condado",
+    "source": "Exportaciones QGIS normalizadas a GeoJSON EPSG:4326.",
+    "crs": "EPSG:4326",
+    "status": "Capa inicial con Bodegas Verdier convertida desde shapefile ETRS89 / UTM 29N"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-verdier",
+        "nombre": "Bodegas Verdier",
+        "estado": "desaparecida",
+        "ubicacion": "La Palma del Condado, Huelva",
+        "resumen": "Huella poligonal procedente del shapefile B.VERDIER exportado desde QGIS.",
+        "fuente": "qgis ya listo/B.VERDIER.shp",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-6.55498664, 37.38987429],
+            [-6.55496521, 37.38959099],
+            [-6.55508942, 37.38940499],
+            [-6.55521938, 37.38944609],
+            [-6.5555616, 37.38955444],
+            [-6.55572172, 37.38961013],
+            [-6.55646258, 37.38984196],
+            [-6.55607201, 37.39041356],
+            [-6.55544209, 37.39040402],
+            [-6.5554628, 37.3899016],
+            [-6.55498664, 37.38987429]
+          ]
+        ]
+      }
+    }
+  ]
+}

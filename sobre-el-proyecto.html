@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Metodología, créditos académicos y alcance del Trabajo de Fin de Grado." />
+    <title>Sobre el proyecto | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a></nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="page-shell project-hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow">Sobre el proyecto</p>
+            <h1>Una investigación académica convertida en archivo público.</h1>
+            <p class="lead">
+              Esta web adapta el Trabajo de Fin de Grado de Blanca Rubio García a una publicación digital consultable,
+              pensada para estudiar, difundir y ampliar el patrimonio bodeguero de La Palma del Condado.
+            </p>
+            <div class="hero-actions">
+              <a class="button-link primary" href="#method-title">Ver metodología</a>
+              <a class="button-link ghost" href="catalogo.html">Abrir catálogo</a>
+            </div>
+          </div>
+
+          <aside class="academic-card" aria-label="Ficha académica" data-animate>
+            <p>Ficha académica</p>
+            <div class="hero-card-summary">
+              <strong>Trabajo de Fin de Grado</strong>
+              <span>Base documental, cartografía y sistema de fichas para consulta pública.</span>
+            </div>
+            <dl>
+              <div><dt>Autora</dt><dd>Blanca Rubio García</dd></div>
+              <div><dt>Tutora</dt><dd>Rocío Romero</dd></div>
+              <div><dt>Institución</dt><dd>ETSA, Universidad de Sevilla</dd></div>
+              <div><dt>Curso</dt><dd>2026</dd></div>
+              <div><dt>Ámbito</dt><dd>La Palma del Condado, Huelva</dd></div>
+              <div><dt>Formato</dt><dd>Trabajo de Fin de Grado y publicación digital</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-shell purpose-section" aria-labelledby="purpose-title" data-animate>
+        <div class="section-heading">
+          <p class="eyebrow">Motivación</p>
+          <h2 id="purpose-title" class="section-title">Documentar antes de que la huella se vuelva ilegible.</h2>
+        </div>
+        <div class="purpose-copy">
+          <p>
+            El proyecto nace de una tensión clara: el patrimonio bodeguero de La Palma del Condado forma parte de la
+            identidad productiva del municipio, pero una parte considerable de sus edificios, trazas y relatos ha
+            desaparecido o se encuentra dispersa entre archivos, parcelas y memoria oral.
+          </p>
+          <p>
+            La publicación digital no sustituye al TFG; lo prolonga. Ordena los datos, los conecta con cartografía y
+            convierte las fichas en piezas navegables para que puedan crecer con nuevas fuentes, imágenes y revisiones.
+          </p>
+        </div>
+      </section>
+
+      <section class="method-band" aria-labelledby="method-title">
+        <div class="page-shell method-inner" data-animate>
+          <div class="section-heading">
+            <p class="eyebrow">Metodología</p>
+            <h2 id="method-title" class="section-title">De la investigación al sistema consultable.</h2>
+          </div>
+          <ol class="method-list">
+            <li><span>01</span><div><h3>Lectura histórica y territorial</h3><p>Construcción de un relato de contexto para relacionar comarca, municipio, actividad vinícola y crecimiento urbano.</p></div></li>
+            <li><span>02</span><div><h3>Trabajo cartográfico</h3><p>Normalización de capas QGIS, trazados, ámbitos y localizaciones para alimentar el mapa interactivo.</p></div></li>
+            <li><span>03</span><div><h3>Catalogación patrimonial</h3><p>Organización de fichas con datos técnicos, estado de conservación, referencias catastrales, imágenes y fuentes.</p></div></li>
+            <li><span>04</span><div><h3>Publicación digital</h3><p>Conversión del TFG en una estructura consultable, responsive y preparada para ampliaciones documentales futuras.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page-shell outputs-section" aria-labelledby="outputs-title" data-animate>
+        <div class="outputs-panel">
+          <div>
+            <p class="eyebrow">Alcance</p>
+            <h2 id="outputs-title">Qué deja preparado esta publicación.</h2>
+            <p>
+              La web se plantea como una base sobria y ampliable. Puede funcionar como pieza de difusión cultural,
+              soporte para revisión académica y estructura inicial para una futura consulta institucional.
+            </p>
+          </div>
+          <ul>
+            <li>Relato histórico-territorial del patrimonio bodeguero.</li>
+            <li>Catálogo de bodegas activas y desaparecidas con páginas individuales.</li>
+            <li>Mapa interactivo conectado a capas GeoJSON exportadas desde QGIS.</li>
+            <li>Base institucional para consulta pública, revisión académica o uso municipal.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-shell sources-section" aria-labelledby="sources-title">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Fuentes</p>
+          <h2 id="sources-title" class="section-title">Materiales de trabajo y referencias.</h2>
+        </div>
+        <div class="sources-grid">
+          <article data-animate>
+            <h3>Documentación académica</h3>
+            <ul>
+              <li>Trabajo de Fin de Grado Arquitectura y memoria perdida del vino.</li>
+              <li>Ficha maquetada de bodega utilizada como referencia de estructura documental.</li>
+              <li>Bibliografía histórica y patrimonial incorporada al TFG.</li>
+            </ul>
+          </article>
+          <article data-animate>
+            <h3>Fuentes espaciales</h3>
+            <ul>
+              <li>Capas QGIS propias exportadas a GeoJSON EPSG:4326.</li>
+              <li>Cartografía histórica y contemporánea empleada en el análisis territorial.</li>
+              <li>Referencias catastrales y parcelas asociadas a cada bodega cuando estén disponibles.</li>
+            </ul>
+          </article>
+          <article data-animate>
+            <h3>Archivo visual</h3>
+            <ul>
+              <li>Planos de situación y planimetría procedentes del trabajo gráfico.</li>
+              <li>Fotografías actuales o históricas incorporables a cada ficha.</li>
+              <li>Vuelos y documentos gráficos para contrastar desapariciones y permanencias.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-shell acknowledgement-section" aria-label="Agradecimientos" data-animate>
+        <div>
+          <p class="eyebrow">Agradecimientos</p>
+          <h2>Un archivo que puede seguir creciendo.</h2>
+        </div>
+        <p>
+          Esta publicación queda preparada para sumar aportaciones documentales, correcciones, fotografías, planos y
+          testimonios relacionados con bodegas activas o desaparecidas.
+        </p>
+        <a class="button-link primary" href="contacto.html">Aportar información</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><p class="eyebrow">La Palma del Condado</p><strong>Arquitectura y memoria perdida del vino</strong><p>Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual.</p></div>
+        <div class="footer-meta"><p><span>Autora</span> Blanca Rubio García</p><p><span>Tutora</span> Rocío Romero</p><p><span>Institución</span> ETSA, Universidad de Sevilla</p></div>
+        <nav class="footer-links" aria-label="Navegación secundaria"><a href="historia.html">Historia</a><a href="catalogo.html">Catálogo</a><a href="mapa.html">Mapa</a><a href="sobre-el-proyecto.html">Metodología</a><a href="contacto.html">Contacto</a></nav>
+      </div>
+      <div class="footer-bottom"><span>ETSA, Universidad de Sevilla · 2026</span><span>Patrimonio bodeguero de La Palma del Condado</span></div>
+    </footer>
+  </body>
+</html>

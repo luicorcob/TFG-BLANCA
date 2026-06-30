@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "name": "ferrocarril_historico",
+  "metadata": {
+    "title": "Linea de ferrocarril historica",
+    "source": "Pendiente de exportacion vectorial desde QGIS.",
+    "crs": "EPSG:4326"
+  },
+  "features": []
+}
