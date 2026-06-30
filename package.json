@@ -4,6 +4,6 @@
   "private": true,
   "description": "Web estatica en HTML, CSS y JavaScript para el TFG Arquitectura y memoria perdida del vino.",
   "scripts": {
-    "start": "echo \"Abre index.html con Live Server\""
+    "start": "node server.js"
   }
 }
