@@ -20,6 +20,8 @@
       return replacements[char] || char;
     });
 
+  const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function initNavigation() {
     const header = document.querySelector("[data-nav-root]");
     const toggle = document.querySelector("[data-nav-toggle]");
@@ -35,6 +37,13 @@
     });
 
     if (!header || !toggle || !menu) return;
+
+    const updateScrolledState = () => {
+      header.toggleAttribute("data-scrolled", window.scrollY > 18);
+    };
+
+    updateScrolledState();
+    window.addEventListener("scroll", updateScrolledState, { passive: true });
 
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
@@ -53,7 +62,7 @@
   }
 
   function initReveal() {
-    const items = document.querySelectorAll("[data-animate]");
+    const items = Array.from(document.querySelectorAll("[data-animate]"));
     if (!("IntersectionObserver" in window) || items.length === 0) {
       items.forEach((item) => item.classList.add("is-visible"));
       return;
@@ -70,7 +79,68 @@
       { threshold: 0.16 }
     );
 
-    items.forEach((item) => observer.observe(item));
+    items.forEach((item, index) => {
+      item.style.setProperty("--reveal-order", index % 6);
+      item.style.setProperty("--reveal-delay", `${(index % 6) * 70}ms`);
+      observer.observe(item);
+    });
+  }
+
+  function initProfessionalMotion() {
+    if (prefersReducedMotion()) return;
+
+    const tiltItems = document.querySelectorAll(
+      ".stat-card, .preview-card, .bodega-card, .map-preview, .hero-panel, .academic-card, .contact-note, .urban-panel, .cartography-grid article, .source-note, .outputs-panel, .sources-grid article, .contact-sidebar section, .technical-panel, .ficha-nav a"
+    );
+
+    tiltItems.forEach((item) => {
+      item.classList.add("motion-card");
+
+      item.addEventListener("pointermove", (event) => {
+        if (event.pointerType === "touch") return;
+        const rect = item.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3);
+        const y = ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3);
+        item.style.setProperty("--tilt-x", `${Number(y) * -4}deg`);
+        item.style.setProperty("--tilt-y", `${Number(x) * 5}deg`);
+        item.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
+        item.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
+      });
+
+      item.addEventListener("pointerleave", () => {
+        item.style.removeProperty("--tilt-x");
+        item.style.removeProperty("--tilt-y");
+        item.style.removeProperty("--spot-x");
+        item.style.removeProperty("--spot-y");
+      });
+    });
+  }
+
+  function initHeroParallax() {
+    if (prefersReducedMotion()) return;
+
+    const heroes = document.querySelectorAll(".home-hero, .page-hero, .project-hero, .contact-hero, .bodega-hero");
+    if (heroes.length === 0) return;
+
+    let ticking = false;
+    const update = () => {
+      heroes.forEach((hero) => {
+        const rect = hero.getBoundingClientRect();
+        const progress = Math.min(1, Math.max(-1, rect.top / window.innerHeight));
+        hero.style.setProperty("--hero-shift", `${progress * -22}px`);
+      });
+      ticking = false;
+    };
+
+    const requestUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
   }
 
   function initCounters() {
@@ -87,8 +157,7 @@
     };
 
     const animate = (counter) => {
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion) {
+      if (prefersReducedMotion()) {
         setValue(counter, 1);
         return;
       }
@@ -614,6 +683,8 @@
   document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
     initReveal();
+    initProfessionalMotion();
+    initHeroParallax();
     initCounters();
     initCatalog();
     initHistoryIndex();

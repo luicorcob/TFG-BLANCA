@@ -14,8 +14,8 @@
         "slug": "bodegas-verdier",
         "nombre": "Bodegas Verdier",
         "estado": "desaparecida",
-        "ubicacion": "La Palma del Condado, Huelva",
-        "resumen": "Huella poligonal procedente del shapefile B.VERDIER exportado desde QGIS.",
+        "ubicacion": "Calle Nicolas Gomez Gonzalez entre el n. 13-14",
+        "resumen": "Bodega fundada en 1891 por Celestino Verdier Martin; edificio desaparecido en 1970.",
         "fuente": "qgis ya listo/B.VERDIER.shp",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
