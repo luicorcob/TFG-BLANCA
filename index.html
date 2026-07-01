@@ -44,11 +44,29 @@
         <a href="mapa.html" data-nav-link>Mapa</a>
         <a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a>
         <a href="contacto.html" data-nav-link>Contacto</a>
+        <a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a>
       </nav>
     </header>
 
     <main id="main-content">
       <section class="home-hero" data-animate>
+        <svg class="hero-bg-pattern" width="100%" height="100%" 
+             style="position:absolute; inset:0; z-index:0; pointer-events:none;">
+          <defs>
+            <pattern id="mudejar-quatrefoil" width="100" height="100" 
+                     patternUnits="userSpaceOnUse">
+              <circle cx="0" cy="0" r="55" fill="none" stroke="#d4af37" 
+                      stroke-width="1" opacity="0.08"/>
+              <circle cx="100" cy="0" r="55" fill="none" stroke="#d4af37" 
+                      stroke-width="1" opacity="0.08"/>
+              <circle cx="0" cy="100" r="55" fill="none" stroke="#d4af37" 
+                      stroke-width="1" opacity="0.08"/>
+              <circle cx="100" cy="100" r="55" fill="none" stroke="#d4af37" 
+                      stroke-width="1" opacity="0.08"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#mudejar-quatrefoil)"/>
+        </svg>
         <div class="page-shell hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Patrimonio bodeguero · La Palma del Condado</p>
@@ -90,10 +108,6 @@
             </div>
           </aside>
         </div>
-
-        <a class="scroll-cue" href="#datos-clave" aria-label="Ir a datos clave">
-          <span aria-hidden="true"></span>
-        </a>
       </section>
 
       <section class="stats-section" id="datos-clave" aria-labelledby="stats-title">
