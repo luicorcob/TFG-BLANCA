@@ -188,7 +188,7 @@ button {
 .site-header {
   position: sticky;
   z-index: 50;
-  top: 0;
+  top: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -196,9 +196,12 @@ button {
   width: min(100% - 32px, 1180px);
   min-height: 76px;
   margin-inline: auto;
-  border-bottom: 1px solid var(--linea);
+  padding-inline: clamp(0.85rem, 2vw, 1.25rem);
+  border: 1px solid rgba(107, 26, 43, 0.12);
+  border-radius: 999px;
   background: rgba(245, 240, 232, 0.91);
   backdrop-filter: blur(18px);
+  box-shadow: 0 14px 36px rgba(48, 14, 22, 0.1);
 }
 
 .brand {
@@ -307,16 +310,18 @@ button {
 
 .site-header[data-open] .site-nav {
   position: fixed;
-  top: 76px;
-  right: 0;
-  left: 0;
+  top: calc(76px + 0.9rem);
+  right: 1rem;
+  left: 1rem;
   display: grid;
   gap: 0.4rem;
-  min-height: calc(100vh - 76px);
+  min-height: calc(100vh - 76px - 1.5rem);
   align-content: start;
   padding: 1.25rem 1rem;
-  border-top: 1px solid var(--linea);
+  border: 1px solid var(--linea);
+  border-radius: 18px;
   background: var(--papel);
+  box-shadow: 0 18px 48px rgba(48, 14, 22, 0.14);
 }
 
 .site-header[data-open] .site-nav a {
@@ -359,7 +364,8 @@ button {
   position: relative;
   overflow: hidden;
   min-height: min(760px, calc(100vh - 76px));
-  padding: clamp(4rem, 8vw, 7rem) 0 clamp(4.8rem, 8vw, 7rem);
+  margin-top: -76px;
+  padding: calc(clamp(4rem, 8vw, 7rem) + 76px) 0 clamp(4.8rem, 8vw, 7rem);
   background:
     linear-gradient(135deg, rgba(53, 16, 24, 0.98), rgba(107, 26, 43, 0.9)),
     var(--vino-oscuro);
@@ -978,7 +984,8 @@ button {
 .bodega-hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(3.8rem, 8vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem);
+  margin-top: -76px;
+  padding: calc(clamp(3.8rem, 8vw, 7rem) + 76px) 0 clamp(2.5rem, 5vw, 4rem);
   background:
     linear-gradient(135deg, rgba(53, 16, 24, 0.98), rgba(107, 26, 43, 0.9)),
     var(--vino-oscuro);
@@ -999,7 +1006,7 @@ button {
 .project-hero,
 .contact-hero {
   min-height: min(680px, calc(100vh - 76px));
-  padding: clamp(3.25rem, 6.4vw, 5.8rem) 0 clamp(3rem, 5vw, 4.5rem);
+  padding: calc(clamp(3.25rem, 6.4vw, 5.8rem) + 76px) 0 clamp(3rem, 5vw, 4.5rem);
 }
 
 .project-hero::before,
@@ -1349,6 +1356,11 @@ button {
   padding: clamp(1rem, 3vw, 1.3rem) 0;
 }
 
+.catalog-section {
+  margin-top: -76px;
+  padding-top: calc(clamp(4rem, 8vw, 7rem) + 76px);
+}
+
 .catalog-controls label,
 .catalog-controls fieldset,
 .map-search,
@@ -1624,7 +1636,8 @@ textarea {
 
 .map-stage {
   min-height: 100vh;
-  padding: clamp(5rem, 8vw, 7rem) 0 1.5rem;
+  margin-top: -76px;
+  padding: calc(clamp(5rem, 8vw, 7rem) + 76px) 0 1.5rem;
   background:
     linear-gradient(180deg, rgba(53, 16, 24, 0.05), rgba(255, 253, 248, 0.86) 36%),
     var(--papel);
@@ -2413,7 +2426,7 @@ textarea {
   .project-hero,
   .contact-hero {
     min-height: auto;
-    padding-top: 3rem;
+    padding-top: calc(3rem + 76px);
   }
 
   .project-hero h1,

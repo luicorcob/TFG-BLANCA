@@ -200,7 +200,7 @@
   function initHistoryIndex() {
     const nav = document.querySelector("[data-history-nav]");
     const sections = Array.from(document.querySelectorAll("[data-history-section]"));
-    if (!nav || sections.length === 0 || !("IntersectionObserver" in window)) return;
+    if (!nav || sections.length === 0) return;
 
     const links = Array.from(nav.querySelectorAll("a"));
     const setActive = (id) => {
@@ -209,18 +209,29 @@
       });
     };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const active = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (active?.target?.id) setActive(active.target.id);
-      },
-      { rootMargin: "-30% 0px -55% 0px", threshold: [0.15, 0.35, 0.65] }
-    );
+    const updateActiveSection = () => {
+      const marker = window.innerHeight * 0.38;
+      const activeSection =
+        sections
+          .filter((section) => section.getBoundingClientRect().top <= marker)
+          .at(-1) || sections[0];
 
-    sections.forEach((section) => observer.observe(section));
-    setActive(sections[0].id);
+      setActive(activeSection.id);
+    };
+
+    let ticking = false;
+    const requestUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        updateActiveSection();
+        ticking = false;
+      });
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
   }
 
   function initContactForm() {
