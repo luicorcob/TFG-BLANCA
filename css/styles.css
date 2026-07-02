@@ -1125,6 +1125,7 @@ button {
 }
 
 .map-preview {
+  min-width: 0;
   padding: clamp(1rem, 2.5vw, 1.25rem);
 }
 
@@ -1165,6 +1166,8 @@ button {
 }
 
 .map-preview-frame {
+  width: 100%;
+  max-width: 100%;
   min-height: clamp(320px, 38vw, 520px);
   border: 1px solid rgba(107, 26, 43, 0.12);
   background: #dde2d6;
@@ -1516,12 +1519,16 @@ button {
 }
 
 .contact-hero::before {
-  background:
-    linear-gradient(90deg, rgba(239, 212, 122, 0.11) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(239, 212, 122, 0.08) 1px, transparent 1px);
-  background-size: 72px 72px;
-  opacity: 0.55;
-  animation: grid-drift 22s linear infinite;
+  background-image:
+    url("../public/mapas/silueta-condado.png"),
+    url("../public/mapas/silueta-condado.png");
+  background-position: 0 0, 120px 72px;
+  background-repeat: repeat;
+  background-size: 240px 144px, 240px 144px;
+  filter: contrast(1.14);
+  mix-blend-mode: screen;
+  opacity: 0.28;
+  animation: condado-drift 32s linear infinite;
 }
 
 @keyframes palm-drift {
@@ -1531,6 +1538,16 @@ button {
 
   to {
     background-position: 168px 96px, 252px 144px;
+  }
+}
+
+@keyframes condado-drift {
+  from {
+    background-position: 0 0, 120px 72px;
+  }
+
+  to {
+    background-position: 240px 144px, 360px 216px;
   }
 }
 
@@ -3217,6 +3234,18 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .map-preview {
+    gap: 0.85rem;
+    padding: 0.85rem;
+  }
+
+  .map-preview-frame {
+    width: 100%;
+    min-height: 0;
+    height: clamp(220px, 62vw, 300px);
+    aspect-ratio: auto;
+  }
+
   .map-canvas-wrap,
   .map-canvas {
     min-height: 420px;
@@ -3227,6 +3256,10 @@ textarea {
   .project-hero h1,
   .contact-hero h1 {
     font-size: clamp(2.05rem, 8.8vw, 2.35rem);
+  }
+
+  .map-preview-frame {
+    height: clamp(190px, 58vw, 250px);
   }
 }
 

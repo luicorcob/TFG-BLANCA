@@ -357,7 +357,13 @@
   }
 
   function initFicha() {
-    document.querySelector("[data-print-ficha]")?.addEventListener("click", () => window.print());
+    const fichaPdfUrl = "public/fichas/ficha-ejemplo-maquetacion.pdf";
+    document.querySelector("[data-print-ficha]")?.addEventListener("click", () => {
+      const pdfWindow = window.open(fichaPdfUrl, "_blank", "noopener");
+      if (!pdfWindow) {
+        window.location.href = fichaPdfUrl;
+      }
+    });
 
     const currentFile = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
     const currentBodega = (window.BODEGAS || []).find((item) => item.href === currentFile);
