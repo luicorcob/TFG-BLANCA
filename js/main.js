@@ -359,14 +359,102 @@
   function initFicha() {
     document.querySelector("[data-print-ficha]")?.addEventListener("click", () => window.print());
 
-    const gallery = document.querySelector("[data-gallery]");
-    if (!gallery) return;
+    const currentFile = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
+    const currentBodega = (window.BODEGAS || []).find((item) => item.href === currentFile);
 
-    document.querySelector("[data-gallery-prev]")?.addEventListener("click", () => {
-      gallery.scrollBy({ left: -gallery.clientWidth, behavior: "smooth" });
-    });
-    document.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
-      gallery.scrollBy({ left: gallery.clientWidth, behavior: "smooth" });
+    const slideFromButton = (button) => {
+      const image = button.querySelector("img");
+      const figure = button.closest("figure");
+      return {
+        src: button.dataset.lightboxSrc || image?.getAttribute("src") || "",
+        alt: button.dataset.lightboxAlt || image?.getAttribute("alt") || "",
+        caption: button.dataset.lightboxCaption || figure?.querySelector("figcaption")?.textContent?.trim() || ""
+      };
+    };
+
+    const uniqueSlides = (slides) => {
+      const seen = new Set();
+      return slides.filter((slide) => {
+        if (!slide.src || seen.has(slide.src)) return false;
+        seen.add(slide.src);
+        return true;
+      });
+    };
+
+    const dataSlides = uniqueSlides(
+      (currentBodega?.imagenes || []).map((image) => ({
+        src: image.src,
+        alt: image.alt || `Imagen de ${currentBodega.nombre}`,
+        caption: image.caption || image.alt || currentBodega.nombre
+      }))
+    );
+
+    const gallerySlides = uniqueSlides(
+      Array.from(document.querySelectorAll("[data-gallery] [data-lightbox-trigger]")).map(slideFromButton)
+    );
+
+    const slides = dataSlides.length > 0 ? dataSlides : gallerySlides;
+    const heroMedia = document.querySelector(".bodega-hero .hero-media");
+    const heroButton = heroMedia?.querySelector("[data-lightbox-trigger]");
+    const heroImage = heroButton?.querySelector("img");
+    const heroCaption = heroMedia?.querySelector("figcaption");
+
+    if (heroMedia && heroButton && heroImage && heroCaption && slides.length > 1) {
+      let activeIndex = Math.max(
+        0,
+        slides.findIndex((slide) => slide.src === heroImage.getAttribute("src"))
+      );
+
+      const controls = document.createElement("div");
+      controls.className = "hero-carousel-controls";
+      controls.innerHTML = `
+        <button type="button" data-hero-carousel-prev aria-label="Imagen anterior">
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+        <span class="hero-carousel-count" data-hero-carousel-count aria-live="polite"></span>
+        <button type="button" data-hero-carousel-next aria-label="Imagen siguiente">
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      `;
+
+      heroMedia.classList.add("has-carousel");
+      heroMedia.append(controls);
+
+      const count = controls.querySelector("[data-hero-carousel-count]");
+      const updateHeroSlide = (nextIndex) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+        const slide = slides[activeIndex];
+        heroImage.src = slide.src;
+        heroImage.alt = slide.alt;
+        heroButton.dataset.lightboxSrc = slide.src;
+        heroButton.dataset.lightboxAlt = slide.alt;
+        heroButton.dataset.lightboxCaption = slide.caption;
+        heroCaption.textContent = slide.caption;
+        if (count) count.textContent = `${activeIndex + 1} / ${slides.length}`;
+      };
+
+      controls.querySelector("[data-hero-carousel-prev]")?.addEventListener("click", () => {
+        updateHeroSlide(activeIndex - 1);
+      });
+      controls.querySelector("[data-hero-carousel-next]")?.addEventListener("click", () => {
+        updateHeroSlide(activeIndex + 1);
+      });
+      heroMedia.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") updateHeroSlide(activeIndex - 1);
+        if (event.key === "ArrowRight") updateHeroSlide(activeIndex + 1);
+      });
+
+      updateHeroSlide(activeIndex);
+    }
+
+    document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+      const scope = gallery.closest("section") || document;
+      scope.querySelector("[data-gallery-prev]")?.addEventListener("click", () => {
+        gallery.scrollBy({ left: -gallery.clientWidth, behavior: "smooth" });
+      });
+      scope.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
+        gallery.scrollBy({ left: gallery.clientWidth, behavior: "smooth" });
+      });
     });
   }
 
@@ -455,9 +543,14 @@
   };
 
   function initMap() {
-    const root = document.querySelector("[data-bodega-map]");
-    if (!root) return;
+    const roots = Array.from(document.querySelectorAll("[data-bodega-map], [data-bodega-map-preview]"));
+    if (roots.length === 0) return;
 
+    roots.forEach(initBodegaMap);
+  }
+
+  function initBodegaMap(root) {
+    const isPreview = root.hasAttribute("data-bodega-map-preview");
     const canvas = root.querySelector("[data-map-canvas]");
     const total = root.querySelector("[data-map-total]");
     const located = root.querySelector("[data-map-located]");
@@ -473,7 +566,9 @@
     const initialSlug = new URLSearchParams(location.search).get("bodega") || "";
 
     if (!window.L || !canvas) {
-      canvas.innerHTML = '<p class="map-fallback">El mapa necesita conexion para cargar Leaflet. Las fichas siguen disponibles en el listado.</p>';
+      if (canvas) {
+        canvas.innerHTML = '<p class="map-fallback">El mapa necesita conexion para cargar Leaflet. Las fichas siguen disponibles en el listado.</p>';
+      }
       return;
     }
 
@@ -494,10 +589,17 @@
       zoom: 16,
       minZoom: 13,
       maxZoom: 20,
-      zoomControl: false
+      zoomControl: false,
+      attributionControl: !isPreview,
+      dragging: !isPreview,
+      scrollWheelZoom: !isPreview,
+      doubleClickZoom: !isPreview,
+      boxZoom: !isPreview,
+      keyboard: !isPreview,
+      touchZoom: !isPreview
     });
 
-    L.control.zoom({ position: "bottomright" }).addTo(map);
+    if (!isPreview) L.control.zoom({ position: "bottomright" }).addTo(map);
 
     const baseLayers = {
       cartodb: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
@@ -624,7 +726,11 @@
     };
 
     const matchesFilters = (item) => {
-      const allowed = new Set(markerToggles.filter((input) => input.checked).map((input) => input.value));
+      const allowed = new Set(
+        markerToggles.length
+          ? markerToggles.filter((input) => input.checked).map((input) => input.value)
+          : ["activa", "desaparecida"]
+      );
       const query = normalize(search?.value);
       const matchesStatus = allowed.has(item.estado);
       const matchesSearch = !query || normalize(`${item.nombre} ${item.ubicacion} ${item.resumen}`).includes(query);

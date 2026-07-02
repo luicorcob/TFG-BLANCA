@@ -7,6 +7,18 @@ window.BODEGAS = [
     resumen:
       "Fundada en 1946 por Antonio Rubio Gordillo; la ficha la situa en la calle Palos de la Frontera n. 14.",
     imagen: "public/bodegas/rubio-fachada.jpg",
+    imagenes: [
+      {
+        src: "public/bodegas/rubio-fachada.jpg",
+        alt: "Fachada de Bodegas Rubio 1893 SL",
+        caption: "Fachada de Bodegas Rubio 1893 SL"
+      },
+      {
+        src: "public/bodegas/rubio-interior.avif",
+        alt: "Interior de Bodegas Rubio 1893 SL",
+        caption: "Interior de Bodegas Rubio 1893 SL"
+      }
+    ],
     href: "bodegas-rubio.html",
     catastro: "6704124QB1460S0001WK",
     ubicacionAnterior: "Bodega El Cura Aguilar",
@@ -27,6 +39,13 @@ window.BODEGAS = [
     resumen:
       "Fundada en 1891 por Celestino Verdier Martin; el edificio desaparecio en 1970.",
     imagen: "public/bodegas/verdier-maquina-destilacion.png",
+    imagenes: [
+      {
+        src: "public/bodegas/verdier-maquina-destilacion.png",
+        alt: "Aparato de destilacion asociado al contexto industrial de Bodegas Verdier",
+        caption: "Aparato de destilacion asociado al contexto industrial de Bodegas Verdier"
+      }
+    ],
     href: "bodegas-verdier.html",
     catastro: "6710056QB1461S0001DS",
     anioConstruccion: "1890",
@@ -53,6 +72,33 @@ window.BODEGAS = [
     resumen:
       "Fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; conserva una de las grandes sedes bodegueras del entorno ferroviario.",
     imagen: "public/bodegas/morales-1950.png",
+    imagenes: [
+      {
+        src: "public/bodegas/morales-1950.png",
+        alt: "Bodegas Loewenthal - Morales a principios de los anios 50",
+        caption: "Bodegas Loewenthal - Morales a principios de los anios 50"
+      },
+      {
+        src: "public/bodegas/morales-interior.png",
+        alt: "Interior actual de Bodegas Morales",
+        caption: "Interior actual de Bodegas Morales"
+      },
+      {
+        src: "public/bodegas/morales-interior-2.png",
+        alt: "Segundo interior documentado de Bodegas Morales",
+        caption: "Segundo interior documentado de Bodegas Morales"
+      },
+      {
+        src: "public/bodegas/morales-ubicacion-anterior.png",
+        alt: "Ubicacion anterior en calle Carlos Mauricio Morales",
+        caption: "Ubicacion anterior en calle Carlos Mauricio Morales n. 44"
+      },
+      {
+        src: "public/bodegas/morales-volumetria.png",
+        alt: "Volumetria de Bodegas Loewenthal - Morales",
+        caption: "Volumetria de Bodegas Loewenthal - Morales"
+      }
+    ],
     href: "bodegas-morales.html",
     catastro: "6714001QB1461S0001KS",
     anioConstruccion: "1902",
@@ -80,6 +126,33 @@ window.BODEGAS = [
     resumen:
       "Fundada en 1895 por Miguel Pichardo Lepe; llego a ocupar un conjunto de naves en torno a la estacion.",
     imagen: "public/bodegas/pichardo-fachada.jpg",
+    imagenes: [
+      {
+        src: "public/bodegas/pichardo-fachada.jpg",
+        alt: "Imagen historica de Bodegas Pichardo",
+        caption: "Imagen historica de Bodegas Pichardo"
+      },
+      {
+        src: "public/bodegas/pichardo-antes.png",
+        alt: "Bodegas Pichardo antes de la demolicion",
+        caption: "Bodegas Pichardo antes de la demolicion"
+      },
+      {
+        src: "public/bodegas/pichardo-despues.png",
+        alt: "Bodegas Pichardo despues de la demolicion",
+        caption: "Bodegas Pichardo despues de la demolicion"
+      },
+      {
+        src: "public/bodegas/pichardo-interior.png",
+        alt: "Interior de Bodegas Pichardo",
+        caption: "Interior de Bodegas Pichardo"
+      },
+      {
+        src: "public/bodegas/pichardo-interior-2.png",
+        alt: "Segundo interior documentado de Bodegas Pichardo",
+        caption: "Segundo interior documentado de Bodegas Pichardo"
+      }
+    ],
     href: "bodegas-pichardo.html",
     catastro: "6710059QB1461S0001JS; 6412502QB1461S0001GS; 6710057QB1461S0002MD",
     anioConstruccion: "1895",
@@ -106,6 +179,38 @@ window.BODEGAS = [
     resumen:
       "Fundada oficialmente en 1907 por Julian Espinosa Escolar; vincula la antigua Verdier con la nave El Cortinal.",
     imagen: "public/bodegas/espinosa-hijos-julian.png",
+    imagenes: [
+      {
+        src: "public/bodegas/espinosa-hijos-julian.png",
+        alt: "Bodega Hijos de Julian Espinosa",
+        caption: "Bodega Hijos de Julian Espinosa"
+      },
+      {
+        src: "public/bodegas/espinosa-anuncio.png",
+        alt: "Anuncio de Hijos de Julian Espinosa",
+        caption: "Anuncio de Hijos de Julian Espinosa"
+      },
+      {
+        src: "public/bodegas/espinosa-cortinal.png",
+        alt: "Interior de la bodega El Cortinal",
+        caption: "Interior de la bodega El Cortinal"
+      },
+      {
+        src: "public/bodegas/espinosa-interior.png",
+        alt: "Interior documentado de Bodegas Espinosa",
+        caption: "Interior documentado de Bodegas Espinosa"
+      },
+      {
+        src: "public/bodegas/espinosa-ubicacion-1.png",
+        alt: "Ubicacion de Bodegas Espinosa en vuelo historico",
+        caption: "Ubicacion de Bodegas Espinosa en vuelo historico"
+      },
+      {
+        src: "public/bodegas/espinosa-ubicacion-2.png",
+        alt: "Segunda ubicacion de Bodegas Espinosa en vuelo historico",
+        caption: "Segunda ubicacion de Bodegas Espinosa en vuelo historico"
+      }
+    ],
     href: "bodegas-espinosa.html",
     catastro: "6407040QB1460N0001SP; 6710042QB1461S0001YS",
     anioConstruccion: "1890",
@@ -133,6 +238,38 @@ window.BODEGAS = [
     resumen:
       "Fundada en 1920 por Rafael y Tomas Salas Lopez; el gran complejo de la calle del Pilar cerro en 1990.",
     imagen: "public/bodegas/salas-fachada.webp",
+    imagenes: [
+      {
+        src: "public/bodegas/salas-fachada.webp",
+        alt: "Fachada de Bodegas Salas",
+        caption: "Fachada de Bodegas Salas"
+      },
+      {
+        src: "public/bodegas/salas-interior.webp",
+        alt: "Interior de Bodegas Salas",
+        caption: "Interior de Bodegas Salas"
+      },
+      {
+        src: "public/bodegas/salas-interior-2.webp",
+        alt: "Segundo interior documentado de Bodegas Salas",
+        caption: "Segundo interior documentado de Bodegas Salas"
+      },
+      {
+        src: "public/bodegas/salas-chimenea.webp",
+        alt: "Chimenea de Bodegas Salas",
+        caption: "Chimenea de Bodegas Salas"
+      },
+      {
+        src: "public/bodegas/salas-vista-aerea.jpg",
+        alt: "Vista aerea de Bodegas Salas",
+        caption: "Vista aerea de Bodegas Salas"
+      },
+      {
+        src: "public/bodegas/salas-propuesta-pgou.png",
+        alt: "Propuesta PGOU para Bodegas Salas",
+        caption: "Propuesta PGOU para Bodegas Salas"
+      }
+    ],
     href: "bodegas-salas.html",
     catastro: "6012002QB1461S0001RS",
     anioConstruccion: "1930",

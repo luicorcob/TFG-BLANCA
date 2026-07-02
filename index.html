@@ -16,7 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script defer src="js/data.js"></script>
     <script defer src="js/main.js"></script>
   </head>
@@ -286,44 +288,15 @@
               <a class="button-link ghost" href="mapa.html">Ver mapa completo</a>
             </div>
 
-            <div class="map-drawing" aria-hidden="true">
-              <svg viewBox="0 0 620 420" role="img">
-                <path
-                  d="M75 238 C124 176 172 155 235 165 C289 173 307 109 374 101 C453 91 519 142 545 214 C575 297 497 352 403 342 C332 335 305 384 224 359 C151 337 39 304 75 238Z"
-                  fill="#e7e2d3"
-                />
-                <path
-                  d="M112 268 C174 248 225 233 286 238 C356 243 415 271 504 251"
-                  fill="none"
-                  stroke="#7d936f"
-                  stroke-width="14"
-                  stroke-linecap="round"
-                  opacity="0.75"
-                />
-                <path
-                  d="M167 155 L232 229 L223 356 M301 120 L286 238 L356 340 M454 137 L414 235 L505 252"
-                  fill="none"
-                  stroke="#c9a84c"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  opacity="0.8"
-                />
-                <g fill="#c9a84c" stroke="#351018" stroke-width="4">
-                  <circle cx="218" cy="223" r="10" />
-                  <circle cx="278" cy="240" r="10" />
-                  <circle cx="343" cy="260" r="10" />
-                  <circle cx="410" cy="231" r="10" />
-                </g>
-                <g fill="#817976" stroke="#351018" stroke-width="3" opacity="0.88">
-                  <circle cx="168" cy="269" r="8" />
-                  <circle cx="374" cy="318" r="8" />
-                  <circle cx="488" cy="257" r="8" />
-                </g>
-              </svg>
-              <div class="map-legend">
-                <span><i class="legend-dot activa"></i>Activas</span>
-                <span><i class="legend-dot desaparecida"></i>Desaparecidas</span>
-              </div>
+            <div class="map-preview-frame" data-bodega-map-preview>
+              <div
+                class="map-canvas preview-map-canvas"
+                data-map-canvas
+                role="region"
+                aria-label="Vista previa del mapa interactivo de bodegas de La Palma del Condado"
+              ></div>
+              <a class="map-preview-hitbox" href="mapa.html" aria-label="Ver mapa completo"></a>
+              <div class="map-credit"><span>Leaflet</span><span>Vista previa</span></div>
             </div>
           </article>
 

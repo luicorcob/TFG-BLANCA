@@ -1144,6 +1144,7 @@ button {
 }
 
 .map-drawing,
+.map-preview-frame,
 .territory-diagram svg,
 .mini-map {
   min-height: 280px;
@@ -1154,23 +1155,105 @@ button {
   background-size: 34px 34px;
 }
 
-.map-drawing {
+.map-drawing,
+.map-preview-frame {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
+  aspect-ratio: 31 / 21;
   border-radius: var(--radio);
 }
 
+.map-preview-frame {
+  min-height: clamp(320px, 38vw, 520px);
+  border: 1px solid rgba(107, 26, 43, 0.12);
+  background: #dde2d6;
+}
+
+.map-preview-frame .map-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.map-preview-frame .map-fallback {
+  min-height: 100%;
+}
+
+.map-preview-frame .leaflet-control-container {
+  display: none;
+}
+
+.map-preview-hitbox {
+  position: absolute;
+  z-index: 560;
+  inset: 0;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.map-preview-hitbox:focus-visible {
+  outline: 3px solid rgba(201, 168, 76, 0.92);
+  outline-offset: -5px;
+}
+
 .map-drawing svg,
-.territory-diagram svg {
+.territory-diagram svg,
+.map-silhouettes {
   transform-origin: center;
   transition: transform var(--motion-slow) var(--ease-out);
 }
 
 .map-drawing svg {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   animation: map-drift 8s ease-in-out infinite alternate;
 }
 
+.map-silhouettes {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  animation: map-drift 8s ease-in-out infinite alternate;
+}
+
+.map-silhouette {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.map-silhouette.condado {
+  inset: -6% 14% 4%;
+  background: rgba(107, 26, 43, 0.32);
+  opacity: 0.55;
+  -webkit-mask-image: url("../public/mapas/silueta-condado.png");
+  mask-image: url("../public/mapas/silueta-condado.png");
+  -webkit-mask-size: 132%;
+  mask-size: 132%;
+}
+
+.map-silhouette.la-palma {
+  inset: 14% 8% 12%;
+  background: rgba(47, 86, 72, 0.78);
+  opacity: 0.72;
+  -webkit-mask-image: url("../public/mapas/silueta-la-palma.png");
+  mask-image: url("../public/mapas/silueta-la-palma.png");
+  -webkit-mask-size: 122%;
+  mask-size: 122%;
+}
+
 .map-drawing:hover svg,
+.map-drawing:hover .map-silhouettes,
 .territory-diagram:hover svg {
   animation: none;
   transform: scale(1.025);
@@ -1192,6 +1275,7 @@ button {
 
 .map-legend {
   position: absolute;
+  z-index: 3;
   right: 0.85rem;
   bottom: 0.85rem;
   display: flex;
@@ -2492,6 +2576,83 @@ textarea {
   padding: 0;
   background: transparent;
   cursor: zoom-in;
+}
+
+.hero-media {
+  position: relative;
+}
+
+.hero-media.has-carousel > button {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  aspect-ratio: 4 / 3;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0.45rem, 1.6vw, 0.75rem);
+  pointer-events: none;
+}
+
+.hero-carousel-controls button {
+  display: grid;
+  width: clamp(38px, 5vw, 46px);
+  height: clamp(38px, 5vw, 46px);
+  min-height: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 253, 248, 0.42);
+  border-radius: 6px;
+  padding: 0;
+  background: rgba(53, 16, 24, 0.66);
+  color: var(--blanco);
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+  transition:
+    background var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.hero-carousel-controls button:hover {
+  border-color: rgba(239, 212, 122, 0.84);
+  background: rgba(107, 26, 43, 0.86);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transform: translateY(-1px);
+}
+
+.hero-carousel-controls button span {
+  font-family: var(--ui);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.hero-carousel-count {
+  position: absolute;
+  bottom: clamp(0.45rem, 1.6vw, 0.75rem);
+  left: 50%;
+  border: 1px solid rgba(255, 253, 248, 0.28);
+  border-radius: 999px;
+  padding: 0.28rem 0.55rem;
+  background: rgba(53, 16, 24, 0.62);
+  color: var(--blanco);
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: auto;
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
 }
 
 .ficha-grid {
