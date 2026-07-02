@@ -5,9 +5,439 @@
     "title": "Patrimonio bodeguero de La Palma del Condado",
     "source": "Exportaciones QGIS normalizadas a GeoJSON EPSG:4326.",
     "crs": "EPSG:4326",
-    "status": "Capa inicial con Bodegas Verdier convertida desde shapefile ETRS89 / UTM 29N"
+    "status": "Cinco capas de bodegas convertidas desde shapefiles ETRS89 / UTM 29N de la carpeta qgis ya listo."
   },
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-espinosa",
+        "nombre": "Bodegas Espinosa",
+        "estado": "desaparecida",
+        "ubicacion": "Calle Nicolas Gomez Gonzalez entre el n. 13-14 y Ronda de Legionarios 18",
+        "resumen": "Bodega fundada oficialmente en 1907 por Julian Espinosa Escolar; cerrada en 1977, con la nave El Cortinal reutilizada por Mosaicos Pino.",
+        "fuente": "qgis ya listo/B.ESPINOSA.shp",
+        "qgisZip": "public/qgis/bodegas-espinosa-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55692254,
+                37.38721485
+              ],
+              [
+                -6.55644153,
+                37.38723658
+              ],
+              [
+                -6.55638692,
+                37.38720694
+              ],
+              [
+                -6.55621686,
+                37.38657629
+              ],
+              [
+                -6.55619551,
+                37.38625594
+              ],
+              [
+                -6.55643475,
+                37.38622288
+              ],
+              [
+                -6.55653747,
+                37.38623767
+              ],
+              [
+                -6.55653221,
+                37.38615521
+              ],
+              [
+                -6.55670757,
+                37.3861335
+              ],
+              [
+                -6.55704639,
+                37.38608982
+              ],
+              [
+                -6.55715847,
+                37.38642788
+              ],
+              [
+                -6.55710935,
+                37.38671827
+              ],
+              [
+                -6.55692254,
+                37.38721485
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55608024,
+                37.39040955
+              ],
+              [
+                -6.55624569,
+                37.39016439
+              ],
+              [
+                -6.55608565,
+                37.3904096
+              ],
+              [
+                -6.55608024,
+                37.39040955
+              ]
+            ],
+            [
+              [
+                -6.55543793,
+                37.39040301
+              ],
+              [
+                -6.55544983,
+                37.3901977
+              ],
+              [
+                -6.55544158,
+                37.39040227
+              ],
+              [
+                -6.55551515,
+                37.3904038
+              ],
+              [
+                -6.55543793,
+                37.39040301
+              ]
+            ],
+            [
+              [
+                -6.55645799,
+                37.3898391
+              ],
+              [
+                -6.55645415,
+                37.38984498
+              ],
+              [
+                -6.55589338,
+                37.38966251
+              ],
+              [
+                -6.55645799,
+                37.3898391
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55544241,
+                37.3903963
+              ],
+              [
+                -6.55548291,
+                37.38954343
+              ],
+              [
+                -6.5561311,
+                37.38973986
+              ],
+              [
+                -6.55645415,
+                37.38984498
+              ],
+              [
+                -6.55645799,
+                37.3898391
+              ],
+              [
+                -6.55643989,
+                37.38983344
+              ],
+              [
+                -6.55647066,
+                37.38984276
+              ],
+              [
+                -6.55608532,
+                37.3904198
+              ],
+              [
+                -6.55544241,
+                37.3903963
+              ]
+            ],
+            [
+              [
+                -6.55624569,
+                37.39016439
+              ],
+              [
+                -6.55608024,
+                37.39040955
+              ],
+              [
+                -6.55608565,
+                37.3904096
+              ],
+              [
+                -6.55624569,
+                37.39016439
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-morales",
+        "nombre": "Bodegas Loewenthal - Morales",
+        "estado": "desaparecida",
+        "ubicacion": "Calle de la Estacion n. 1",
+        "resumen": "Bodega fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; sede definitiva construida hacia 1902 y cerrada en 1966.",
+        "fuente": "qgis ya listo/B.MORALES.shp",
+        "qgisZip": "public/qgis/bodegas-morales-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55367699,
+                37.3925074
+              ],
+              [
+                -6.55303466,
+                37.39255092
+              ],
+              [
+                -6.55325044,
+                37.3917552
+              ],
+              [
+                -6.55320983,
+                37.39099677
+              ],
+              [
+                -6.55413049,
+                37.39115314
+              ],
+              [
+                -6.55431575,
+                37.39184353
+              ],
+              [
+                -6.55367699,
+                37.3925074
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-pichardo",
+        "nombre": "Bodegas Pichardo",
+        "estado": "desaparecida",
+        "ubicacion": "Avenida de la Constitucion y Calle Presidente Adolfo Suarez",
+        "resumen": "Bodega fundada en 1895 por Miguel Pichardo Lepe; varias naves fueron demolidas en 2006 y parte del conjunto tuvo usos bodegueros posteriores.",
+        "fuente": "qgis ya listo/B.PICHARDO.shp",
+        "qgisZip": "public/qgis/bodegas-pichardo-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55321955,
+                37.39037213
+              ],
+              [
+                -6.55317988,
+                37.39037131
+              ],
+              [
+                -6.55330258,
+                37.38977205
+              ],
+              [
+                -6.5541171,
+                37.38987126
+              ],
+              [
+                -6.55408415,
+                37.39039636
+              ],
+              [
+                -6.55321955,
+                37.39037213
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55519614,
+                37.39038136
+              ],
+              [
+                -6.55419584,
+                37.39037967
+              ],
+              [
+                -6.5541883,
+                37.38987907
+              ],
+              [
+                -6.5552262,
+                37.38994489
+              ],
+              [
+                -6.55519614,
+                37.39038136
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55420014,
+                37.38975895
+              ],
+              [
+                -6.55335327,
+                37.38967808
+              ],
+              [
+                -6.55343744,
+                37.38928706
+              ],
+              [
+                -6.55414943,
+                37.38936515
+              ],
+              [
+                -6.55420014,
+                37.38975895
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55746585,
+                37.3907767
+              ],
+              [
+                -6.55718156,
+                37.39072965
+              ],
+              [
+                -6.55699104,
+                37.39072888
+              ],
+              [
+                -6.55672345,
+                37.39065683
+              ],
+              [
+                -6.55634997,
+                37.39054459
+              ],
+              [
+                -6.55689551,
+                37.38988122
+              ],
+              [
+                -6.55699725,
+                37.38980414
+              ],
+              [
+                -6.55710781,
+                37.38982226
+              ],
+              [
+                -6.55791001,
+                37.39030127
+              ],
+              [
+                -6.55746585,
+                37.3907767
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-salas",
+        "nombre": "Bodegas Salas",
+        "estado": "desaparecida",
+        "ubicacion": "Final de la Calle del Pilar",
+        "resumen": "Bodega fundada en 1920 por Rafael y Tomas Salas Lopez; cerrada en 1990 y conservada en estado de abandono y semiruina.",
+        "fuente": "qgis ya listo/B.SALAS.shp",
+        "qgisZip": "public/qgis/bodegas-salas-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.56003211,
+                37.39082957
+              ],
+              [
+                -6.55903679,
+                37.39089405
+              ],
+              [
+                -6.55833348,
+                37.39049858
+              ],
+              [
+                -6.55880714,
+                37.39035191
+              ],
+              [
+                -6.55880062,
+                37.38989601
+              ],
+              [
+                -6.5595425,
+                37.38989093
+              ],
+              [
+                -6.56003211,
+                37.39082957
+              ]
+            ]
+          ]
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
@@ -17,23 +447,59 @@
         "ubicacion": "Calle Nicolas Gomez Gonzalez entre el n. 13-14",
         "resumen": "Bodega fundada en 1891 por Celestino Verdier Martin; edificio desaparecido en 1970.",
         "fuente": "qgis ya listo/B.VERDIER.shp",
+        "qgisZip": "public/qgis/bodegas-verdier-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "MultiPolygon",
         "coordinates": [
           [
-            [-6.55498664, 37.38987429],
-            [-6.55496521, 37.38959099],
-            [-6.55508942, 37.38940499],
-            [-6.55521938, 37.38944609],
-            [-6.5555616, 37.38955444],
-            [-6.55572172, 37.38961013],
-            [-6.55646258, 37.38984196],
-            [-6.55607201, 37.39041356],
-            [-6.55544209, 37.39040402],
-            [-6.5554628, 37.3899016],
-            [-6.55498664, 37.38987429]
+            [
+              [
+                -6.55498664,
+                37.38987429
+              ],
+              [
+                -6.55496521,
+                37.38959099
+              ],
+              [
+                -6.55508942,
+                37.38940499
+              ],
+              [
+                -6.55521938,
+                37.38944609
+              ],
+              [
+                -6.5555616,
+                37.38955444
+              ],
+              [
+                -6.55572172,
+                37.38961013
+              ],
+              [
+                -6.55646258,
+                37.38984196
+              ],
+              [
+                -6.55607201,
+                37.39041356
+              ],
+              [
+                -6.55544209,
+                37.39040402
+              ],
+              [
+                -6.5554628,
+                37.3899016
+              ],
+              [
+                -6.55498664,
+                37.38987429
+              ]
+            ]
           ]
         ]
       }

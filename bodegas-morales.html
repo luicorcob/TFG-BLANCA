@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de Bodegas Loewenthal - Morales a partir de la ficha de catalogación del TFG y la capa QGIS."
+    />
+    <title>Bodegas Loewenthal - Morales | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+    </header>
+
+    <main>
+      <article class="ficha-completa">
+        <section class="bodega-hero">
+          <div class="page-shell hero-grid">
+            <div class="hero-copy" data-animate>
+              <a class="back-link" href="catalogo.html">Volver al catálogo</a>
+              <p class="eyebrow">Ficha de bodega</p>
+              <h1>Bodegas Loewenthal - Morales</h1>
+              <p class="lead">
+                Fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal, fue uno de los grandes emporios
+                vinícolas del Condado y conserva una sede patrimonial junto a la estación.
+              </p>
+              <div class="status-row">
+                <span class="status-pill desaparecida">Desaparecida</span>
+                <span>Calle de la Estación nº 1</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button-link primary" href="mapa.html?bodega=bodegas-morales">Ver en el mapa</a>
+                <a class="button-link ghost" href="public/qgis/bodegas-morales-qgis.zip" download>Descargar QGIS</a>
+                <button class="button-link ghost" type="button" data-print-ficha>Descargar ficha PDF</button>
+              </div>
+            </div>
+
+            <figure class="hero-media" data-animate>
+              <button
+                type="button"
+                data-lightbox-trigger
+                data-lightbox-src="public/bodegas/morales-1950.png"
+                data-lightbox-alt="Bodegas Loewenthal - Morales a principios de los años 50"
+                data-lightbox-caption="Bodegas Loewenthal - Morales a principios de los años 50"
+              >
+                <img src="public/bodegas/morales-1950.png" alt="Bodegas Loewenthal - Morales a principios de los años 50" />
+              </button>
+              <figcaption>La ficha recoge planimetría, volumetría, interiores y ubicación anterior de la bodega.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="page-shell ficha-grid" aria-label="Ficha técnica de Bodegas Loewenthal - Morales">
+          <aside class="technical-panel" data-animate>
+            <h2>Datos técnicos</h2>
+            <dl>
+              <div><dt>Estado</dt><dd>Desaparecida como actividad bodeguera; edificio conservado en abandono</dd></div>
+              <div><dt>Ubicación</dt><dd>Calle de la Estación nº 1</dd></div>
+              <div><dt>Referencia catastral</dt><dd>6714001QB1461S0001KS</dd></div>
+              <div><dt>Coordenadas</dt><dd>37.391774, -6.553675</dd></div>
+              <div><dt>Año de construcción</dt><dd>1902</dd></div>
+              <div><dt>Fundación</dt><dd>1893</dd></div>
+              <div><dt>Cierre</dt><dd>1966</dd></div>
+              <div><dt>Ubicación anterior</dt><dd>Calle Carlos Mauricio Morales nº 44</dd></div>
+            </dl>
+
+            <div class="mini-map" aria-label="Estado de datos cartográficos">
+              <span>Mapa</span>
+              <p>Polígono QGIS convertido desde ETRS89 / UTM 29N a GeoJSON EPSG:4326.</p>
+              <a href="mapa.html?bodega=bodegas-morales">Abrir localización</a>
+            </div>
+
+            <section class="qgis-download" aria-labelledby="qgis-morales">
+              <span>QGIS</span>
+              <h3 id="qgis-morales">Archivos cartográficos</h3>
+              <p>Paquete ZIP con la capa de Bodegas Morales: SHP, SHX, DBF, PRJ y CPG.</p>
+              <a href="public/qgis/bodegas-morales-qgis.zip" download>Descargar ZIP QGIS</a>
+            </section>
+          </aside>
+
+          <div class="ficha-main">
+            <section class="visual-section" aria-labelledby="gallery-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Archivo visual</p>
+                <h2 id="gallery-title">Galería documental</h2>
+              </div>
+              <div class="gallery-track" data-gallery>
+                <div class="gallery-row">
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/morales-1950.png" data-lightbox-alt="Bodegas Morales a principios de los años 50" data-lightbox-caption="Bodegas Morales a principios de los años 50">
+                      <img src="public/bodegas/morales-1950.png" alt="Bodegas Morales a principios de los años 50" loading="lazy" />
+                    </button>
+                    <figcaption>Vista histórica de Bodegas Morales.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/morales-interior.png" data-lightbox-alt="Interior actual de Bodegas Morales" data-lightbox-caption="Interior actual de Bodegas Morales">
+                      <img src="public/bodegas/morales-interior.png" alt="Interior actual de Bodegas Morales" loading="lazy" />
+                    </button>
+                    <figcaption>Interior actual documentado en la ficha.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/morales-ubicacion-anterior.png" data-lightbox-alt="Ubicación anterior en calle Carlos Mauricio Morales" data-lightbox-caption="Ubicación anterior en calle Carlos Mauricio Morales nº 44">
+                      <img src="public/bodegas/morales-ubicacion-anterior.png" alt="Ubicación anterior en calle Carlos Mauricio Morales" loading="lazy" />
+                    </button>
+                    <figcaption>Ubicación anterior de la firma.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/morales-volumetria.png" data-lightbox-alt="Volumetría de Bodegas Loewenthal - Morales" data-lightbox-caption="Volumetría de Bodegas Loewenthal - Morales">
+                      <img src="public/bodegas/morales-volumetria.png" alt="Volumetría de Bodegas Loewenthal - Morales" loading="lazy" />
+                    </button>
+                    <figcaption>Volumetría de la bodega.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="content-panel" aria-labelledby="lectura-patrimonial" data-animate>
+              <p class="eyebrow">Historia documentada</p>
+              <h2 id="lectura-patrimonial">Lectura patrimonial</h2>
+              <p>
+                Bodegas Loewenthal - Morales fue fundada en 1893 por Carlos Mauricio Morales y el alemán Friederick
+                Loewenthal. Su primera ubicación estuvo en la actual calle Carlos Mauricio Morales nº 44, antiguo Camino
+                de las Huertas.
+              </p>
+              <p>
+                Entre 1898 y 1902 se edificó la sede definitiva frente a la estación ferroviaria para facilitar la
+                exportación. La ficha documenta un conjunto de 12.469 m² con cerchas metálicas tipo Polonceau, vigas
+                Warren y una chimenea de 20 m atribuida al constructor Manuel Talaverón.
+              </p>
+              <p>
+                La firma alcanzó prestigio internacional con marcas como Luis Felipe, La Rábida y Fino Rociero. En la
+                década de 1940 dio empleo a más de cien trabajadores y mantuvo comercio con América y Europa.
+              </p>
+              <p>
+                Tras el declive de la industria vinícola, la bodega cerró en 1966. Las soleras de Luis Felipe y La
+                Rábida fueron adquiridas por la familia Rubio antes del cierre.
+              </p>
+            </section>
+
+            <section class="ficha-timeline" aria-labelledby="timeline-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Etapas</p>
+                <h2 id="timeline-title">Cronología de la bodega</h2>
+              </div>
+              <ol>
+                <li><time>1893</time><div><h3>Fundación</h3><p>Carlos Mauricio Morales y Friederick Loewenthal inician la firma.</p></div></li>
+                <li><time>1898-1902</time><div><h3>Sede definitiva</h3><p>Se edifica el gran complejo junto a la estación ferroviaria.</p></div></li>
+                <li><time>1917</time><div><h3>Sucesión</h3><p>Tras la muerte de Carlos Mauricio Morales, la firma pasa a llamarse Hijos de Carlos M. Morales.</p></div></li>
+                <li><time>1940</time><div><h3>Esplendor</h3><p>La bodega emplea a más de cien trabajadores y exporta a América y Europa.</p></div></li>
+                <li><time>1966</time><div><h3>Cierre</h3><p>La crisis del sector provoca el cierre de la actividad bodeguera.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="environment-section" aria-labelledby="environment-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Entorno histórico</p>
+                <h2 id="environment-title">Lectura urbana documentada</h2>
+              </div>
+              <p>
+                La bodega se situó frente a la estación para reforzar la exportación ferroviaria. La ficha indica que
+                hoy se conserva de manera íntegra, aunque en abandono, incluida en el inventario patrimonial del PGOU.
+              </p>
+            </section>
+
+            <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
+              <h2>Fuentes</h2>
+              <ul>
+                <li>Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.</li>
+                <li>Ficha Ejemplo Maquetación 1.07, ficha de catalogación de Bodegas Loewenthal - Morales.</li>
+                <li>Capa QGIS qgis ya listo/B.MORALES.shp, convertida a GeoJSON EPSG:4326.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <nav class="page-shell ficha-nav" aria-label="Navegación entre fichas">
+          <a href="bodegas-verdier.html"><span>Anterior</span>Bodegas Verdier</a>
+          <a href="bodegas-pichardo.html"><span>Siguiente</span>Bodegas Pichardo</a>
+        </nav>
+      </article>
+    </main>
+
+    <div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar visor">Cerrar</button>
+      <figure><img src="" alt="" data-lightbox-image /><figcaption data-lightbox-caption></figcaption></figure>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><p class="eyebrow">La Palma del Condado</p><strong>Arquitectura y memoria perdida del vino</strong><p>Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual.</p></div>
+        <div class="footer-meta"><p><span>Autora</span> Blanca Rubio García</p><p><span>Tutora</span> Rocío Romero</p><p><span>Institución</span> ETSA, Universidad de Sevilla</p></div>
+        <nav class="footer-links" aria-label="Navegación secundaria"><a href="historia.html">Historia</a><a href="catalogo.html">Catálogo</a><a href="mapa.html">Mapa</a><a href="sobre-el-proyecto.html">Metodología</a><a href="contacto.html">Contacto</a></nav>
+      </div>
+      <div class="footer-bottom"><span>ETSA, Universidad de Sevilla · 2026</span><span>Patrimonio bodeguero de La Palma del Condado</span></div>
+    </footer>
+  </body>
+</html>

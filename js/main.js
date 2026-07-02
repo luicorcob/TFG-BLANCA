@@ -380,6 +380,80 @@
     return pairs;
   };
 
+  const featureSlug = (feature) => {
+    const props = feature?.properties || {};
+    return props.slug || normalize(props.nombre).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  };
+
+  const isValidLngLat = (pair) =>
+    Array.isArray(pair) &&
+    Number.isFinite(pair[0]) &&
+    Number.isFinite(pair[1]) &&
+    Math.abs(pair[0]) <= 180 &&
+    Math.abs(pair[1]) <= 90;
+
+  const outerRings = (geometry) => {
+    if (geometry?.type === "Polygon") return [geometry.coordinates?.[0]].filter(Array.isArray);
+    if (geometry?.type === "MultiPolygon") {
+      return (geometry.coordinates || []).map((polygon) => polygon?.[0]).filter(Array.isArray);
+    }
+    return [];
+  };
+
+  const ringArea = (ring) => {
+    const points = ring.filter(isValidLngLat);
+    if (points.length < 3) return 0;
+
+    let area = 0;
+    points.forEach(([lng, lat], index) => {
+      const [nextLng, nextLat] = points[(index + 1) % points.length];
+      area += lng * nextLat - nextLng * lat;
+    });
+    return Math.abs(area) / 2;
+  };
+
+  const boundsCenter = (pairs) => {
+    const validPairs = pairs.filter(isValidLngLat);
+    if (validPairs.length === 0 || !window.L) return null;
+
+    const bounds = L.latLngBounds(validPairs.map(([lng, lat]) => L.latLng(lat, lng)));
+    return bounds.isValid() ? bounds.getCenter() : null;
+  };
+
+  const ringCentroid = (ring) => {
+    const points = ring.filter(isValidLngLat);
+    if (points.length < 3 || !window.L) return boundsCenter(points);
+
+    let areaTwice = 0;
+    let centroidLng = 0;
+    let centroidLat = 0;
+
+    points.forEach(([lng, lat], index) => {
+      const [nextLng, nextLat] = points[(index + 1) % points.length];
+      const cross = lng * nextLat - nextLng * lat;
+      areaTwice += cross;
+      centroidLng += (lng + nextLng) * cross;
+      centroidLat += (lat + nextLat) * cross;
+    });
+
+    if (Math.abs(areaTwice) < 1e-12) return boundsCenter(points);
+
+    const factor = 1 / (3 * areaTwice);
+    const lng = centroidLng * factor;
+    const lat = centroidLat * factor;
+    return Number.isFinite(lat) && Number.isFinite(lng) ? L.latLng(lat, lng) : boundsCenter(points);
+  };
+
+  const representativeLatLng = (geometry) => {
+    const rings = outerRings(geometry)
+      .map((ring) => ({ ring, area: ringArea(ring) }))
+      .filter(({ area }) => area > 0)
+      .sort((a, b) => b.area - a.area);
+
+    if (rings.length > 0) return ringCentroid(rings[0].ring);
+    return boundsCenter(collectCoordinatePairs(geometry?.coordinates));
+  };
+
   function initMap() {
     const root = document.querySelector("[data-bodega-map]");
     if (!root) return;
@@ -426,7 +500,7 @@
     L.control.zoom({ position: "bottomright" }).addTo(map);
 
     const baseLayers = {
-      cartodb: L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      cartodb: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
         attribution: "&copy; OpenStreetMap &copy; CARTO",
         maxZoom: 20
       }),
@@ -444,10 +518,73 @@
       )
     };
 
-    let activeBase = baseLayers.cartodb.addTo(map);
+    let activeBase = baseLayers.osm.addTo(map);
     const activeLayer = L.layerGroup().addTo(map);
     const lostLayer = L.layerGroup().addTo(map);
     const markerRecords = new Map();
+    const areaRecords = new Map();
+
+    const itemBySlug = (slug) => items.find((item) => item.slug === slug);
+
+    const statusFor = (source) => {
+      const raw = source?.estado || source?.properties?.estado || "";
+      return normalize(raw).includes("activa") ? "activa" : "desaparecida";
+    };
+
+    const slugPalettes = {
+      "bodegas-rubio": { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" },
+      "bodegas-verdier": { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" },
+      "bodegas-morales": { stroke: "#2f5648", fill: "#5f9d73", markerFill: "#2f5648" },
+      "bodegas-pichardo": { stroke: "#71550d", fill: "#c9a84c", markerFill: "#71550d" },
+      "bodegas-espinosa": { stroke: "#2f6f76", fill: "#67aab0", markerFill: "#2f6f76" },
+      "bodegas-salas": { stroke: "#5a3d6f", fill: "#9a7cb6", markerFill: "#5a3d6f" }
+    };
+
+    const mapPalette = (source) => {
+      const fallback =
+        statusFor(source) === "activa"
+          ? { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" }
+          : { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" };
+
+      return {
+        ...fallback,
+        ...(slugPalettes[source?.slug] || {}),
+        markerStroke: statusFor(source) === "activa" ? "#efd47a" : "#fffdf8"
+      };
+    };
+
+    const areaStyle = (source, selected = false) => {
+      const palette = mapPalette(source);
+      return {
+        color: palette.stroke,
+        fillColor: palette.fill,
+        dashArray: selected ? "10 7" : null,
+        fillOpacity: selected ? 0.52 : 0.28,
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: selected ? 1 : 0.92,
+        weight: selected ? 4.4 : 2.35
+      };
+    };
+
+    const markerStyle = (item, selected = false) => {
+      const palette = mapPalette(item);
+      return {
+        radius: selected ? 8 : 6.5,
+        color: palette.markerStroke,
+        fillColor: palette.markerFill,
+        fillOpacity: 0.98,
+        opacity: 1,
+        weight: selected ? 3 : 2.4
+      };
+    };
+
+    const hiddenAreaStyle = {
+      opacity: 0,
+      fillOpacity: 0,
+      weight: 0
+    };
+
     const overlays = {
       bic: L.geoJSON(undefined, {
         style: { color: "#6b1a2b", fillColor: "#c9a84c", fillOpacity: 0.14, weight: 2 }
@@ -457,25 +594,34 @@
       }),
       bodegas: L.geoJSON(undefined, {
         filter: (feature) => feature?.geometry?.type !== "Point",
-        style: {
-          color: "#4a4543",
-          fillColor: "#9b9490",
-          fillOpacity: 0.22,
-          weight: 2
+        style: (feature) => areaStyle(feature?.properties),
+        onEachFeature: (feature, layer) => {
+          const slug = featureSlug(feature);
+          if (!slug) return;
+
+          const record = areaRecords.get(slug) || { item: null, layers: [] };
+          record.item = itemBySlug(slug) || record.item;
+          record.layers.push(layer);
+          areaRecords.set(slug, record);
+
+          layer.on("click", () => focusBodega(slug));
         }
       }).addTo(map)
     };
 
-    const popupHtml = (item) => `
-      <article class="map-popup">
-        <img src="${escapeHtml(item.imagen)}" alt="Imagen de ${escapeHtml(item.nombre)}">
-        <div>
-          <h3>${escapeHtml(item.nombre)}</h3>
-          <p><span class="popup-dot ${escapeHtml(item.estado)}"></span>${escapeHtml(formatStatus(item.estado))}</p>
-          <a href="${escapeHtml(item.href)}">Ver ficha completa</a>
-          ${item.qgisZip ? `<a href="${escapeHtml(item.qgisZip)}" download>Descargar QGIS</a>` : ""}
-        </div>
-      </article>`;
+    const popupHtml = (item) => {
+      const palette = mapPalette(item);
+      return `
+        <article class="map-popup">
+          <img src="${escapeHtml(item.imagen)}" alt="Imagen de ${escapeHtml(item.nombre)}">
+          <div>
+            <h3>${escapeHtml(item.nombre)}</h3>
+            <p><span class="popup-dot ${escapeHtml(item.estado)}" style="background: ${palette.markerFill}"></span>${escapeHtml(formatStatus(item.estado))}</p>
+            <a href="${escapeHtml(item.href)}">Ver ficha completa</a>
+            ${item.qgisZip ? `<a href="${escapeHtml(item.qgisZip)}" download>Descargar QGIS</a>` : ""}
+          </div>
+        </article>`;
+    };
 
     const matchesFilters = (item) => {
       const allowed = new Set(markerToggles.filter((input) => input.checked).map((input) => input.value));
@@ -491,40 +637,54 @@
       markerRecords.clear();
 
       items.filter(hasCoords).forEach((item) => {
-        const isActive = item.estado === "activa";
         const latLng = L.latLng(item.coordenadas.lat, item.coordenadas.lng);
-        const marker = L.circleMarker(latLng, {
-          radius: 9,
-          color: isActive ? "#6b1a2b" : "#4a4543",
-          fillColor: isActive ? "#c9a84c" : "#9b9490",
-          fillOpacity: 0.92,
-          opacity: 0.95,
-          weight: 2
-        }).bindPopup(popupHtml(item), { className: "bodega-popup", maxWidth: 260 });
+        const marker = L.circleMarker(latLng, markerStyle(item)).bindPopup(popupHtml(item), {
+          className: "bodega-popup",
+          maxWidth: 260
+        });
 
         markerRecords.set(item.slug, { item, marker, latLng });
       });
     };
 
-    const listButton = (item, distance, selected) => `
-      <button class="map-list-item${selected === item.slug ? " is-selected" : ""}" type="button" data-focus-bodega="${escapeHtml(item.slug)}">
-        <span class="item-status ${escapeHtml(item.estado)}" aria-hidden="true"></span>
-        <span>
-          <strong>${escapeHtml(item.nombre)}</strong>
-          <small>${escapeHtml(item.ubicacion)}</small>
-        </span>
-        <em>${distance == null ? "sin coordenadas" : `${Math.max(0.01, distance / 1000).toFixed(2)} km`}</em>
-      </button>`;
+    const listButton = (item, distance, selected) => {
+      const palette = mapPalette(item);
+      return `
+        <button class="map-list-item${selected === item.slug ? " is-selected" : ""}" type="button" data-focus-bodega="${escapeHtml(item.slug)}">
+          <span class="item-status ${escapeHtml(item.estado)}" style="background: ${palette.markerFill}" aria-hidden="true"></span>
+          <span>
+            <strong>${escapeHtml(item.nombre)}</strong>
+            <small>${escapeHtml(item.ubicacion)}</small>
+          </span>
+          <em>${distance == null ? "sin coordenadas" : `${Math.max(0.01, distance / 1000).toFixed(2)} km`}</em>
+        </button>`;
+    };
 
     let selectedSlug = initialSlug;
 
     const paint = () => {
+      areaRecords.forEach(({ item, layers }, slug) => {
+        const visible = item && matchesFilters(item);
+        const selected = selectedSlug === slug;
+        layers.forEach((layer) => {
+          layer.setStyle(visible ? areaStyle(item, selected) : hiddenAreaStyle);
+          if (visible && selected) layer.bringToFront();
+          const element = layer.getElement?.();
+          if (element) {
+            element.style.pointerEvents = visible ? "auto" : "none";
+            element.classList.toggle("bodega-area-selected", Boolean(visible && selected));
+          }
+        });
+      });
+
       activeLayer.clearLayers();
       lostLayer.clearLayers();
       markerRecords.forEach(({ item, marker }) => {
         if (!matchesFilters(item)) return;
+        marker.setStyle(markerStyle(item, selectedSlug === item.slug));
         if (item.estado === "activa") activeLayer.addLayer(marker);
         else lostLayer.addLayer(marker);
+        marker.bringToFront();
       });
 
       const bounds = map.getBounds();
@@ -550,11 +710,11 @@
     const focusBodega = (slug) => {
       selectedSlug = slug;
       const record = markerRecords.get(slug);
+      paint();
       if (record) {
         map.setView(record.latLng, Math.max(map.getZoom(), 18), { animate: true });
         record.marker.openPopup();
       }
-      paint();
     };
 
     const fitMarkers = () => {
@@ -579,26 +739,22 @@
     const mergeBodegaGeoJson = (geoJson) => {
       if (!geoJson?.features?.length) return;
 
-      overlays.bodegas.addData(geoJson);
       const known = new Map(items.map((item) => [item.slug, item]));
 
       geoJson.features.forEach((feature) => {
         const props = feature.properties || {};
-        const slug = props.slug || normalize(props.nombre).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const slug = featureSlug(feature);
         if (!slug) return;
 
-        const pairs = collectCoordinatePairs(feature.geometry?.coordinates).filter(
-          ([lng, lat]) => Math.abs(lng) <= 180 && Math.abs(lat) <= 90
-        );
-        if (pairs.length === 0) return;
+        const center = representativeLatLng(feature.geometry);
+        if (!center) return;
 
-        const bounds = L.latLngBounds(pairs.map(([lng, lat]) => L.latLng(lat, lng)));
-        const center = bounds.getCenter();
         const existing = known.get(slug);
 
         if (existing) {
-          existing.coordenadas = existing.coordenadas || { lat: center.lat, lng: center.lng };
+          existing.coordenadas = { lat: center.lat, lng: center.lng };
           existing.ubicacion = props.ubicacion || existing.ubicacion;
+          existing.qgisZip = props.qgisZip || existing.qgisZip;
           return;
         }
 
@@ -608,13 +764,17 @@
           estado: normalize(props.estado).includes("desap") ? "desaparecida" : "activa",
           ubicacion: props.ubicacion || "Ubicacion pendiente",
           resumen: props.resumen || "Ficha procedente de la capa QGIS.",
-          imagen: "public/bodegas/placeholder-bodega.svg",
+          imagen: "public/historia/portada-bodegas.jpg",
           href: `catalogo.html`,
           coordenadas: { lat: center.lat, lng: center.lng }
         };
         items.push(item);
         known.set(slug, item);
       });
+
+      areaRecords.clear();
+      overlays.bodegas.clearLayers();
+      overlays.bodegas.addData(geoJson);
     };
 
     baseButtons.forEach((button) => {

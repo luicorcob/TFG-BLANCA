@@ -10,6 +10,9 @@ const MIME_TYPES = {
   ".dbf": "application/octet-stream",
   ".geojson": "application/geo+json; charset=utf-8",
   ".html": "text/html; charset=utf-8",
+  ".avif": "image/avif",
+  ".jpeg": "image/jpeg",
+  ".jpg": "image/jpeg",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
   ".pdf": "application/pdf",
@@ -18,6 +21,7 @@ const MIME_TYPES = {
   ".shp": "application/octet-stream",
   ".shx": "application/octet-stream",
   ".svg": "image/svg+xml; charset=utf-8",
+  ".webp": "image/webp",
   ".zip": "application/zip"
 };
 

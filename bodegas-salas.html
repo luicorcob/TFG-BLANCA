@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de Bodegas Salas a partir de la ficha de catalogación del TFG y la capa QGIS."
+    />
+    <title>Bodegas Salas | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+    </header>
+
+    <main>
+      <article class="ficha-completa">
+        <section class="bodega-hero">
+          <div class="page-shell hero-grid">
+            <div class="hero-copy" data-animate>
+              <a class="back-link" href="catalogo.html">Volver al catálogo</a>
+              <p class="eyebrow">Ficha de bodega</p>
+              <h1>Bodegas Salas</h1>
+              <p class="lead">
+                Fundada en 1920 por Rafael y Tomás Salas López, la bodega llegó a ocupar un complejo de 12.000 m² en
+                la calle del Pilar y cerró en 1990.
+              </p>
+              <div class="status-row">
+                <span class="status-pill desaparecida">Desaparecida</span>
+                <span>Final de la Calle del Pilar</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button-link primary" href="mapa.html?bodega=bodegas-salas">Ver en el mapa</a>
+                <a class="button-link ghost" href="public/qgis/bodegas-salas-qgis.zip" download>Descargar QGIS</a>
+                <button class="button-link ghost" type="button" data-print-ficha>Descargar ficha PDF</button>
+              </div>
+            </div>
+
+            <figure class="hero-media" data-animate>
+              <button
+                type="button"
+                data-lightbox-trigger
+                data-lightbox-src="public/bodegas/salas-fachada.webp"
+                data-lightbox-alt="Fachada de Bodegas Salas"
+                data-lightbox-caption="Fachada de Bodegas Salas"
+              >
+                <img src="public/bodegas/salas-fachada.webp" alt="Fachada de Bodegas Salas" />
+              </button>
+              <figcaption>La ficha documenta fachada, interiores, chimenea, vuelo histórico y propuesta PGOU.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="page-shell ficha-grid" aria-label="Ficha técnica de Bodegas Salas">
+          <aside class="technical-panel" data-animate>
+            <h2>Datos técnicos</h2>
+            <dl>
+              <div><dt>Estado</dt><dd>Desaparecida como actividad bodeguera; inmueble en abandono y semiruina</dd></div>
+              <div><dt>Ubicación</dt><dd>Final de la Calle del Pilar</dd></div>
+              <div><dt>Referencia catastral</dt><dd>6012002QB1461S0001RS</dd></div>
+              <div><dt>Coordenadas</dt><dd>37.390392, -6.559183</dd></div>
+              <div><dt>Fundación</dt><dd>1920</dd></div>
+              <div><dt>Año de construcción</dt><dd>1930</dd></div>
+              <div><dt>Cierre</dt><dd>1990</dd></div>
+              <div><dt>Propuesta PGOU</dt><dd>Reorganización para viviendas y museo del vino en 2005, no ejecutada</dd></div>
+            </dl>
+
+            <div class="mini-map" aria-label="Estado de datos cartográficos">
+              <span>Mapa</span>
+              <p>Polígono QGIS convertido desde la carpeta qgis ya listo.</p>
+              <a href="mapa.html?bodega=bodegas-salas">Abrir localización</a>
+            </div>
+
+            <section class="qgis-download" aria-labelledby="qgis-salas">
+              <span>QGIS</span>
+              <h3 id="qgis-salas">Archivos cartográficos</h3>
+              <p>Paquete ZIP con la capa de Bodegas Salas: SHP, SHX, DBF, PRJ y CPG.</p>
+              <a href="public/qgis/bodegas-salas-qgis.zip" download>Descargar ZIP QGIS</a>
+            </section>
+          </aside>
+
+          <div class="ficha-main">
+            <section class="visual-section" aria-labelledby="gallery-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Archivo visual</p>
+                <h2 id="gallery-title">Galería documental</h2>
+              </div>
+              <div class="gallery-track" data-gallery>
+                <div class="gallery-row">
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/salas-fachada.webp" data-lightbox-alt="Fachada de Bodegas Salas" data-lightbox-caption="Fachada de Bodegas Salas">
+                      <img src="public/bodegas/salas-fachada.webp" alt="Fachada de Bodegas Salas" loading="lazy" />
+                    </button>
+                    <figcaption>Fachada de Bodegas Salas.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/salas-interior.webp" data-lightbox-alt="Interior de Bodegas Salas" data-lightbox-caption="Interior de Bodegas Salas">
+                      <img src="public/bodegas/salas-interior.webp" alt="Interior de Bodegas Salas" loading="lazy" />
+                    </button>
+                    <figcaption>Interior de nave de crianza.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/salas-chimenea.webp" data-lightbox-alt="Chimenea de Bodegas Salas" data-lightbox-caption="Chimenea de Bodegas Salas">
+                      <img src="public/bodegas/salas-chimenea.webp" alt="Chimenea de Bodegas Salas" loading="lazy" />
+                    </button>
+                    <figcaption>Chimenea del conjunto bodeguero.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/salas-vista-aerea.jpg" data-lightbox-alt="Vista aérea de Bodegas Salas" data-lightbox-caption="Vista aérea de Bodegas Salas">
+                      <img src="public/bodegas/salas-vista-aerea.jpg" alt="Vista aérea de Bodegas Salas" loading="lazy" />
+                    </button>
+                    <figcaption>Vista aérea histórica.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/salas-propuesta-pgou.png" data-lightbox-alt="Propuesta PGOU para Bodegas Salas" data-lightbox-caption="Propuesta PGOU para Bodegas Salas">
+                      <img src="public/bodegas/salas-propuesta-pgou.png" alt="Propuesta PGOU para Bodegas Salas" loading="lazy" />
+                    </button>
+                    <figcaption>Propuesta de reorganización del PGOU de 2005.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="content-panel" aria-labelledby="lectura-patrimonial" data-animate>
+              <p class="eyebrow">Historia documentada</p>
+              <h2 id="lectura-patrimonial">Lectura patrimonial</h2>
+              <p>
+                Bodegas Salas fue fundada en 1920 por los hermanos Rafael y Tomás Salas López, antiguos trabajadores de
+                la casa de Julián Espinosa. Su primera sede estuvo en la antigua Bodega Hermanos Navarro.
+              </p>
+              <p>
+                Tras diez años, la firma se trasladó hacia 1930 a la calle del Pilar con la Avenida de Huelva. El nuevo
+                complejo alcanzó 12.000 m² y una capacidad aproximada para 6.000 bocoyes.
+              </p>
+              <p>
+                La ficha destaca la chimenea de 1929, con cerámica azul y amarilla, las naves de crianza con techos de
+                madera y arquerías, la torre alambique, las oficinas y las instalaciones de embotellado.
+              </p>
+              <p>
+                La bodega consolidó productos como el Coñac Radiante, Soleras Salas, vermuts y amontillados. En 1966,
+                tras el cierre de Bodegas Morales, adquirió soleras de Fino Rociero. Cerró en 1990 y el inmueble
+                permanece en abandono y semiruina.
+              </p>
+            </section>
+
+            <section class="ficha-timeline" aria-labelledby="timeline-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Etapas</p>
+                <h2 id="timeline-title">Cronología de la bodega</h2>
+              </div>
+              <ol>
+                <li><time>1920</time><div><h3>Fundación</h3><p>Rafael y Tomás Salas López fundan la firma.</p></div></li>
+                <li><time>1929</time><div><h3>Chimenea</h3><p>Se levanta la chimenea que singulariza el conjunto.</p></div></li>
+                <li><time>1930</time><div><h3>Traslado</h3><p>La bodega se instala en la calle del Pilar con Avenida de Huelva.</p></div></li>
+                <li><time>1966</time><div><h3>Soleras</h3><p>Tras el cierre de Morales, Salas adquiere soleras de Fino Rociero.</p></div></li>
+                <li><time>1990</time><div><h3>Cierre</h3><p>La bodega cierra como una de las últimas grandes firmas del municipio.</p></div></li>
+                <li><time>2005</time><div><h3>PGOU</h3><p>Se propone una reorganización para viviendas y museo del vino que no llega a ejecutarse.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="environment-section" aria-labelledby="environment-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Entorno histórico</p>
+                <h2 id="environment-title">Lectura urbana documentada</h2>
+              </div>
+              <p>
+                El complejo se sitúa en el borde de la calle del Pilar, ligado a la expansión de las bodegas hacia la
+                Avenida de Huelva. La ficha lo registra como una pieza de gran escala todavía reconocible.
+              </p>
+            </section>
+
+            <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
+              <h2>Fuentes</h2>
+              <ul>
+                <li>Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.</li>
+                <li>Ficha Ejemplo Maquetación 1.07, ficha de catalogación de Bodegas Salas.</li>
+                <li>Capa QGIS qgis ya listo/B.SALAS.shp, convertida a GeoJSON EPSG:4326.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <nav class="page-shell ficha-nav" aria-label="Navegación entre fichas">
+          <a href="bodegas-espinosa.html"><span>Anterior</span>Bodegas Espinosa</a>
+          <span></span>
+        </nav>
+      </article>
+    </main>
+
+    <div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar visor">Cerrar</button>
+      <figure><img src="" alt="" data-lightbox-image /><figcaption data-lightbox-caption></figcaption></figure>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><p class="eyebrow">La Palma del Condado</p><strong>Arquitectura y memoria perdida del vino</strong><p>Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual.</p></div>
+        <div class="footer-meta"><p><span>Autora</span> Blanca Rubio García</p><p><span>Tutora</span> Rocío Romero</p><p><span>Institución</span> ETSA, Universidad de Sevilla</p></div>
+        <nav class="footer-links" aria-label="Navegación secundaria"><a href="historia.html">Historia</a><a href="catalogo.html">Catálogo</a><a href="mapa.html">Mapa</a><a href="sobre-el-proyecto.html">Metodología</a><a href="contacto.html">Contacto</a></nav>
+      </div>
+      <div class="footer-bottom"><span>ETSA, Universidad de Sevilla · 2026</span><span>Patrimonio bodeguero de La Palma del Condado</span></div>
+    </footer>
+  </body>
+</html>

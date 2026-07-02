@@ -1530,6 +1530,23 @@ button {
   border-radius: var(--radio);
 }
 
+.territory-diagram img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border: 1px solid rgba(255, 253, 248, 0.18);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  object-fit: cover;
+  transition:
+    opacity var(--motion-medium) ease,
+    transform var(--motion-slow) var(--ease-out);
+}
+
+.territory-diagram:hover img {
+  opacity: 0.92;
+  transform: scale(1.025);
+}
+
 .territory-diagram figcaption,
 .hero-media figcaption,
 .gallery-track figcaption,
@@ -2387,6 +2404,30 @@ textarea {
   font-size: 0.64rem;
 }
 
+.leaflet-interactive.bodega-area-selected {
+  animation:
+    selected-area-dash 1.15s linear infinite,
+    selected-area-pulse 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(53, 16, 24, 0.24));
+}
+
+@keyframes selected-area-dash {
+  to {
+    stroke-dashoffset: -34;
+  }
+}
+
+@keyframes selected-area-pulse {
+  0%,
+  100% {
+    fill-opacity: 0.48;
+  }
+
+  50% {
+    fill-opacity: 0.64;
+  }
+}
+
 .bodega-popup .leaflet-popup-content-wrapper {
   overflow: hidden;
   border-radius: var(--radio);
@@ -2518,6 +2559,15 @@ textarea {
   border-radius: var(--radio);
   background: var(--blanco);
   object-fit: cover;
+}
+
+.hero-media img[src$="verdier-maquina-destilacion.png"],
+.gallery-row img[src$="verdier-maquina-destilacion.png"],
+.preview-card img[src$="verdier-maquina-destilacion.png"],
+.bodega-card img[src$="verdier-maquina-destilacion.png"],
+.map-popup img[src$="verdier-maquina-destilacion.png"] {
+  background: #f8f1dd;
+  object-fit: contain;
 }
 
 .gallery-row figcaption,

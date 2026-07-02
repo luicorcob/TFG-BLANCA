@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de Bodegas Pichardo a partir de la ficha de catalogación del TFG y la capa QGIS."
+    />
+    <title>Bodegas Pichardo | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+    </header>
+
+    <main>
+      <article class="ficha-completa">
+        <section class="bodega-hero">
+          <div class="page-shell hero-grid">
+            <div class="hero-copy" data-animate>
+              <a class="back-link" href="catalogo.html">Volver al catálogo</a>
+              <p class="eyebrow">Ficha de bodega</p>
+              <h1>Bodegas Pichardo</h1>
+              <p class="lead">
+                Fundada en 1895 por Miguel Pichardo Lepe, llegó a formar uno de los conjuntos bodegueros más grandes
+                del Condado, organizado alrededor de la estación.
+              </p>
+              <div class="status-row">
+                <span class="status-pill desaparecida">Desaparecida</span>
+                <span>Av. de la Constitución y C/ Presidente Adolfo Suárez</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button-link primary" href="mapa.html?bodega=bodegas-pichardo">Ver en el mapa</a>
+                <a class="button-link ghost" href="public/qgis/bodegas-pichardo-qgis.zip" download>Descargar QGIS</a>
+                <button class="button-link ghost" type="button" data-print-ficha>Descargar ficha PDF</button>
+              </div>
+            </div>
+
+            <figure class="hero-media" data-animate>
+              <button
+                type="button"
+                data-lightbox-trigger
+                data-lightbox-src="public/bodegas/pichardo-fachada.jpg"
+                data-lightbox-alt="Imagen histórica de Bodegas Pichardo"
+                data-lightbox-caption="Imagen histórica de Bodegas Pichardo"
+              >
+                <img src="public/bodegas/pichardo-fachada.jpg" alt="Imagen histórica de Bodegas Pichardo" />
+              </button>
+              <figcaption>La ficha distingue las naves El Cine, El Molino, La Nueva y La Vinagrera.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="page-shell ficha-grid" aria-label="Ficha técnica de Bodegas Pichardo">
+          <aside class="technical-panel" data-animate>
+            <h2>Datos técnicos</h2>
+            <dl>
+              <div><dt>Estado</dt><dd>Desaparecida como conjunto histórico</dd></div>
+              <div><dt>Ubicación</dt><dd>Varias ubicaciones en Av. de la Constitución y C/ Presidente Adolfo Suárez</dd></div>
+              <div><dt>Referencia catastral</dt><dd>6710059QB1461S0001JS; 6412502QB1461S0001GS; 6710057QB1461S0002MD</dd></div>
+              <div><dt>Coordenadas</dt><dd>37.390032, -6.555545</dd></div>
+              <div><dt>Año de construcción</dt><dd>1895</dd></div>
+              <div><dt>Cese de actividad</dt><dd>1985</dd></div>
+              <div><dt>Desaparición parcial</dt><dd>2006, demolición de El Molino, La Nueva y parte de El Cine</dd></div>
+              <div><dt>Bodegas posteriores</dt><dd>Cooperativa Nuestra Señora de Guía y Bodegas Torrepalma</dd></div>
+            </dl>
+
+            <div class="mini-map" aria-label="Estado de datos cartográficos">
+              <span>Mapa</span>
+              <p>La capa QGIS agrupa cuatro polígonos correspondientes a varias naves del conjunto.</p>
+              <a href="mapa.html?bodega=bodegas-pichardo">Abrir localización</a>
+            </div>
+
+            <section class="qgis-download" aria-labelledby="qgis-pichardo">
+              <span>QGIS</span>
+              <h3 id="qgis-pichardo">Archivos cartográficos</h3>
+              <p>Paquete ZIP con la capa de Bodegas Pichardo: SHP, SHX, DBF, PRJ y CPG.</p>
+              <a href="public/qgis/bodegas-pichardo-qgis.zip" download>Descargar ZIP QGIS</a>
+            </section>
+          </aside>
+
+          <div class="ficha-main">
+            <section class="visual-section" aria-labelledby="gallery-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Archivo visual</p>
+                <h2 id="gallery-title">Galería documental</h2>
+              </div>
+              <div class="gallery-track" data-gallery>
+                <div class="gallery-row">
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/pichardo-fachada.jpg" data-lightbox-alt="Bodegas Pichardo" data-lightbox-caption="Bodegas Pichardo">
+                      <img src="public/bodegas/pichardo-fachada.jpg" alt="Bodegas Pichardo" loading="lazy" />
+                    </button>
+                    <figcaption>Imagen histórica de Bodegas Pichardo.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/pichardo-antes.png" data-lightbox-alt="Bodegas Pichardo antes de la demolición" data-lightbox-caption="Bodegas Pichardo antes de la demolición">
+                      <img src="public/bodegas/pichardo-antes.png" alt="Bodegas Pichardo antes de la demolición" loading="lazy" />
+                    </button>
+                    <figcaption>Estado previo del conjunto.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/pichardo-despues.png" data-lightbox-alt="Bodegas Pichardo después de la demolición" data-lightbox-caption="Bodegas Pichardo después de la demolición">
+                      <img src="public/bodegas/pichardo-despues.png" alt="Bodegas Pichardo después de la demolición" loading="lazy" />
+                    </button>
+                    <figcaption>Transformación posterior del recinto.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/pichardo-interior.png" data-lightbox-alt="Interior de Bodegas Pichardo" data-lightbox-caption="Interior de Bodegas Pichardo">
+                      <img src="public/bodegas/pichardo-interior.png" alt="Interior de Bodegas Pichardo" loading="lazy" />
+                    </button>
+                    <figcaption>Interior de una de las naves.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="content-panel" aria-labelledby="lectura-patrimonial" data-animate>
+              <p class="eyebrow">Historia documentada</p>
+              <h2 id="lectura-patrimonial">Lectura patrimonial</h2>
+              <p>
+                Bodegas Pichardo fue fundada en 1895 por Miguel Pichardo Lepe. La empresa comenzó en un pequeño
+                despacho de la calle Real y terminó ocupando una superficie aproximada de 22.660 m².
+              </p>
+              <p>
+                El conjunto se dividía en naves situadas alrededor de la estación: El Cine, El Molino, La Cerca, La
+                Nueva y La Vinagrera. Esta implantación fue decisiva para enlazar el casco histórico con el ámbito del
+                ferrocarril.
+              </p>
+              <p>
+                Entre sus productos destacaron el Vermut Pichardo y el Fino Rabo Conejo. La producción de vinagres en
+                La Vinagrera fue clave para la posterior obtención de la D.O.P. Vinagre Condado de Huelva.
+              </p>
+              <p>
+                Tras la muerte del fundador en 1947, la empresa pasó a sus hijos y se constituyó como sociedad limitada.
+                La actividad cesó en 1985. En 2006 se demolió gran parte de El Cine y varias naves históricas.
+              </p>
+            </section>
+
+            <section class="ficha-timeline" aria-labelledby="timeline-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Etapas</p>
+                <h2 id="timeline-title">Cronología de la bodega</h2>
+              </div>
+              <ol>
+                <li><time>1895</time><div><h3>Fundación</h3><p>Miguel Pichardo Lepe funda la firma.</p></div></li>
+                <li><time>1929</time><div><h3>Reconocimiento</h3><p>La bodega obtiene proyección con galardones como la medalla de oro de la Exposición Iberoamericana.</p></div></li>
+                <li><time>1939</time><div><h3>Alambique</h3><p>Se reconstruye la torre alambique de destilación.</p></div></li>
+                <li><time>1947</time><div><h3>Sucesión</h3><p>La empresa pasa a los hijos del fundador y adopta forma de sociedad limitada.</p></div></li>
+                <li><time>1985</time><div><h3>Cese</h3><p>La bodega cesa su actividad por la crisis del sector vinícola.</p></div></li>
+                <li><time>2006</time><div><h3>Demolición</h3><p>Se derriban El Molino, La Nueva y parte de la nave El Cine.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="environment-section" aria-labelledby="environment-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Entorno histórico</p>
+                <h2 id="environment-title">Lectura urbana documentada</h2>
+              </div>
+              <p>
+                La ficha muestra una implantación dispersa pero conectada por el ferrocarril. Algunas naves pasaron a
+                usos posteriores como la Cooperativa del Vino y Bodegas Torrepalma.
+              </p>
+            </section>
+
+            <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
+              <h2>Fuentes</h2>
+              <ul>
+                <li>Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.</li>
+                <li>Ficha Ejemplo Maquetación 1.07, ficha de catalogación de Bodegas Pichardo.</li>
+                <li>Capa QGIS qgis ya listo/B.PICHARDO.shp, convertida a GeoJSON EPSG:4326.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <nav class="page-shell ficha-nav" aria-label="Navegación entre fichas">
+          <a href="bodegas-morales.html"><span>Anterior</span>Bodegas Loewenthal - Morales</a>
+          <a href="bodegas-espinosa.html"><span>Siguiente</span>Bodegas Espinosa</a>
+        </nav>
+      </article>
+    </main>
+
+    <div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar visor">Cerrar</button>
+      <figure><img src="" alt="" data-lightbox-image /><figcaption data-lightbox-caption></figcaption></figure>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><p class="eyebrow">La Palma del Condado</p><strong>Arquitectura y memoria perdida del vino</strong><p>Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual.</p></div>
+        <div class="footer-meta"><p><span>Autora</span> Blanca Rubio García</p><p><span>Tutora</span> Rocío Romero</p><p><span>Institución</span> ETSA, Universidad de Sevilla</p></div>
+        <nav class="footer-links" aria-label="Navegación secundaria"><a href="historia.html">Historia</a><a href="catalogo.html">Catálogo</a><a href="mapa.html">Mapa</a><a href="sobre-el-proyecto.html">Metodología</a><a href="contacto.html">Contacto</a></nav>
+      </div>
+      <div class="footer-bottom"><span>ETSA, Universidad de Sevilla · 2026</span><span>Patrimonio bodeguero de La Palma del Condado</span></div>
+    </footer>
+  </body>
+</html>

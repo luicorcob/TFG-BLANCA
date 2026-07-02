@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de Bodegas Espinosa a partir de la ficha de catalogación del TFG y la capa QGIS."
+    />
+    <title>Bodegas Espinosa | Arquitectura y memoria perdida del vino</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav-root>
+      <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+    </header>
+
+    <main>
+      <article class="ficha-completa">
+        <section class="bodega-hero">
+          <div class="page-shell hero-grid">
+            <div class="hero-copy" data-animate>
+              <a class="back-link" href="catalogo.html">Volver al catálogo</a>
+              <p class="eyebrow">Ficha de bodega</p>
+              <h1>Bodegas Espinosa</h1>
+              <p class="lead">
+                Fundada oficialmente en 1907 por Julián Espinosa Escolar, enlaza la antigua bodega Verdier con la nave
+                El Cortinal, dedicada al soleraje.
+              </p>
+              <div class="status-row">
+                <span class="status-pill desaparecida">Desaparecida</span>
+                <span>C/ Nicolás Gómez González y Ronda de Legionarios 18</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button-link primary" href="mapa.html?bodega=bodegas-espinosa">Ver en el mapa</a>
+                <a class="button-link ghost" href="public/qgis/bodegas-espinosa-qgis.zip" download>Descargar QGIS</a>
+                <button class="button-link ghost" type="button" data-print-ficha>Descargar ficha PDF</button>
+              </div>
+            </div>
+
+            <figure class="hero-media" data-animate>
+              <button
+                type="button"
+                data-lightbox-trigger
+                data-lightbox-src="public/bodegas/espinosa-hijos-julian.png"
+                data-lightbox-alt="Bodega Hijos de Julián Espinosa"
+                data-lightbox-caption="Bodega Hijos de Julián Espinosa"
+              >
+                <img src="public/bodegas/espinosa-hijos-julian.png" alt="Bodega Hijos de Julián Espinosa" />
+              </button>
+              <figcaption>La ficha incorpora la antigua Verdier, El Cortinal e imágenes interiores de archivo.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="page-shell ficha-grid" aria-label="Ficha técnica de Bodegas Espinosa">
+          <aside class="technical-panel" data-animate>
+            <h2>Datos técnicos</h2>
+            <dl>
+              <div><dt>Estado</dt><dd>Desaparecida como actividad bodeguera</dd></div>
+              <div><dt>Ubicación</dt><dd>Calle Nicolás Gómez González nº 13-14 y Ronda de Legionarios 18</dd></div>
+              <div><dt>Referencia catastral</dt><dd>6407040QB1460N0001SP; 6710042QB1461S0001YS</dd></div>
+              <div><dt>Coordenadas</dt><dd>37.388255, -6.556298</dd></div>
+              <div><dt>Año de construcción</dt><dd>1890</dd></div>
+              <div><dt>Fundación oficial</dt><dd>1907</dd></div>
+              <div><dt>Cierre</dt><dd>1977</dd></div>
+              <div><dt>Uso posterior</dt><dd>La nave El Cortinal pasa a propiedad de Mosaicos Pino</dd></div>
+            </dl>
+
+            <div class="mini-map" aria-label="Estado de datos cartográficos">
+              <span>Mapa</span>
+              <p>La capa QGIS conserva tres polígonos para las piezas documentadas.</p>
+              <a href="mapa.html?bodega=bodegas-espinosa">Abrir localización</a>
+            </div>
+
+            <section class="qgis-download" aria-labelledby="qgis-espinosa">
+              <span>QGIS</span>
+              <h3 id="qgis-espinosa">Archivos cartográficos</h3>
+              <p>Paquete ZIP con la capa de Bodegas Espinosa: SHP, SHX, DBF, PRJ y CPG.</p>
+              <a href="public/qgis/bodegas-espinosa-qgis.zip" download>Descargar ZIP QGIS</a>
+            </section>
+          </aside>
+
+          <div class="ficha-main">
+            <section class="visual-section" aria-labelledby="gallery-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Archivo visual</p>
+                <h2 id="gallery-title">Galería documental</h2>
+              </div>
+              <div class="gallery-track" data-gallery>
+                <div class="gallery-row">
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/espinosa-hijos-julian.png" data-lightbox-alt="Bodega Hijos de Julián Espinosa" data-lightbox-caption="Bodega Hijos de Julián Espinosa">
+                      <img src="public/bodegas/espinosa-hijos-julian.png" alt="Bodega Hijos de Julián Espinosa" loading="lazy" />
+                    </button>
+                    <figcaption>Bodega Hijos de Julián Espinosa.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/espinosa-anuncio.png" data-lightbox-alt="Anuncio de Hijos de Julián Espinosa" data-lightbox-caption="Anuncio de Hijos de Julián Espinosa">
+                      <img src="public/bodegas/espinosa-anuncio.png" alt="Anuncio de Hijos de Julián Espinosa" loading="lazy" />
+                    </button>
+                    <figcaption>Anuncio histórico de la firma.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/espinosa-cortinal.png" data-lightbox-alt="Interior de la bodega El Cortinal" data-lightbox-caption="Interior de la bodega El Cortinal">
+                      <img src="public/bodegas/espinosa-cortinal.png" alt="Interior de la bodega El Cortinal" loading="lazy" />
+                    </button>
+                    <figcaption>Interior de El Cortinal.</figcaption>
+                  </figure>
+                  <figure>
+                    <button type="button" data-lightbox-trigger data-lightbox-src="public/bodegas/espinosa-ubicacion-1.png" data-lightbox-alt="Ubicación de Bodegas Espinosa en vuelo histórico" data-lightbox-caption="Ubicación de Bodegas Espinosa en vuelo histórico">
+                      <img src="public/bodegas/espinosa-ubicacion-1.png" alt="Ubicación de Bodegas Espinosa en vuelo histórico" loading="lazy" />
+                    </button>
+                    <figcaption>Ubicación sobre vuelo histórico.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="content-panel" aria-labelledby="lectura-patrimonial" data-animate>
+              <p class="eyebrow">Historia documentada</p>
+              <h2 id="lectura-patrimonial">Lectura patrimonial</h2>
+              <p>
+                El origen de la firma se remonta a 1885, con una destilería de alcoholes. Bodegas Espinosa se fundó
+                oficialmente en La Palma del Condado en 1907 por Julián Espinosa Escolar.
+              </p>
+              <p>
+                La bodega se consolidó cuando adquirió parte de Bodegas Verdier tras su cierre, en la avenida de la
+                Constitución junto a la estación. La chimenea quedó fuera de la operación, ya que Julián Espinosa
+                destilaba en Almonte.
+              </p>
+              <p>
+                En la Ronda de los Legionarios se encontraba la nave El Cortinal, destinada al soleraje y destacada por
+                sus 110 m de longitud. Contaba con laboratorio, oficinas, lavadero y cobertizo de calderas.
+              </p>
+              <p>
+                Tras el fallecimiento del fundador en 1943, la firma pasó a denominarse Hijos de Julián Espinosa. La
+                actividad se mantuvo hasta 1977. La nave primitiva fue demolida para la urbanización La Moncloa y El
+                Cortinal fue ocupada por Mosaicos Pino.
+              </p>
+            </section>
+
+            <section class="ficha-timeline" aria-labelledby="timeline-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Etapas</p>
+                <h2 id="timeline-title">Cronología de la bodega</h2>
+              </div>
+              <ol>
+                <li><time>1885</time><div><h3>Origen</h3><p>La firma nace vinculada a una destilería de alcoholes.</p></div></li>
+                <li><time>1907</time><div><h3>Fundación oficial</h3><p>Julián Espinosa Escolar consolida la sede en La Palma del Condado.</p></div></li>
+                <li><time>1943</time><div><h3>Sucesión</h3><p>La empresa pasa a denominarse Hijos de Julián Espinosa.</p></div></li>
+                <li><time>1977</time><div><h3>Cierre</h3><p>La crisis del sector obliga al cierre de la actividad.</p></div></li>
+                <li><time>1989</time><div><h3>Transformación</h3><p>La nave primitiva desaparece con la urbanización La Moncloa.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="environment-section" aria-labelledby="environment-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Entorno histórico</p>
+                <h2 id="environment-title">Lectura urbana documentada</h2>
+              </div>
+              <p>
+                La ficha conecta dos ámbitos urbanos: la antigua zona Verdier junto a la estación y la Ronda de
+                Legionarios, donde El Cortinal prolongó la memoria material de la bodega.
+              </p>
+            </section>
+
+            <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
+              <h2>Fuentes</h2>
+              <ul>
+                <li>Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.</li>
+                <li>Ficha Ejemplo Maquetación 1.07, ficha de catalogación de Bodegas Espinosa.</li>
+                <li>Capa QGIS qgis ya listo/B.ESPINOSA.shp, convertida a GeoJSON EPSG:4326.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <nav class="page-shell ficha-nav" aria-label="Navegación entre fichas">
+          <a href="bodegas-pichardo.html"><span>Anterior</span>Bodegas Pichardo</a>
+          <a href="bodegas-salas.html"><span>Siguiente</span>Bodegas Salas</a>
+        </nav>
+      </article>
+    </main>
+
+    <div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar visor">Cerrar</button>
+      <figure><img src="" alt="" data-lightbox-image /><figcaption data-lightbox-caption></figcaption></figure>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><p class="eyebrow">La Palma del Condado</p><strong>Arquitectura y memoria perdida del vino</strong><p>Publicación digital del Trabajo de Fin de Grado sobre el patrimonio bodeguero histórico y actual.</p></div>
+        <div class="footer-meta"><p><span>Autora</span> Blanca Rubio García</p><p><span>Tutora</span> Rocío Romero</p><p><span>Institución</span> ETSA, Universidad de Sevilla</p></div>
+        <nav class="footer-links" aria-label="Navegación secundaria"><a href="historia.html">Historia</a><a href="catalogo.html">Catálogo</a><a href="mapa.html">Mapa</a><a href="sobre-el-proyecto.html">Metodología</a><a href="contacto.html">Contacto</a></nav>
+      </div>
+      <div class="footer-bottom"><span>ETSA, Universidad de Sevilla · 2026</span><span>Patrimonio bodeguero de La Palma del Condado</span></div>
+    </footer>
+  </body>
+</html>
