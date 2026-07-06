@@ -19,6 +19,11 @@ window.BODEGAS = [
         "caption": "Interior de Bodegas Rubio 1893 SL"
       },
       {
+        "src": "IMAGENES/B.RUBIO.webp",
+        "alt": "Vista documental de Bodegas Rubio",
+        "caption": "Vista documental de Bodegas Rubio"
+      },
+      {
         "src": "IMAGENES/BODEGAS RUBIO.jpg",
         "alt": "Imagen documental de Bodegas Rubio",
         "caption": "Imagen documental de Bodegas Rubio"
@@ -27,6 +32,21 @@ window.BODEGAS = [
         "src": "IMAGENES/BODEGAS RUBIO 2.avif",
         "alt": "Vista interior de Bodegas Rubio",
         "caption": "Vista interior de Bodegas Rubio"
+      },
+      {
+        "src": "IMAGENES/FOTOGRAMA VUELO AÑOS 50 1950-1959 (TODAVIA NO ESTABA CONSTRUIDO B.RUBIO Y ESTABAMOS UBICADOS EN LA B.DE EL CURA AGUILAR )_IGN.png",
+        "alt": "Vuelo histórico de los años 50 previo a la construcción de Bodegas Rubio",
+        "caption": "Vuelo histórico de los años 50 previo a la construcción de Bodegas Rubio"
+      },
+      {
+        "src": "IMAGENES/FOTOGRAMA VUELO AÑOS 50 1950-1959 (TODAVIA NO ESTABA CONSTRUIDO B.RUBIO Y ESTABAMOS UBICADOS EN LA B.DE EL CURA AGUILAR )_IGN 2.0.png",
+        "alt": "Detalle del vuelo histórico de los años 50 vinculado a la ubicación anterior de Bodegas Rubio",
+        "caption": "Detalle del vuelo histórico de los años 50 vinculado a la ubicación anterior de Bodegas Rubio"
+      },
+      {
+        "src": "IMAGENES/FOTOGRAMA VUELO INTERMINISTERIAL 1976-1986 (APARECE POR 1º VEZ EL EDIFICIO DE BODEGAS RUBIO_IGN.png",
+        "alt": "Vuelo interministerial en el que aparece por primera vez el edificio de Bodegas Rubio",
+        "caption": "Vuelo interministerial en el que aparece por primera vez el edificio de Bodegas Rubio"
       }
     ],
     "href": "bodegas-rubio.html",
@@ -84,22 +104,12 @@ window.BODEGAS = [
     "documentacion": "catalogacion",
     "ubicacion": "Calle Nicolás Gómez González entre el nº 13-14",
     "resumen": "Fundada en 1891 por Celestino Verdier Martín sobre la primitiva destilería de Nicolás Gómez; desapareció en 1970.",
-    "imagen": "public/bodegas/verdier-maquina-destilacion.png",
+    "imagen": "IMAGENES/MAQUINA DE DESTILACION NICOLAS GOMEZ (CAP 4 ).png",
     "imagenes": [
-      {
-        "src": "public/bodegas/verdier-maquina-destilacion.png",
-        "alt": "Aparato de destilación vinculado al contexto industrial de Verdier",
-        "caption": "Aparato de destilación vinculado al contexto industrial de Verdier"
-      },
       {
         "src": "IMAGENES/MAQUINA DE DESTILACION NICOLAS GOMEZ (CAP 4 ).png",
         "alt": "Máquina de destilación de Nicolás Gómez",
         "caption": "Máquina de destilación de Nicolás Gómez"
-      },
-      {
-        "src": "IMAGENES/CHIMENEA B.SALAS.webp",
-        "alt": "Chimenea industrial documentada en el archivo visual",
-        "caption": "Chimenea industrial documentada en el archivo visual"
       }
     ],
     "href": "bodegas-verdier.html",
@@ -153,30 +163,30 @@ window.BODEGAS = [
     "documentacion": "catalogacion",
     "ubicacion": "Calle de la Estación nº 1",
     "resumen": "Fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; la sede definitiva frente al ferrocarril se edificó entre 1898 y 1902.",
-    "imagen": "public/bodegas/morales-1950.png",
+    "imagen": "IMAGENES/BODEGAS MORALES PRINICPIOS AÑOS 50.png",
     "imagenes": [
       {
-        "src": "public/bodegas/morales-1950.png",
+        "src": "IMAGENES/BODEGAS MORALES PRINICPIOS AÑOS 50.png",
         "alt": "Bodegas Loewenthal - Morales a principios de los años 50",
         "caption": "Bodegas Loewenthal - Morales a principios de los años 50"
       },
       {
-        "src": "public/bodegas/morales-interior.png",
+        "src": "IMAGENES/INTERIOR B.MORALES (IES LA PALMA ).png",
         "alt": "Interior actual de Bodegas Morales",
         "caption": "Interior actual de Bodegas Morales"
       },
       {
-        "src": "public/bodegas/morales-interior-2.png",
+        "src": "IMAGENES/INTERIOR B.MORALES 2 (ARCHIVO FAMILIAR).png",
         "alt": "Segundo interior documentado de Bodegas Morales",
         "caption": "Segundo interior documentado de Bodegas Morales"
       },
       {
-        "src": "public/bodegas/morales-ubicacion-anterior.png",
+        "src": "IMAGENES/UBICACIÓN ANTERIOR MORALES EN C.CARLOS MAURICIO MORALES 44.png",
         "alt": "Ubicación anterior en calle Carlos Mauricio Morales nº 44",
         "caption": "Ubicación anterior en calle Carlos Mauricio Morales nº 44"
       },
       {
-        "src": "public/bodegas/morales-volumetria.png",
+        "src": "IMAGENES/VOLUMEN B.MORALES.png",
         "alt": "Volumetría de Bodegas Loewenthal - Morales",
         "caption": "Volumetría de Bodegas Loewenthal - Morales"
       }
@@ -232,37 +242,47 @@ window.BODEGAS = [
     "documentacion": "catalogacion",
     "ubicacion": "Avenida de la Constitución y calle Presidente Adolfo Suárez",
     "resumen": "Fundada en 1895 por Miguel Pichardo Lepe; articuló un gran conjunto de naves en torno a la estación.",
-    "imagen": "public/bodegas/pichardo-fachada.jpg",
+    "imagen": "IMAGENES/BODEGAS PICHARDO (FACEBOOK).jpg",
     "imagenes": [
       {
-        "src": "public/bodegas/pichardo-fachada.jpg",
+        "src": "IMAGENES/BODEGAS PICHARDO (FACEBOOK).jpg",
         "alt": "Imagen histórica de Bodegas Pichardo",
         "caption": "Imagen histórica de Bodegas Pichardo"
       },
       {
-        "src": "public/bodegas/pichardo-antes.png",
+        "src": "IMAGENES/ANTES B. PICHARDO.png",
         "alt": "Bodegas Pichardo antes de la demolición",
         "caption": "Bodegas Pichardo antes de la demolición"
       },
       {
-        "src": "public/bodegas/pichardo-despues.png",
+        "src": "IMAGENES/DESPUES B. PICHARDO.png",
         "alt": "Bodegas Pichardo después de la demolición",
         "caption": "Bodegas Pichardo después de la demolición"
       },
       {
-        "src": "public/bodegas/pichardo-interior.png",
+        "src": "IMAGENES/INTERIOR B. PICHARDO  .png",
         "alt": "Interior de Bodegas Pichardo",
         "caption": "Interior de Bodegas Pichardo"
       },
       {
-        "src": "public/bodegas/pichardo-interior-2.png",
+        "src": "IMAGENES/INTERIOR B. PICHARDO 2.png",
         "alt": "Segundo interior documentado de Bodegas Pichardo",
         "caption": "Segundo interior documentado de Bodegas Pichardo"
       },
       {
         "src": "IMAGENES/INTERIOR B. PICHARDO 3.png",
-        "alt": "Interior documental de Bodegas Pichardo",
-        "caption": "Interior documental de Bodegas Pichardo"
+        "alt": "Tercer interior documentado de Bodegas Pichardo",
+        "caption": "Tercer interior documentado de Bodegas Pichardo"
+      },
+      {
+        "src": "IMAGENES/INTERIOR B. PICHARDO 4.png",
+        "alt": "Cuarto interior documentado de Bodegas Pichardo",
+        "caption": "Cuarto interior documentado de Bodegas Pichardo"
+      },
+      {
+        "src": "IMAGENES/UBI B.PICHARDO VUELO AÑOS 50 1950-1959 .png",
+        "alt": "Ubicación de Bodegas Pichardo en vuelo histórico",
+        "caption": "Ubicación de Bodegas Pichardo en vuelo histórico"
       }
     ],
     "href": "bodegas-pichardo.html",
@@ -322,35 +342,35 @@ window.BODEGAS = [
     "documentacion": "catalogacion",
     "ubicacion": "Calle Nicolás Gómez González nº 13-14 y Ronda de Legionarios nº 18",
     "resumen": "Fundada oficialmente en 1907 por Julián Espinosa Escolar; combina la antigua Verdier con la nave El Cortinal.",
-    "imagen": "public/bodegas/espinosa-hijos-julian.png",
+    "imagen": "IMAGENES/B.HIJOS JULIAN ESPINOSA.png",
     "imagenes": [
       {
-        "src": "public/bodegas/espinosa-hijos-julian.png",
+        "src": "IMAGENES/B.HIJOS JULIAN ESPINOSA.png",
         "alt": "Bodega Hijos de Julián Espinosa",
         "caption": "Bodega Hijos de Julián Espinosa"
       },
       {
-        "src": "public/bodegas/espinosa-anuncio.png",
+        "src": "IMAGENES/ANUNCIO HIJOS JULIAN ESPINOSA .png",
         "alt": "Anuncio de Hijos de Julián Espinosa",
         "caption": "Anuncio de Hijos de Julián Espinosa"
       },
       {
-        "src": "public/bodegas/espinosa-cortinal.png",
+        "src": "IMAGENES/INTERIOR B.ESPINOSA (EL CORTINAL).png",
         "alt": "Interior de la bodega El Cortinal",
         "caption": "Interior de la bodega El Cortinal"
       },
       {
-        "src": "public/bodegas/espinosa-interior.png",
+        "src": "IMAGENES/INTERIOR B. ESPINOSA (2).png",
         "alt": "Interior documentado de Bodegas Espinosa",
         "caption": "Interior documentado de Bodegas Espinosa"
       },
       {
-        "src": "public/bodegas/espinosa-ubicacion-1.png",
+        "src": "IMAGENES/UBI B.ESPINOSA 1 VUELO AÑOS 50 1950-1959 .png",
         "alt": "Ubicación de Bodegas Espinosa en vuelo histórico",
         "caption": "Ubicación de Bodegas Espinosa en vuelo histórico"
       },
       {
-        "src": "public/bodegas/espinosa-ubicacion-2.png",
+        "src": "IMAGENES/UBI B.ESPINOSA 2 VUELO AÑOS 50 1950-1959 .png",
         "alt": "Segunda ubicación de Bodegas Espinosa en vuelo histórico",
         "caption": "Segunda ubicación de Bodegas Espinosa en vuelo histórico"
       }
@@ -407,37 +427,42 @@ window.BODEGAS = [
     "documentacion": "catalogacion",
     "ubicacion": "Final de la calle del Pilar",
     "resumen": "Fundada en 1920 por Rafael y Tomás Salas López; el gran complejo de la calle del Pilar cerró en 1990.",
-    "imagen": "public/bodegas/salas-fachada.webp",
+    "imagen": "IMAGENES/FACHADA B.SALAS.webp",
     "imagenes": [
       {
-        "src": "public/bodegas/salas-fachada.webp",
+        "src": "IMAGENES/FACHADA B.SALAS.webp",
         "alt": "Fachada de Bodegas Salas",
         "caption": "Fachada de Bodegas Salas"
       },
       {
-        "src": "public/bodegas/salas-interior.webp",
+        "src": "IMAGENES/INTERIOR B.SALAS.webp",
         "alt": "Interior de Bodegas Salas",
         "caption": "Interior de Bodegas Salas"
       },
       {
-        "src": "public/bodegas/salas-interior-2.webp",
+        "src": "IMAGENES/INTERIOR B.SALAS 2.webp",
         "alt": "Segundo interior documentado de Bodegas Salas",
         "caption": "Segundo interior documentado de Bodegas Salas"
       },
       {
-        "src": "public/bodegas/salas-chimenea.webp",
+        "src": "IMAGENES/CHIMENEA B.SALAS.webp",
         "alt": "Chimenea de Bodegas Salas",
         "caption": "Chimenea de Bodegas Salas"
       },
       {
-        "src": "public/bodegas/salas-vista-aerea.jpg",
+        "src": "IMAGENES/VISTA AEREA B.SALAS.jpg",
         "alt": "Vista aérea de Bodegas Salas",
         "caption": "Vista aérea de Bodegas Salas"
       },
       {
-        "src": "public/bodegas/salas-propuesta-pgou.png",
+        "src": "IMAGENES/PROPUESTA PARA BODEGAS SALAS .png",
         "alt": "Propuesta PGOU para Bodegas Salas",
         "caption": "Propuesta PGOU para Bodegas Salas"
+      },
+      {
+        "src": "IMAGENES/UBI B.SALAS VUELO AÑOS 50 1950-1959 .png",
+        "alt": "Ubicación de Bodegas Salas en vuelo histórico",
+        "caption": "Ubicación de Bodegas Salas en vuelo histórico"
       }
     ],
     "href": "bodegas-salas.html",
@@ -512,6 +537,11 @@ window.BODEGAS = [
         "src": "IMAGENES/INTERIOR B. TORO.png",
         "alt": "Interior de Bodegas Toro",
         "caption": "Interior de Bodegas Toro"
+      },
+      {
+        "src": "IMAGENES/INTERIOR B.TORO.png",
+        "alt": "Segundo interior documentado de Bodegas Toro",
+        "caption": "Segundo interior documentado de Bodegas Toro"
       },
       {
         "src": "IMAGENES/UBI B.TORO VUELO AÑOS 50 1950-1959 .png",
@@ -602,6 +632,16 @@ window.BODEGAS = [
         "src": "IMAGENES/INTERIOR B. SOLDÁN 2.png",
         "alt": "Segundo interior de Bodegas Soldán",
         "caption": "Segundo interior de Bodegas Soldán"
+      },
+      {
+        "src": "IMAGENES/ANTES B.SOLDÁN.png",
+        "alt": "Estado anterior vinculado a Bodegas Soldán",
+        "caption": "Estado anterior vinculado a Bodegas Soldán"
+      },
+      {
+        "src": "IMAGENES/DESPUES B. SOLDÁN.png",
+        "alt": "Estado posterior vinculado a Bodegas Soldán",
+        "caption": "Estado posterior vinculado a Bodegas Soldán"
       },
       {
         "src": "IMAGENES/FAMILIA SOLDÁN .png",
@@ -779,6 +819,16 @@ window.BODEGAS = [
         "src": "IMAGENES/UBI B.GENOVÉS 1 VUELO AÑOS 50 1950-1959 .png",
         "alt": "Ubicación de Bodegas Genovés en vuelo histórico",
         "caption": "Ubicación de Bodegas Genovés en vuelo histórico"
+      },
+      {
+        "src": "IMAGENES/UBI B.GENOVÉS 2 VUELO AÑOS 50 1950-1959 .png",
+        "alt": "Segunda ubicación de Bodegas Genovés en vuelo histórico",
+        "caption": "Segunda ubicación de Bodegas Genovés en vuelo histórico"
+      },
+      {
+        "src": "IMAGENES/UBI B.GENOVÉS 3 VUELO AÑOS 50 1950-1959 .png",
+        "alt": "Tercera ubicación de Bodegas Genovés en vuelo histórico",
+        "caption": "Tercera ubicación de Bodegas Genovés en vuelo histórico"
       }
     ],
     "href": "bodega.html?slug=bodegas-genoves",
@@ -921,6 +971,11 @@ window.BODEGAS = [
         "src": "IMAGENES/B. ALFREDO RUBIO ORTEGA 5.png",
         "alt": "Imagen documental de Bodegas Alfredo Rubio Ortega",
         "caption": "Imagen documental de Bodegas Alfredo Rubio Ortega"
+      },
+      {
+        "src": "IMAGENES/B. ALFREDO RUBIO ORTEGA 6.png",
+        "alt": "Sexta imagen documental de Bodegas Alfredo Rubio Ortega",
+        "caption": "Sexta imagen documental de Bodegas Alfredo Rubio Ortega"
       },
       {
         "src": "IMAGENES/UBI B.ALFREDO RUBIO ORTEGA VUELO AÑOS 50 1950-1959 .png",

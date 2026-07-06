@@ -14,7 +14,7 @@
 
   const documentationLabels = {
     catalogacion: "Ficha de catalogación",
-    cartografica: "Capa QGIS"
+    cartografica: "Solo QGIS"
   };
 
   const formatStatus = (status) => statusLabels[status] || "Sin clasificar";
@@ -222,7 +222,9 @@
         item.cierre,
         item.desaparicion,
         item.periodo,
-        item.documentacion
+        item.documentacion,
+        item.estado,
+        (item.capas || []).join(" ")
       ]
         .filter(Boolean)
         .join(" ");
@@ -250,6 +252,7 @@
               data-catalog-card
               data-estado="${escapeHtml(item.estado)}"
               data-documentacion="${escapeHtml(item.documentacion || "")}"
+              data-periodo="${escapeHtml(item.periodo || "")}"
               data-search="${escapeHtml(cardSearchText(item))}"
               data-animate
             >
@@ -283,8 +286,14 @@
     const state = {
       estado: params.get("estado") || "",
       documentacion: params.get("documentacion") || "",
+      periodo: params.get("periodo") || "",
       busqueda: params.get("busqueda") || ""
     };
+
+    if (state.estado === "cartografica") {
+      state.estado = "";
+      state.documentacion = state.documentacion || "cartografica";
+    }
 
     const syncUrl = () => {
       const next = new URL(location.href);
@@ -305,19 +314,29 @@
       });
 
       const query = normalize(state.busqueda);
+      const selectedPeriod = normalize(state.periodo);
       let visible = 0;
+      let visibleCatalogation = 0;
+      let visibleCartographic = 0;
 
       cards.forEach((card) => {
         const matchesStatus = !state.estado || card.dataset.estado === state.estado;
         const matchesDocumentation = !state.documentacion || card.dataset.documentacion === state.documentacion;
+        const matchesPeriod = !selectedPeriod || normalize(card.dataset.periodo).includes(selectedPeriod);
         const haystack = normalize(card.dataset.search);
         const matchesSearch = !query || haystack.includes(query);
-        const show = matchesStatus && matchesDocumentation && matchesSearch;
+        const show = matchesStatus && matchesDocumentation && matchesPeriod && matchesSearch;
         card.hidden = !show;
-        if (show) visible += 1;
+        if (show) {
+          visible += 1;
+          if (card.dataset.documentacion === "catalogacion") visibleCatalogation += 1;
+          if (card.dataset.documentacion === "cartografica") visibleCartographic += 1;
+        }
       });
 
-      if (count) count.textContent = `${visible} ${visible === 1 ? "ficha" : "fichas"}`;
+      if (count) {
+        count.textContent = `${visible} ${visible === 1 ? "registro" : "registros"} · ${visibleCatalogation} fichas de catalogación · ${visibleCartographic} capas QGIS`;
+      }
       if (empty) empty.hidden = visible > 0;
     };
 
@@ -338,6 +357,7 @@
     reset?.addEventListener("click", () => {
       state.estado = "";
       state.documentacion = "";
+      state.periodo = "";
       state.busqueda = "";
       syncUrl();
       render();
@@ -382,6 +402,54 @@
     updateActiveSection();
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
+  }
+
+  function initContextCarousels() {
+    document.querySelectorAll("[data-context-carousel]").forEach((carousel) => {
+      const image = carousel.querySelector("[data-carousel-image]");
+      const caption = carousel.querySelector("[data-carousel-caption]");
+      const count = carousel.querySelector("[data-carousel-count]");
+      const stage = carousel.querySelector("[data-carousel-stage]");
+      const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"))
+        .map((slide) => ({
+          src: slide.dataset.src || "",
+          alt: slide.dataset.alt || "",
+          kicker: slide.dataset.kicker || "",
+          caption: slide.dataset.caption || ""
+        }))
+        .filter((slide) => slide.src);
+
+      if (!image || slides.length === 0) return;
+
+      let activeIndex = Math.max(
+        0,
+        slides.findIndex((slide) => slide.src === image.getAttribute("src"))
+      );
+
+      const updateSlide = (nextIndex) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+        const slide = slides[activeIndex];
+        image.src = slide.src;
+        image.alt = slide.alt;
+        if (caption) {
+          caption.innerHTML = `${slide.kicker ? `<span>${escapeHtml(slide.kicker)}</span>` : ""}${escapeHtml(slide.caption)}`;
+        }
+        if (count) count.textContent = `${activeIndex + 1} / ${slides.length}`;
+      };
+
+      const previous = () => updateSlide(activeIndex - 1);
+      const next = () => updateSlide(activeIndex + 1);
+
+      carousel.querySelector("[data-carousel-prev]")?.addEventListener("click", previous);
+      carousel.querySelector("[data-carousel-next]")?.addEventListener("click", next);
+      stage?.addEventListener("click", next);
+      stage?.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") previous();
+        if (event.key === "ArrowRight") next();
+      });
+
+      updateSlide(activeIndex);
+    });
   }
 
   function initContactForm() {
@@ -630,6 +698,9 @@
     const sources = (item.fuentes || [])
       .map((source) => `<li>${escapeHtml(source)}</li>`)
       .join("");
+    const layerList = item.capas?.length
+      ? `<ul class="layer-list">${item.capas.map((layer) => `<li>${escapeHtml(layer)}</li>`).join("")}</ul>`
+      : `<p>Sin capas asociadas.</p>`;
 
     const qgisButton = item.qgisZip
       ? `<a class="button-link ghost" href="${escapeHtml(item.qgisZip)}" download>Descargar QGIS</a>`
@@ -721,7 +792,7 @@
                 <p class="eyebrow">Cartografía</p>
                 <h2 id="environment-title">Capas asociadas</h2>
               </div>
-              <p>${escapeHtml((item.capas || []).join("; ") || "Sin capas asociadas.")}</p>
+              ${layerList}
             </section>
 
             <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
@@ -840,8 +911,10 @@
     const empty = root.querySelector("[data-map-empty]");
     const search = root.querySelector("[data-map-search]");
     const markerToggles = Array.from(root.querySelectorAll("[data-marker-toggle]"));
+    const documentationToggles = Array.from(root.querySelectorAll("[data-documentation-toggle]"));
     const overlayToggles = Array.from(root.querySelectorAll("[data-overlay-toggle]"));
     const baseButtons = Array.from(root.querySelectorAll("[data-base-layer]"));
+    const periodFilter = root.querySelector("[data-period-filter]");
     const items = [...(window.BODEGAS || [])];
     const initialSlug = new URLSearchParams(location.search).get("bodega") || "";
 
@@ -1014,12 +1087,21 @@
       const allowed = new Set(
         markerToggles.length
           ? markerToggles.filter((input) => input.checked).map((input) => input.value)
-          : ["activa", "desaparecida", "cartografica"]
+          : ["activa", "desaparecida"]
+      );
+      const allowedDocumentation = new Set(
+        documentationToggles.length
+          ? documentationToggles.filter((input) => input.checked).map((input) => input.value)
+          : ["catalogacion", "cartografica"]
       );
       const query = normalize(search?.value);
-      const matchesStatus = allowed.has(item.estado);
-      const matchesSearch = !query || normalize(`${item.nombre} ${item.ubicacion} ${item.resumen}`).includes(query);
-      return matchesStatus && matchesSearch;
+      const selectedPeriod = normalize(periodFilter?.value);
+      const matchesStatus = item.documentacion === "cartografica" || allowed.has(item.estado);
+      const matchesDocumentation = allowedDocumentation.has(item.documentacion || "catalogacion");
+      const matchesPeriod = !selectedPeriod || normalize(item.periodo).includes(selectedPeriod);
+      const searchable = [item.nombre, item.ubicacion, item.resumen, item.periodo, item.documentacion, ...(item.capas || [])].join(" ");
+      const matchesSearch = !query || normalize(searchable).includes(query);
+      return matchesStatus && matchesDocumentation && matchesPeriod && matchesSearch;
     };
 
     const renderMarkers = () => {
@@ -1164,6 +1246,9 @@
           resumen: props.resumen || "Ficha procedente de la capa QGIS.",
           imagen: "public/historia/portada-bodegas.jpg",
           href: `catalogo.html`,
+          documentacion: props.documentacion || "cartografica",
+          periodo: props.periodo || "",
+          qgisZip: props.qgisZip || "",
           coordenadas: { lat: center.lat, lng: center.lng }
         };
         items.push(item);
@@ -1188,6 +1273,8 @@
     });
 
     markerToggles.forEach((input) => input.addEventListener("change", paint));
+    documentationToggles.forEach((input) => input.addEventListener("change", paint));
+    periodFilter?.addEventListener("change", paint);
     search?.addEventListener("input", paint);
     map.on("moveend zoomend", paint);
 
@@ -1247,6 +1334,7 @@
     initHeroParallax();
     initCounters();
     initHistoryIndex();
+    initContextCarousels();
     initContactForm();
     initLightbox();
     initFicha();

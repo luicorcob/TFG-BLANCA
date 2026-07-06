@@ -61,9 +61,26 @@
             <legend>Capas patrimoniales</legend>
             <label><input type="checkbox" data-marker-toggle value="activa" checked /><span>Bodegas actuales</span></label>
             <label><input type="checkbox" data-marker-toggle value="desaparecida" checked /><span>Bodegas desaparecidas</span></label>
-            <label><input type="checkbox" data-marker-toggle value="cartografica" checked /><span>Registros cartográficos</span></label>
             <label><input type="checkbox" data-overlay-toggle value="bic" /><span>Conjunto histórico BIC</span></label>
             <label><input type="checkbox" data-overlay-toggle value="rail" /><span>Ferrocarril histórico</span></label>
+          </fieldset>
+
+          <fieldset class="map-control-group">
+            <legend>Tipo de registro</legend>
+            <label><input type="checkbox" data-documentation-toggle value="catalogacion" checked /><span>Fichas de catalogación</span></label>
+            <label><input type="checkbox" data-documentation-toggle value="cartografica" checked /><span>Solo capas QGIS</span></label>
+          </fieldset>
+
+          <fieldset class="map-control-group">
+            <legend>Periodo QGIS</legend>
+            <select data-period-filter aria-label="Filtrar por periodo QGIS">
+              <option value="">Todos los periodos</option>
+              <option value="preindustriales">Bodegas preindustriales</option>
+              <option value="1870-1924">1870-1924</option>
+              <option value="1925-1950">1925-1950</option>
+              <option value="actuales">Actuales</option>
+              <option value="cooperativas">Cooperativas</option>
+            </select>
           </fieldset>
 
           <div class="map-actions" aria-label="Descargas cartográficas">

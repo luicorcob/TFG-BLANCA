@@ -1906,6 +1906,123 @@ button {
   transform: translateX(4px);
 }
 
+.context-carousel {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0.9rem 0 0;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: rgba(255, 253, 248, 0.76);
+  box-shadow: 0 16px 42px rgba(53, 16, 24, 0.08);
+}
+
+.split-section > .context-carousel {
+  grid-column: 1 / -1;
+}
+
+.context-carousel-stage {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background:
+    linear-gradient(135deg, rgba(245, 240, 232, 0.76), rgba(232, 237, 231, 0.64)),
+    var(--papel);
+  cursor: pointer;
+}
+
+.context-carousel-stage img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(135deg, rgba(245, 240, 232, 0.76), rgba(232, 237, 231, 0.64)),
+    var(--papel);
+  object-fit: contain;
+}
+
+.context-carousel-count {
+  position: absolute;
+  top: 0.72rem;
+  right: 0.72rem;
+  border: 1px solid rgba(53, 16, 24, 0.14);
+  border-radius: 999px;
+  padding: 0.26rem 0.5rem;
+  background: rgba(255, 253, 248, 0.88);
+  color: var(--vino-oscuro);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.context-carousel-controls {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  aspect-ratio: 4 / 3;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  pointer-events: none;
+}
+
+.context-carousel-controls button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  min-height: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 253, 248, 0.68);
+  border-radius: 6px;
+  padding: 0;
+  background: rgba(53, 16, 24, 0.62);
+  color: var(--blanco);
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+  transition:
+    background var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.context-carousel-controls button:hover {
+  border-color: rgba(239, 212, 122, 0.88);
+  background: rgba(107, 26, 43, 0.86);
+  transform: translateY(-1px);
+}
+
+.context-carousel-controls span {
+  font-family: var(--ui);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.context-carousel figcaption {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0;
+  border-top: 1px solid var(--linea);
+  padding: 0.85rem 0.95rem;
+  color: var(--gris);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.context-carousel figcaption span {
+  color: var(--vino);
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .urban-panel dl,
 .academic-card dl {
   margin: 0;
@@ -2392,6 +2509,10 @@ textarea {
   accent-color: var(--vino);
 }
 
+.map-control-group select {
+  min-height: 42px;
+}
+
 .map-control-group .is-disabled {
   color: var(--gris);
 }
@@ -2507,6 +2628,26 @@ textarea {
   color: var(--gris);
   font-family: var(--ui);
   font-weight: 800;
+}
+
+.layer-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.layer-list li {
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(107, 26, 43, 0.12);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+  background: rgba(255, 253, 248, 0.72);
+  color: var(--vino-oscuro);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .map-canvas-wrap {
@@ -2797,9 +2938,28 @@ textarea {
 }
 
 .hero-media img[src$="verdier-maquina-destilacion.png"],
+.hero-media img[src*="MAQUINA DE DESTILACION"],
+.hero-media img[src*="FOTOGRAMA"],
+.hero-media img[src*="UBI "],
+.hero-media img[src*="UBICACIÓN"],
+.hero-media img[src*="VOLUMEN"],
+.hero-media img[src*="PROPUESTA"],
+.hero-media img[src*="ANUNCIO"],
 .gallery-row img[src$="verdier-maquina-destilacion.png"],
+.gallery-row img[src*="MAQUINA DE DESTILACION"],
+.gallery-row img[src*="FOTOGRAMA"],
+.gallery-row img[src*="UBI "],
+.gallery-row img[src*="UBICACIÓN"],
+.gallery-row img[src*="VOLUMEN"],
+.gallery-row img[src*="PROPUESTA"],
+.gallery-row img[src*="ANUNCIO"],
+.gallery-row img[src*="MOSAICO"],
+.gallery-row img[src*="RETRATO"],
 .preview-card img[src$="verdier-maquina-destilacion.png"],
+.preview-card img[src*="MAQUINA DE DESTILACION"],
 .bodega-card img[src$="verdier-maquina-destilacion.png"],
+.bodega-card img[src*="MAQUINA DE DESTILACION"],
+.bodega-card img[src*="ANUNCIO"],
 .map-popup img[src$="verdier-maquina-destilacion.png"] {
   background: #f8f1dd;
   object-fit: contain;

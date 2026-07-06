@@ -52,8 +52,21 @@ const records = [
     imagenes: [
       image(pub("rubio-fachada.jpg"), "Fachada de Bodegas Rubio 1893 SL"),
       image(pub("rubio-interior.avif"), "Interior de Bodegas Rubio 1893 SL"),
+      image(img("B.RUBIO.webp"), "Vista documental de Bodegas Rubio"),
       image(img("BODEGAS RUBIO.jpg"), "Imagen documental de Bodegas Rubio"),
-      image(img("BODEGAS RUBIO 2.avif"), "Vista interior de Bodegas Rubio")
+      image(img("BODEGAS RUBIO 2.avif"), "Vista interior de Bodegas Rubio"),
+      image(
+        img("FOTOGRAMA VUELO AÑOS 50 1950-1959 (TODAVIA NO ESTABA CONSTRUIDO B.RUBIO Y ESTABAMOS UBICADOS EN LA B.DE EL CURA AGUILAR )_IGN.png"),
+        "Vuelo histórico de los años 50 previo a la construcción de Bodegas Rubio"
+      ),
+      image(
+        img("FOTOGRAMA VUELO AÑOS 50 1950-1959 (TODAVIA NO ESTABA CONSTRUIDO B.RUBIO Y ESTABAMOS UBICADOS EN LA B.DE EL CURA AGUILAR )_IGN 2.0.png"),
+        "Detalle del vuelo histórico de los años 50 vinculado a la ubicación anterior de Bodegas Rubio"
+      ),
+      image(
+        img("FOTOGRAMA VUELO INTERMINISTERIAL 1976-1986 (APARECE POR 1º VEZ EL EDIFICIO DE BODEGAS RUBIO_IGN.png"),
+        "Vuelo interministerial en el que aparece por primera vez el edificio de Bodegas Rubio"
+      )
     ],
     href: "bodegas-rubio.html",
     catastro: "6704124QB1460S0001WK; 6704142QB1460S0001KK; 6704130QB1460S0001YK",
@@ -82,11 +95,9 @@ const records = [
     ubicacion: "Calle Nicolás Gómez González entre el nº 13-14",
     resumen:
       "Fundada en 1891 por Celestino Verdier Martín sobre la primitiva destilería de Nicolás Gómez; desapareció en 1970.",
-    imagen: pub("verdier-maquina-destilacion.png"),
+    imagen: img("MAQUINA DE DESTILACION NICOLAS GOMEZ (CAP 4 ).png"),
     imagenes: [
-      image(pub("verdier-maquina-destilacion.png"), "Aparato de destilación vinculado al contexto industrial de Verdier"),
-      image(img("MAQUINA DE DESTILACION NICOLAS GOMEZ (CAP 4 ).png"), "Máquina de destilación de Nicolás Gómez"),
-      image(img("CHIMENEA B.SALAS.webp"), "Chimenea industrial documentada en el archivo visual")
+      image(img("MAQUINA DE DESTILACION NICOLAS GOMEZ (CAP 4 ).png"), "Máquina de destilación de Nicolás Gómez")
     ],
     href: "bodegas-verdier.html",
     catastro: "6710056QB1461S0001DS",
@@ -114,13 +125,13 @@ const records = [
     ubicacion: "Calle de la Estación nº 1",
     resumen:
       "Fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; la sede definitiva frente al ferrocarril se edificó entre 1898 y 1902.",
-    imagen: pub("morales-1950.png"),
+    imagen: img("BODEGAS MORALES PRINICPIOS AÑOS 50.png"),
     imagenes: [
-      image(pub("morales-1950.png"), "Bodegas Loewenthal - Morales a principios de los años 50"),
-      image(pub("morales-interior.png"), "Interior actual de Bodegas Morales"),
-      image(pub("morales-interior-2.png"), "Segundo interior documentado de Bodegas Morales"),
-      image(pub("morales-ubicacion-anterior.png"), "Ubicación anterior en calle Carlos Mauricio Morales nº 44"),
-      image(pub("morales-volumetria.png"), "Volumetría de Bodegas Loewenthal - Morales")
+      image(img("BODEGAS MORALES PRINICPIOS AÑOS 50.png"), "Bodegas Loewenthal - Morales a principios de los años 50"),
+      image(img("INTERIOR B.MORALES (IES LA PALMA ).png"), "Interior actual de Bodegas Morales"),
+      image(img("INTERIOR B.MORALES 2 (ARCHIVO FAMILIAR).png"), "Segundo interior documentado de Bodegas Morales"),
+      image(img("UBICACIÓN ANTERIOR MORALES EN C.CARLOS MAURICIO MORALES 44.png"), "Ubicación anterior en calle Carlos Mauricio Morales nº 44"),
+      image(img("VOLUMEN B.MORALES.png"), "Volumetría de Bodegas Loewenthal - Morales")
     ],
     href: "bodegas-morales.html",
     catastro: "6714001QB1461S0001KS",
@@ -148,14 +159,16 @@ const records = [
     ubicacion: "Avenida de la Constitución y calle Presidente Adolfo Suárez",
     resumen:
       "Fundada en 1895 por Miguel Pichardo Lepe; articuló un gran conjunto de naves en torno a la estación.",
-    imagen: pub("pichardo-fachada.jpg"),
+    imagen: img("BODEGAS PICHARDO (FACEBOOK).jpg"),
     imagenes: [
-      image(pub("pichardo-fachada.jpg"), "Imagen histórica de Bodegas Pichardo"),
-      image(pub("pichardo-antes.png"), "Bodegas Pichardo antes de la demolición"),
-      image(pub("pichardo-despues.png"), "Bodegas Pichardo después de la demolición"),
-      image(pub("pichardo-interior.png"), "Interior de Bodegas Pichardo"),
-      image(pub("pichardo-interior-2.png"), "Segundo interior documentado de Bodegas Pichardo"),
-      image(img("INTERIOR B. PICHARDO 3.png"), "Interior documental de Bodegas Pichardo")
+      image(img("BODEGAS PICHARDO (FACEBOOK).jpg"), "Imagen histórica de Bodegas Pichardo"),
+      image(img("ANTES B. PICHARDO.png"), "Bodegas Pichardo antes de la demolición"),
+      image(img("DESPUES B. PICHARDO.png"), "Bodegas Pichardo después de la demolición"),
+      image(img("INTERIOR B. PICHARDO  .png"), "Interior de Bodegas Pichardo"),
+      image(img("INTERIOR B. PICHARDO 2.png"), "Segundo interior documentado de Bodegas Pichardo"),
+      image(img("INTERIOR B. PICHARDO 3.png"), "Tercer interior documentado de Bodegas Pichardo"),
+      image(img("INTERIOR B. PICHARDO 4.png"), "Cuarto interior documentado de Bodegas Pichardo"),
+      image(img("UBI B.PICHARDO VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Pichardo en vuelo histórico")
     ],
     href: "bodegas-pichardo.html",
     catastro: "6710059QB1461S0001JS; 6412502QB1461S0001GS; 6710057QB1461S0002MD",
@@ -185,14 +198,14 @@ const records = [
     ubicacion: "Calle Nicolás Gómez González nº 13-14 y Ronda de Legionarios nº 18",
     resumen:
       "Fundada oficialmente en 1907 por Julián Espinosa Escolar; combina la antigua Verdier con la nave El Cortinal.",
-    imagen: pub("espinosa-hijos-julian.png"),
+    imagen: img("B.HIJOS JULIAN ESPINOSA.png"),
     imagenes: [
-      image(pub("espinosa-hijos-julian.png"), "Bodega Hijos de Julián Espinosa"),
-      image(pub("espinosa-anuncio.png"), "Anuncio de Hijos de Julián Espinosa"),
-      image(pub("espinosa-cortinal.png"), "Interior de la bodega El Cortinal"),
-      image(pub("espinosa-interior.png"), "Interior documentado de Bodegas Espinosa"),
-      image(pub("espinosa-ubicacion-1.png"), "Ubicación de Bodegas Espinosa en vuelo histórico"),
-      image(pub("espinosa-ubicacion-2.png"), "Segunda ubicación de Bodegas Espinosa en vuelo histórico")
+      image(img("B.HIJOS JULIAN ESPINOSA.png"), "Bodega Hijos de Julián Espinosa"),
+      image(img("ANUNCIO HIJOS JULIAN ESPINOSA .png"), "Anuncio de Hijos de Julián Espinosa"),
+      image(img("INTERIOR B.ESPINOSA (EL CORTINAL).png"), "Interior de la bodega El Cortinal"),
+      image(img("INTERIOR B. ESPINOSA (2).png"), "Interior documentado de Bodegas Espinosa"),
+      image(img("UBI B.ESPINOSA 1 VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Espinosa en vuelo histórico"),
+      image(img("UBI B.ESPINOSA 2 VUELO AÑOS 50 1950-1959 .png"), "Segunda ubicación de Bodegas Espinosa en vuelo histórico")
     ],
     href: "bodegas-espinosa.html",
     catastro: "6407040QB1460N0001SP; 6710042QB1461S0001YS",
@@ -221,14 +234,15 @@ const records = [
     ubicacion: "Final de la calle del Pilar",
     resumen:
       "Fundada en 1920 por Rafael y Tomás Salas López; el gran complejo de la calle del Pilar cerró en 1990.",
-    imagen: pub("salas-fachada.webp"),
+    imagen: img("FACHADA B.SALAS.webp"),
     imagenes: [
-      image(pub("salas-fachada.webp"), "Fachada de Bodegas Salas"),
-      image(pub("salas-interior.webp"), "Interior de Bodegas Salas"),
-      image(pub("salas-interior-2.webp"), "Segundo interior documentado de Bodegas Salas"),
-      image(pub("salas-chimenea.webp"), "Chimenea de Bodegas Salas"),
-      image(pub("salas-vista-aerea.jpg"), "Vista aérea de Bodegas Salas"),
-      image(pub("salas-propuesta-pgou.png"), "Propuesta PGOU para Bodegas Salas")
+      image(img("FACHADA B.SALAS.webp"), "Fachada de Bodegas Salas"),
+      image(img("INTERIOR B.SALAS.webp"), "Interior de Bodegas Salas"),
+      image(img("INTERIOR B.SALAS 2.webp"), "Segundo interior documentado de Bodegas Salas"),
+      image(img("CHIMENEA B.SALAS.webp"), "Chimenea de Bodegas Salas"),
+      image(img("VISTA AEREA B.SALAS.jpg"), "Vista aérea de Bodegas Salas"),
+      image(img("PROPUESTA PARA BODEGAS SALAS .png"), "Propuesta PGOU para Bodegas Salas"),
+      image(img("UBI B.SALAS VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Salas en vuelo histórico")
     ],
     href: "bodegas-salas.html",
     catastro: "6012002QB1461S0001RS",
@@ -262,6 +276,7 @@ const records = [
       image(img("EXTERIOR B.TORO.png"), "Exterior de Bodegas Toro"),
       image(img("EXTERIOR B.TORO 2.png"), "Segundo exterior de Bodegas Toro"),
       image(img("INTERIOR B. TORO.png"), "Interior de Bodegas Toro"),
+      image(img("INTERIOR B.TORO.png"), "Segundo interior documentado de Bodegas Toro"),
       image(img("UBI B.TORO VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Toro en vuelo histórico"),
       image(img("UBI B.TORO VUELO AÑOS 97.png"), "Ubicación de Bodegas Toro en vuelo de 1997")
     ],
@@ -299,6 +314,8 @@ const records = [
       image(img("Fachada Bodegas Soldan 2.png"), "Segunda fachada vinculada a Bodegas Soldán"),
       image(img("INTERIOR B. SOLDÁN.png"), "Interior de Bodegas Soldán"),
       image(img("INTERIOR B. SOLDÁN 2.png"), "Segundo interior de Bodegas Soldán"),
+      image(img("ANTES B.SOLDÁN.png"), "Estado anterior vinculado a Bodegas Soldán"),
+      image(img("DESPUES B. SOLDÁN.png"), "Estado posterior vinculado a Bodegas Soldán"),
       image(img("FAMILIA SOLDÁN .png"), "Familia Soldán"),
       image(img("UBI B.SOLDÁN VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Soldán en vuelo histórico")
     ],
@@ -369,7 +386,9 @@ const records = [
       image(img("INTERIOR B. GENOVÉS 2.png"), "Segundo interior de Bodegas Genovés"),
       image(img("ANTES B.GENOVES.png"), "Estado anterior de Bodegas Genovés"),
       image(img("DESPUES B.GENOVES.png"), "Estado posterior de Bodegas Genovés"),
-      image(img("UBI B.GENOVÉS 1 VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Genovés en vuelo histórico")
+      image(img("UBI B.GENOVÉS 1 VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Genovés en vuelo histórico"),
+      image(img("UBI B.GENOVÉS 2 VUELO AÑOS 50 1950-1959 .png"), "Segunda ubicación de Bodegas Genovés en vuelo histórico"),
+      image(img("UBI B.GENOVÉS 3 VUELO AÑOS 50 1950-1959 .png"), "Tercera ubicación de Bodegas Genovés en vuelo histórico")
     ],
     href: "bodega.html?slug=bodegas-genoves",
     catastro: "6801404QB1460S0001EK; 7108629QB1470N0001PF; 6410006QB1461S0001ZS",
@@ -434,6 +453,7 @@ const records = [
       image(img("B. ALFREDO RUBIO ORTEGA 3(CORUMBEL 2008).png"), "Archivo Corumbel de Bodegas Alfredo Rubio Ortega"),
       image(img("B. ALFREDO RUBIO ORTEGA 4.png"), "Detalle documental de Bodegas Alfredo Rubio Ortega"),
       image(img("B. ALFREDO RUBIO ORTEGA 5.png"), "Imagen documental de Bodegas Alfredo Rubio Ortega"),
+      image(img("B. ALFREDO RUBIO ORTEGA 6.png"), "Sexta imagen documental de Bodegas Alfredo Rubio Ortega"),
       image(img("UBI B.ALFREDO RUBIO ORTEGA VUELO AÑOS 50 1950-1959 .png"), "Ubicación de Bodegas Alfredo Rubio Ortega")
     ],
     href: "bodega.html?slug=bodegas-alfredo-rubio-ortega",
