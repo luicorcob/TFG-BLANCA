@@ -1328,6 +1328,12 @@ button {
   background: var(--vino);
 }
 
+.legend-dot.cartografica,
+.item-status.cartografica,
+.popup-dot.cartografica {
+  background: var(--azul);
+}
+
 .status-pill {
   display: inline-flex;
   min-height: 30px;
@@ -1386,6 +1392,31 @@ button {
   background: var(--vino);
   color: var(--blanco);
   box-shadow: 0 8px 20px rgba(107, 26, 43, 0.22);
+}
+
+.status-pill.cartografica {
+  border-color: rgba(255, 253, 248, 0.5);
+  background: var(--azul);
+  color: var(--blanco);
+  box-shadow: 0 8px 20px rgba(47, 111, 118, 0.2);
+}
+
+.catalog-level {
+  width: fit-content;
+  border: 1px solid rgba(107, 26, 43, 0.16);
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+  color: var(--vino);
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.catalog-level.cartografica {
+  border-color: rgba(47, 111, 118, 0.2);
+  color: var(--azul);
 }
 
 .card-meta {

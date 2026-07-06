@@ -38,7 +38,7 @@
           </div>
 
           <div class="map-summary" aria-label="Estado de datos cartográficos">
-            <span><strong data-map-total>6</strong> fichas</span>
+            <span><strong data-map-total>6</strong> registros</span>
             <span><strong data-map-located>5</strong> georreferenciadas</span>
             <span><strong data-map-pending>1</strong> pendientes</span>
           </div>
@@ -61,17 +61,15 @@
             <legend>Capas patrimoniales</legend>
             <label><input type="checkbox" data-marker-toggle value="activa" checked /><span>Bodegas actuales</span></label>
             <label><input type="checkbox" data-marker-toggle value="desaparecida" checked /><span>Bodegas desaparecidas</span></label>
+            <label><input type="checkbox" data-marker-toggle value="cartografica" checked /><span>Registros cartográficos</span></label>
             <label><input type="checkbox" data-overlay-toggle value="bic" /><span>Conjunto histórico BIC</span></label>
             <label><input type="checkbox" data-overlay-toggle value="rail" /><span>Ferrocarril histórico</span></label>
           </fieldset>
 
           <div class="map-actions" aria-label="Descargas cartográficas">
             <a href="public/mapas/bodegas.geojson" download>GeoJSON bodegas</a>
-            <a href="public/qgis/bodegas-verdier-qgis.zip" download>QGIS Verdier</a>
-            <a href="public/qgis/bodegas-morales-qgis.zip" download>QGIS Morales</a>
-            <a href="public/qgis/bodegas-pichardo-qgis.zip" download>QGIS Pichardo</a>
-            <a href="public/qgis/bodegas-espinosa-qgis.zip" download>QGIS Espinosa</a>
-            <a href="public/qgis/bodegas-salas-qgis.zip" download>QGIS Salas</a>
+            <a href="catalogo.html?documentacion=cartografica">Ver capas QGIS</a>
+            <a href="catalogo.html?documentacion=catalogacion">Ver fichas PDF</a>
           </div>
 
           <section class="map-list-section" aria-labelledby="visible-bodegas-title">

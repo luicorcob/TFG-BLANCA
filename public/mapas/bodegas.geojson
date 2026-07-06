@@ -3,21 +3,23 @@
   "name": "bodegas",
   "metadata": {
     "title": "Patrimonio bodeguero de La Palma del Condado",
-    "source": "Exportaciones QGIS normalizadas a GeoJSON EPSG:4326.",
+    "source": "Capas QGIS normalizadas a GeoJSON EPSG:4326 desde CAPAS DE QGIS TODO.",
     "crs": "EPSG:4326",
-    "status": "Cinco capas de bodegas convertidas desde shapefiles ETRS89 / UTM 29N de la carpeta qgis ya listo."
+    "status": "41 registros con geometría: fichas de catalogación y registros cartográficos."
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "slug": "bodegas-espinosa",
-        "nombre": "Bodegas Espinosa",
-        "estado": "desaparecida",
-        "ubicacion": "Calle Nicolas Gomez Gonzalez entre el n. 13-14 y Ronda de Legionarios 18",
-        "resumen": "Bodega fundada oficialmente en 1907 por Julian Espinosa Escolar; cerrada en 1977, con la nave El Cortinal reutilizada por Mosaicos Pino.",
-        "fuente": "qgis ya listo/B.ESPINOSA.shp",
-        "qgisZip": "public/qgis/bodegas-espinosa-qgis.zip",
+        "slug": "bodegas-rubio",
+        "nombre": "Bodegas Rubio 1893 SL",
+        "estado": "activa",
+        "documentacion": "catalogacion",
+        "periodo": "Actuales",
+        "ubicacion": "Calle Palos de la Frontera nº 12, 14 y calle San Francisco nº 27",
+        "resumen": "Fundada en 1946 por Antonio Rubio Gordillo; su sede actual integra tres naves y conserva restos de arquerías preindustriales.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.RUBIO..shp",
+        "qgisZip": "public/qgis/bodegas-rubio-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
       "geometry": {
@@ -26,174 +28,132 @@
           [
             [
               [
-                -6.55692254,
-                37.38721485
+                -6.55378136,
+                37.38377734
               ],
               [
-                -6.55644153,
-                37.38723658
+                -6.55376603,
+                37.3837142
               ],
               [
-                -6.55638692,
-                37.38720694
+                -6.5537146,
+                37.38372375
               ],
               [
-                -6.55621686,
-                37.38657629
+                -6.55370427,
+                37.38369579
               ],
               [
-                -6.55619551,
-                37.38625594
+                -6.55364975,
+                37.38370609
               ],
               [
-                -6.55643475,
-                37.38622288
+                -6.55339941,
+                37.38354427
               ],
               [
-                -6.55653747,
-                37.38623767
+                -6.55351215,
+                37.38344136
               ],
               [
-                -6.55653221,
-                37.38615521
+                -6.55375458,
+                37.38321714
               ],
               [
-                -6.55670757,
-                37.3861335
+                -6.55390184,
+                37.38327892
               ],
               [
-                -6.55704639,
-                37.38608982
+                -6.55392529,
+                37.38356413
               ],
               [
-                -6.55715847,
-                37.38642788
+                -6.55421283,
+                37.38355621
               ],
               [
-                -6.55710935,
-                37.38671827
+                -6.55424529,
+                37.38368986
               ],
               [
-                -6.55692254,
-                37.38721485
+                -6.55395444,
+                37.38370505
+              ],
+              [
+                -6.55395309,
+                37.38374663
+              ],
+              [
+                -6.55378136,
+                37.38377734
               ]
             ]
-          ],
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-verdier",
+        "nombre": "Bodegas Verdier",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle Nicolás Gómez González entre el nº 13-14",
+        "resumen": "Fundada en 1891 por Celestino Verdier Martín sobre la primitiva destilería de Nicolás Gómez; desapareció en 1970.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.VERDIER.shp",
+        "qgisZip": "public/qgis/bodegas-verdier-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
           [
             [
               [
-                -6.55608024,
-                37.39040955
+                -6.55498664,
+                37.38987429
               ],
               [
-                -6.55624569,
-                37.39016439
+                -6.55496521,
+                37.38959099
               ],
               [
-                -6.55608565,
-                37.3904096
+                -6.55508942,
+                37.38940499
               ],
               [
-                -6.55608024,
-                37.39040955
-              ]
-            ],
-            [
-              [
-                -6.55543793,
-                37.39040301
+                -6.55521938,
+                37.38944609
               ],
               [
-                -6.55544983,
-                37.3901977
+                -6.5555616,
+                37.38955444
               ],
               [
-                -6.55544158,
-                37.39040227
+                -6.55572172,
+                37.38961013
               ],
               [
-                -6.55551515,
-                37.3904038
+                -6.55646258,
+                37.38984196
               ],
               [
-                -6.55543793,
-                37.39040301
-              ]
-            ],
-            [
-              [
-                -6.55645799,
-                37.3898391
+                -6.55607201,
+                37.39041356
               ],
               [
-                -6.55645415,
-                37.38984498
+                -6.55544209,
+                37.39040402
               ],
               [
-                -6.55589338,
-                37.38966251
+                -6.5554628,
+                37.3899016
               ],
               [
-                -6.55645799,
-                37.3898391
-              ]
-            ]
-          ],
-          [
-            [
-              [
-                -6.55544241,
-                37.3903963
-              ],
-              [
-                -6.55548291,
-                37.38954343
-              ],
-              [
-                -6.5561311,
-                37.38973986
-              ],
-              [
-                -6.55645415,
-                37.38984498
-              ],
-              [
-                -6.55645799,
-                37.3898391
-              ],
-              [
-                -6.55643989,
-                37.38983344
-              ],
-              [
-                -6.55647066,
-                37.38984276
-              ],
-              [
-                -6.55608532,
-                37.3904198
-              ],
-              [
-                -6.55544241,
-                37.3903963
-              ]
-            ],
-            [
-              [
-                -6.55624569,
-                37.39016439
-              ],
-              [
-                -6.55608024,
-                37.39040955
-              ],
-              [
-                -6.55608565,
-                37.3904096
-              ],
-              [
-                -6.55624569,
-                37.39016439
+                -6.55498664,
+                37.38987429
               ]
             ]
           ]
@@ -206,9 +166,11 @@
         "slug": "bodegas-morales",
         "nombre": "Bodegas Loewenthal - Morales",
         "estado": "desaparecida",
-        "ubicacion": "Calle de la Estacion n. 1",
-        "resumen": "Bodega fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; sede definitiva construida hacia 1902 y cerrada en 1966.",
-        "fuente": "qgis ya listo/B.MORALES.shp",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle de la Estación nº 1",
+        "resumen": "Fundada en 1893 por Carlos Mauricio Morales y Friederick Loewenthal; la sede definitiva frente al ferrocarril se edificó entre 1898 y 1902.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.MORALES.shp",
         "qgisZip": "public/qgis/bodegas-morales-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
@@ -256,9 +218,11 @@
         "slug": "bodegas-pichardo",
         "nombre": "Bodegas Pichardo",
         "estado": "desaparecida",
-        "ubicacion": "Avenida de la Constitucion y Calle Presidente Adolfo Suarez",
-        "resumen": "Bodega fundada en 1895 por Miguel Pichardo Lepe; varias naves fueron demolidas en 2006 y parte del conjunto tuvo usos bodegueros posteriores.",
-        "fuente": "qgis ya listo/B.PICHARDO.shp",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Avenida de la Constitución y calle Presidente Adolfo Suárez",
+        "resumen": "Fundada en 1895 por Miguel Pichardo Lepe; articuló un gran conjunto de naves en torno a la estación.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.PICHARDO.shp",
         "qgisZip": "public/qgis/bodegas-pichardo-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
@@ -391,12 +355,214 @@
     {
       "type": "Feature",
       "properties": {
+        "slug": "bodegas-espinosa",
+        "nombre": "Bodegas Espinosa",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle Nicolás Gómez González nº 13-14 y Ronda de Legionarios nº 18",
+        "resumen": "Fundada oficialmente en 1907 por Julián Espinosa Escolar; combina la antigua Verdier con la nave El Cortinal.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.ESPINOSA.shp",
+        "qgisZip": "public/qgis/bodegas-espinosa-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55692254,
+                37.38721485
+              ],
+              [
+                -6.55644153,
+                37.38723658
+              ],
+              [
+                -6.55638692,
+                37.38720694
+              ],
+              [
+                -6.55621686,
+                37.38657629
+              ],
+              [
+                -6.55619551,
+                37.38625594
+              ],
+              [
+                -6.55643475,
+                37.38622288
+              ],
+              [
+                -6.55653747,
+                37.38623767
+              ],
+              [
+                -6.55653221,
+                37.38615521
+              ],
+              [
+                -6.55670757,
+                37.3861335
+              ],
+              [
+                -6.55704639,
+                37.38608982
+              ],
+              [
+                -6.55715847,
+                37.38642788
+              ],
+              [
+                -6.55710935,
+                37.38671827
+              ],
+              [
+                -6.55692254,
+                37.38721485
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55608024,
+                37.39040955
+              ],
+              [
+                -6.55624569,
+                37.39016439
+              ],
+              [
+                -6.55608565,
+                37.3904096
+              ],
+              [
+                -6.55608024,
+                37.39040955
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55543793,
+                37.39040301
+              ],
+              [
+                -6.55544983,
+                37.3901977
+              ],
+              [
+                -6.55544158,
+                37.39040227
+              ],
+              [
+                -6.55551515,
+                37.3904038
+              ],
+              [
+                -6.55543793,
+                37.39040301
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55645799,
+                37.3898391
+              ],
+              [
+                -6.55645415,
+                37.38984498
+              ],
+              [
+                -6.55589338,
+                37.38966251
+              ],
+              [
+                -6.55645799,
+                37.3898391
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55544241,
+                37.3903963
+              ],
+              [
+                -6.55548291,
+                37.38954343
+              ],
+              [
+                -6.5561311,
+                37.38973986
+              ],
+              [
+                -6.55645415,
+                37.38984498
+              ],
+              [
+                -6.55645799,
+                37.3898391
+              ],
+              [
+                -6.55643989,
+                37.38983344
+              ],
+              [
+                -6.55647066,
+                37.38984276
+              ],
+              [
+                -6.55608532,
+                37.3904198
+              ],
+              [
+                -6.55544241,
+                37.3903963
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55624569,
+                37.39016439
+              ],
+              [
+                -6.55608024,
+                37.39040955
+              ],
+              [
+                -6.55608565,
+                37.3904096
+              ],
+              [
+                -6.55624569,
+                37.39016439
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "slug": "bodegas-salas",
         "nombre": "Bodegas Salas",
         "estado": "desaparecida",
-        "ubicacion": "Final de la Calle del Pilar",
-        "resumen": "Bodega fundada en 1920 por Rafael y Tomas Salas Lopez; cerrada en 1990 y conservada en estado de abandono y semiruina.",
-        "fuente": "qgis ya listo/B.SALAS.shp",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Final de la calle del Pilar",
+        "resumen": "Fundada en 1920 por Rafael y Tomás Salas López; el gran complejo de la calle del Pilar cerró en 1990.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.SALAS.shp",
         "qgisZip": "public/qgis/bodegas-salas-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
@@ -441,13 +607,15 @@
     {
       "type": "Feature",
       "properties": {
-        "slug": "bodegas-verdier",
-        "nombre": "Bodegas Verdier",
+        "slug": "bodegas-toro",
+        "nombre": "Bodegas Toro",
         "estado": "desaparecida",
-        "ubicacion": "Calle Nicolas Gomez Gonzalez entre el n. 13-14",
-        "resumen": "Bodega fundada en 1891 por Celestino Verdier Martin; edificio desaparecido en 1970.",
-        "fuente": "qgis ya listo/B.VERDIER.shp",
-        "qgisZip": "public/qgis/bodegas-verdier-qgis.zip",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Paseo de las Palmeras",
+        "resumen": "Fundada por José María del Toro Pérez en 1920 sobre un recinto de origen Estenave y Cárdenas-Lebrón.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.TORO.shp",
+        "qgisZip": "public/qgis/bodegas-toro-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
       },
       "geometry": {
@@ -456,48 +624,2136 @@
           [
             [
               [
-                -6.55498664,
-                37.38987429
+                -6.55292187,
+                37.38375089
               ],
               [
-                -6.55496521,
-                37.38959099
+                -6.55288812,
+                37.38373999
               ],
               [
-                -6.55508942,
-                37.38940499
+                -6.55267496,
+                37.38282405
               ],
               [
-                -6.55521938,
-                37.38944609
+                -6.55257797,
+                37.38226764
               ],
               [
-                -6.5555616,
-                37.38955444
+                -6.55399827,
+                37.38210657
               ],
               [
-                -6.55572172,
-                37.38961013
+                -6.55409992,
+                37.38278212
               ],
               [
-                -6.55646258,
-                37.38984196
+                -6.55323396,
+                37.38359069
               ],
               [
-                -6.55607201,
-                37.39041356
+                -6.55292187,
+                37.38375089
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-soldan",
+        "nombre": "Bodegas Soldán",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calles María Auxiliadora, Arquitecto Pinto y San Agustín nº 28",
+        "resumen": "Bodega familiar vinculada a Juan Bautista Soldán y a naves construidas por Antonio Soldán y Sotelo en 1885.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.SOLDÁN.shp",
+        "qgisZip": "public/qgis/bodegas-soldan-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55306822,
+                37.38488652
               ],
               [
-                -6.55544209,
-                37.39040402
+                -6.5527154,
+                37.38498806
               ],
               [
-                -6.5554628,
-                37.3899016
+                -6.55212372,
+                37.38509484
               ],
               [
-                -6.55498664,
-                37.38987429
+                -6.5513029,
+                37.38516967
+              ],
+              [
+                -6.55130389,
+                37.38513908
+              ],
+              [
+                -6.55201196,
+                37.38433746
+              ],
+              [
+                -6.55293698,
+                37.38420356
+              ],
+              [
+                -6.55308952,
+                37.38488696
+              ],
+              [
+                -6.55306822,
+                37.38488652
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55182575,
+                37.3837724
+              ],
+              [
+                -6.54978866,
+                37.38454818
+              ],
+              [
+                -6.54946865,
+                37.38377287
+              ],
+              [
+                -6.55172262,
+                37.38314274
+              ],
+              [
+                -6.55182575,
+                37.3837724
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-miguel-cepeda-soldan",
+        "nombre": "Bodegas Miguel Cepeda y Soldán",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle Maestro Juan Antonio Ríos nº 4",
+        "resumen": "Firma llevada por Miguel Cepeda y Soldán en naves construidas por Antonio Soldán y Sotelo en 1885.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B, MIGUEL CEPEDA Y SOLDÁN.shp",
+        "qgisZip": "public/qgis/bodegas-miguel-cepeda-soldan-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55257506,
+                37.38301245
+              ],
+              [
+                -6.5517175,
+                37.38310352
+              ],
+              [
+                -6.55167637,
+                37.38286119
+              ],
+              [
+                -6.55256183,
+                37.38276388
+              ],
+              [
+                -6.55258667,
+                37.38291745
+              ],
+              [
+                -6.55258681,
+                37.38297868
+              ],
+              [
+                -6.55257506,
+                37.38301245
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-genoves",
+        "nombre": "Bodegas Genovés",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle Cabo nº 2, Ronda de los Legionarios nº 4 y Av. San Juan Bosco nº 8",
+        "resumen": "Fundada en 1930 por Agustín y Adolfo Genovés; llegó a integrar sistemas avanzados de vinagre, mostos y embotellado.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.GENOVES.shp",
+        "qgisZip": "public/qgis/bodegas-genoves-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55248612,
+                37.38148771
+              ],
+              [
+                -6.5524655,
+                37.38199066
+              ],
+              [
+                -6.55240487,
+                37.38202002
+              ],
+              [
+                -6.5519375,
+                37.38158179
+              ],
+              [
+                -6.55193589,
+                37.38150012
+              ],
+              [
+                -6.55233345,
+                37.38146414
+              ],
+              [
+                -6.55248745,
+                37.38144692
+              ],
+              [
+                -6.55248612,
+                37.38148771
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55742326,
+                37.38932081
+              ],
+              [
+                -6.5571008,
+                37.38940598
+              ],
+              [
+                -6.5570635,
+                37.38924195
+              ],
+              [
+                -6.5575268,
+                37.38902024
+              ],
+              [
+                -6.55756443,
+                37.38917407
+              ],
+              [
+                -6.55742326,
+                37.38932081
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55045753,
+                37.38675157
+              ],
+              [
+                -6.55029299,
+                37.38679748
+              ],
+              [
+                -6.55021106,
+                37.38662997
+              ],
+              [
+                -6.55027788,
+                37.38657439
+              ],
+              [
+                -6.55038881,
+                37.38666937
+              ],
+              [
+                -6.55045753,
+                37.38675157
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-soriano",
+        "nombre": "Bodegas Soriano",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle María Auxiliadora y Ronda de los Legionarios nº 15",
+        "resumen": "Fundada por Juan Soriano Luengo; ejemplo de bodega no exportadora centrada en Huelva y Sevilla.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.SORIANO.shp",
+        "qgisZip": "public/qgis/bodegas-soriano-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55759492,
+                37.38895703
+              ],
+              [
+                -6.55705711,
+                37.38924182
+              ],
+              [
+                -6.55686191,
+                37.38895208
+              ],
+              [
+                -6.55674217,
+                37.38870131
+              ],
+              [
+                -6.55668534,
+                37.38848246
+              ],
+              [
+                -6.55664444,
+                37.38829795
+              ],
+              [
+                -6.55660944,
+                37.38780065
+              ],
+              [
+                -6.55721231,
+                37.38761244
+              ],
+              [
+                -6.55729457,
+                37.38822976
+              ],
+              [
+                -6.55763738,
+                37.38869941
+              ],
+              [
+                -6.55771104,
+                37.38892541
+              ],
+              [
+                -6.55759492,
+                37.38895703
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-alfredo-rubio-ortega",
+        "nombre": "Bodegas Alfredo Rubio Ortega",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle Alcázar y Pérez nº 1",
+        "resumen": "Bodega de cosechero fundada por Pedro Domínguez Valdés y consolidada desde 1930 por Alfredo Rubio Ortega.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B.ALFREDO RUBIO ORTEGA.shp",
+        "qgisZip": "public/qgis/bodegas-alfredo-rubio-ortega-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55312266,
+                37.3820978
+              ],
+              [
+                -6.55264296,
+                37.3821695
+              ],
+              [
+                -6.55260103,
+                37.38214823
+              ],
+              [
+                -6.55255473,
+                37.38213026
+              ],
+              [
+                -6.55253519,
+                37.38155165
+              ],
+              [
+                -6.55254287,
+                37.38144637
+              ],
+              [
+                -6.55269383,
+                37.38139168
+              ],
+              [
+                -6.55296404,
+                37.38133945
+              ],
+              [
+                -6.55312266,
+                37.3820978
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-mamerto-de-la-vara",
+        "nombre": "Bodegas Mamerto de la Vara",
+        "estado": "desaparecida",
+        "documentacion": "catalogacion",
+        "periodo": "Bodegas catálogo",
+        "ubicacion": "Calle San Antonio nº 23 y 24",
+        "resumen": "Fundada en julio de 1940 por Mamerto de la Vara Pérez; especializada en vinos compuestos y licores.",
+        "fuente": "CAPAS DE QGIS TODO/BODEGAS CATALOGO/B. MAMERTO DE LA VARA.shp",
+        "qgisZip": "public/qgis/bodegas-mamerto-de-la-vara-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.5510248,
+                37.38621659
+              ],
+              [
+                -6.55066152,
+                37.38637742
+              ],
+              [
+                -6.55052878,
+                37.3861995
+              ],
+              [
+                -6.55053547,
+                37.38612482
+              ],
+              [
+                -6.55064288,
+                37.38603351
+              ],
+              [
+                -6.55077393,
+                37.38593589
+              ],
+              [
+                -6.550893,
+                37.38587884
+              ],
+              [
+                -6.5510248,
+                37.38621659
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-de-la-viga",
+        "nombre": "Bodega de la Viga",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "B. preindustriales",
+        "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B. DE LA VIGA.shp",
+        "qgisZip": "public/qgis/bodegas-de-la-viga-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55141756,
+                37.38734968
+              ],
+              [
+                -6.55138798,
+                37.3872488
+              ],
+              [
+                -6.5513974,
+                37.38716724
+              ],
+              [
+                -6.55143136,
+                37.38683631
+              ],
+              [
+                -6.55182064,
+                37.38675491
+              ],
+              [
+                -6.55235883,
+                37.38661181
+              ],
+              [
+                -6.55254549,
+                37.38657865
+              ],
+              [
+                -6.55272442,
+                37.38654534
+              ],
+              [
+                -6.55289441,
+                37.38654886
+              ],
+              [
+                -6.55296822,
+                37.38653805
+              ],
+              [
+                -6.55298282,
+                37.3864458
+              ],
+              [
+                -6.55319236,
+                37.38642237
+              ],
+              [
+                -6.55326567,
+                37.38642697
+              ],
+              [
+                -6.55325708,
+                37.38633425
+              ],
+              [
+                -6.55325889,
+                37.38627875
+              ],
+              [
+                -6.55322702,
+                37.38618863
+              ],
+              [
+                -6.55376445,
+                37.38594987
+              ],
+              [
+                -6.55385387,
+                37.38605353
+              ],
+              [
+                -6.55406562,
+                37.38619982
+              ],
+              [
+                -6.55413713,
+                37.38625991
+              ],
+              [
+                -6.55419248,
+                37.38634127
+              ],
+              [
+                -6.55405931,
+                37.38639404
+              ],
+              [
+                -6.55357813,
+                37.38668641
+              ],
+              [
+                -6.55346192,
+                37.38669326
+              ],
+              [
+                -6.55321284,
+                37.38674364
+              ],
+              [
+                -6.55293622,
+                37.38680886
+              ],
+              [
+                -6.55268915,
+                37.38679758
+              ],
+              [
+                -6.5523923,
+                37.38689015
+              ],
+              [
+                -6.55192601,
+                37.38708102
+              ],
+              [
+                -6.55168236,
+                37.38720245
+              ],
+              [
+                -6.55170047,
+                37.38723985
+              ],
+              [
+                -6.55155947,
+                37.38729554
+              ],
+              [
+                -6.55141756,
+                37.38734968
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-acacio-larios-bexarano",
+        "nombre": "Bodegas Acacio Larios Bexarano",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "B. preindustriales",
+        "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.ACACIO LARIOS BEXARANO.shp",
+        "qgisZip": "public/qgis/bodegas-acacio-larios-bexarano-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55425375,
+                37.38754877
+              ],
+              [
+                -6.55426931,
+                37.38754601
+              ],
+              [
+                -6.55395244,
+                37.38765977
+              ],
+              [
+                -6.55390226,
+                37.38753841
+              ],
+              [
+                -6.55403859,
+                37.3875073
+              ],
+              [
+                -6.55399533,
+                37.38741077
+              ],
+              [
+                -6.55418269,
+                37.38735603
+              ],
+              [
+                -6.55425375,
+                37.38754877
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-del-camino-de-hinojos",
+        "nombre": "Bodega del Camino de Hinojos",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "B. preindustriales",
+        "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.DEL CAMINO DE HINOJOS.shp",
+        "qgisZip": "public/qgis/bodegas-del-camino-de-hinojos-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.54605007,
+                37.38646556
+              ],
+              [
+                -6.54596309,
+                37.38605036
+              ],
+              [
+                -6.54729236,
+                37.38607179
+              ],
+              [
+                -6.54735036,
+                37.38619022
+              ],
+              [
+                -6.54605007,
+                37.38646556
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-perez-lagares",
+        "nombre": "Bodegas Pérez Lagares",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "B. preindustriales / 1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: B. preindustriales / 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales / 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.PÉREZ LAGARES.shp; CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.PÉREZ LAGARES.shp",
+        "qgisZip": "public/qgis/bodegas-perez-lagares-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55309281,
+                37.38488677
+              ],
+              [
+                -6.55280274,
+                37.38496493
+              ],
+              [
+                -6.55276904,
+                37.38489044
+              ],
+              [
+                -6.55307158,
+                37.38482868
+              ],
+              [
+                -6.55309281,
+                37.38488677
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55308701,
+                37.38488281
+              ],
+              [
+                -6.55291418,
+                37.38492786
+              ],
+              [
+                -6.5528864,
+                37.38484523
+              ],
+              [
+                -6.5530703,
+                37.38481106
+              ],
+              [
+                -6.55308701,
+                37.38488281
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-p-y-j-cardenas-lebron",
+        "nombre": "Bodegas P. y J. Cárdenas Lebrón",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B. P Y J CÁRDENAS LEBRÓN.shp",
+        "qgisZip": "public/qgis/bodegas-p-y-j-cardenas-lebron-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55292187,
+                37.38375089
+              ],
+              [
+                -6.55288812,
+                37.38373999
+              ],
+              [
+                -6.55267496,
+                37.38282405
+              ],
+              [
+                -6.55257797,
+                37.38226764
+              ],
+              [
+                -6.55399827,
+                37.38210657
+              ],
+              [
+                -6.55409992,
+                37.38278212
+              ],
+              [
+                -6.55323396,
+                37.38359069
+              ],
+              [
+                -6.55292187,
+                37.38375089
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-solis-diaz",
+        "nombre": "Bodegas Solís Díaz",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B. SOLIS DÍAZ.shp",
+        "qgisZip": "public/qgis/bodegas-solis-diaz-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55674879,
+                37.39200964
+              ],
+              [
+                -6.55630069,
+                37.3921719
+              ],
+              [
+                -6.55589833,
+                37.39132314
+              ],
+              [
+                -6.55600367,
+                37.39125671
+              ],
+              [
+                -6.55641964,
+                37.39128933
+              ],
+              [
+                -6.55665558,
+                37.39170242
+              ],
+              [
+                -6.55680905,
+                37.39200746
+              ],
+              [
+                -6.55674879,
+                37.39200964
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-cueva",
+        "nombre": "Bodegas Cueva",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.CUEVA.shp",
+        "qgisZip": "public/qgis/bodegas-cueva-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55461469,
+                37.38651855
+              ],
+              [
+                -6.55440763,
+                37.38626523
+              ],
+              [
+                -6.55454313,
+                37.38618617
+              ],
+              [
+                -6.55473374,
+                37.38645645
+              ],
+              [
+                -6.55461469,
+                37.38651855
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-cura-aguilar",
+        "nombre": "Bodega del Cura Aguilar",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.CURA AGUILAR.shp",
+        "qgisZip": "public/qgis/bodegas-cura-aguilar-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55046088,
+                37.3867542
+              ],
+              [
+                -6.55029599,
+                37.38680382
+              ],
+              [
+                -6.55020784,
+                37.38662674
+              ],
+              [
+                -6.55027176,
+                37.38657157
+              ],
+              [
+                -6.55038857,
+                37.38666738
+              ],
+              [
+                -6.55046088,
+                37.3867542
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55415355,
+                37.38325771
+              ],
+              [
+                -6.55406062,
+                37.38327193
+              ],
+              [
+                -6.55406289,
+                37.38333539
+              ],
+              [
+                -6.55390802,
+                37.38334372
+              ],
+              [
+                -6.55389442,
+                37.3832731
+              ],
+              [
+                -6.55383031,
+                37.38324526
+              ],
+              [
+                -6.55385783,
+                37.38319856
+              ],
+              [
+                -6.55380546,
+                37.38316519
+              ],
+              [
+                -6.55410348,
+                37.38288658
+              ],
+              [
+                -6.55415355,
+                37.38325771
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-estenave",
+        "nombre": "Bodegas Estenave",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.ESTENAVE.shp",
+        "qgisZip": "public/qgis/bodegas-estenave-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55292187,
+                37.38375089
+              ],
+              [
+                -6.55288812,
+                37.38373999
+              ],
+              [
+                -6.55267496,
+                37.38282405
+              ],
+              [
+                -6.55257797,
+                37.38226764
+              ],
+              [
+                -6.55399827,
+                37.38210657
+              ],
+              [
+                -6.55409992,
+                37.38278212
+              ],
+              [
+                -6.55323396,
+                37.38359069
+              ],
+              [
+                -6.55292187,
+                37.38375089
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-francisco-dominguez-delgado",
+        "nombre": "Bodegas Francisco Domínguez Delgado",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.FRANCISCO DOMÍNGUEZ DELGADO.shp",
+        "qgisZip": "public/qgis/bodegas-francisco-dominguez-delgado-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.54808892,
+                37.38665374
+              ],
+              [
+                -6.54775908,
+                37.38661234
+              ],
+              [
+                -6.54765003,
+                37.38612831
+              ],
+              [
+                -6.54822621,
+                37.38619312
+              ],
+              [
+                -6.54808892,
+                37.38665374
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-juan-dominguez-millan",
+        "nombre": "Bodegas Juan Domínguez Millán",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.JUAN DOMÍNGUEZ MILLÁN.shp",
+        "qgisZip": "public/qgis/bodegas-juan-dominguez-millan-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55373514,
+                37.38426849
+              ],
+              [
+                -6.553236,
+                37.38434906
+              ],
+              [
+                -6.55320266,
+                37.3842506
+              ],
+              [
+                -6.55325703,
+                37.38423115
+              ],
+              [
+                -6.55319855,
+                37.38391434
+              ],
+              [
+                -6.55378037,
+                37.38380289
+              ],
+              [
+                -6.55380528,
+                37.38389603
+              ],
+              [
+                -6.55364059,
+                37.38393722
+              ],
+              [
+                -6.55373514,
+                37.38426849
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-navarro",
+        "nombre": "Bodegas Navarro",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.NAVARRO.shp",
+        "qgisZip": "public/qgis/bodegas-navarro-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.56003211,
+                37.39082957
+              ],
+              [
+                -6.55903679,
+                37.39089405
+              ],
+              [
+                -6.55833348,
+                37.39049858
+              ],
+              [
+                -6.55880714,
+                37.39035191
+              ],
+              [
+                -6.55880062,
+                37.38989601
+              ],
+              [
+                -6.5595425,
+                37.38989093
+              ],
+              [
+                -6.56003211,
+                37.39082957
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-rafael-ayudarte",
+        "nombre": "Bodegas Rafael Ayudarte",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.RAFAEL AYUDARTE.shp",
+        "qgisZip": "public/qgis/bodegas-rafael-ayudarte-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55247626,
+                37.38194207
+              ],
+              [
+                -6.55239709,
+                37.38197733
+              ],
+              [
+                -6.55197319,
+                37.381595
+              ],
+              [
+                -6.55195369,
+                37.38148391
+              ],
+              [
+                -6.55248318,
+                37.3814626
+              ],
+              [
+                -6.55247626,
+                37.38194207
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-rafael-daza-zarza",
+        "nombre": "Bodegas Rafael Daza Zarza",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1870-1924",
+        "ubicacion": "Registro cartográfico QGIS: 1870-1924",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.RAFAEL DAZA ZARZA.shp",
+        "qgisZip": "public/qgis/bodegas-rafael-daza-zarza-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55424358,
+                37.38393289
+              ],
+              [
+                -6.55396594,
+                37.38393983
+              ],
+              [
+                -6.55401767,
+                37.3842153
+              ],
+              [
+                -6.55373861,
+                37.38426602
+              ],
+              [
+                -6.55364966,
+                37.38393559
+              ],
+              [
+                -6.55380961,
+                37.38390431
+              ],
+              [
+                -6.55378506,
+                37.38381503
+              ],
+              [
+                -6.55394638,
+                37.38378609
+              ],
+              [
+                -6.55394366,
+                37.38373645
+              ],
+              [
+                -6.55423011,
+                37.38372509
+              ],
+              [
+                -6.55424358,
+                37.38393289
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-calero",
+        "nombre": "Bodegas Calero",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.CALERO.shp",
+        "qgisZip": "public/qgis/bodegas-calero-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55461469,
+                37.38651855
+              ],
+              [
+                -6.55440763,
+                37.38626523
+              ],
+              [
+                -6.55454313,
+                37.38618617
+              ],
+              [
+                -6.55473374,
+                37.38645645
+              ],
+              [
+                -6.55461469,
+                37.38651855
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-castizo-romero-hermanos",
+        "nombre": "Bodegas Castizo Romero y Hermanos",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.CASTIZO ROMERO Y HERMANOS.shp",
+        "qgisZip": "public/qgis/bodegas-castizo-romero-hermanos-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55154116,
+                37.384178
+              ],
+              [
+                -6.55068059,
+                37.38444922
+              ],
+              [
+                -6.55062831,
+                37.38433653
+              ],
+              [
+                -6.55146664,
+                37.38401798
+              ],
+              [
+                -6.55154116,
+                37.384178
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-jose-maria-juan-castizo-pinto",
+        "nombre": "Bodegas José Mª y Juan Castizo Pinto",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JOSE Mª Y JUAN CASTIZO PINTO.shp",
+        "qgisZip": "public/qgis/bodegas-jose-maria-juan-castizo-pinto-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55257269,
+                37.38301977
+              ],
+              [
+                -6.55190012,
+                37.38308654
+              ],
+              [
+                -6.55191902,
+                37.38321606
+              ],
+              [
+                -6.55171962,
+                37.38321654
+              ],
+              [
+                -6.55167127,
+                37.38283738
+              ],
+              [
+                -6.55254785,
+                37.38271718
+              ],
+              [
+                -6.55258911,
+                37.38287022
+              ],
+              [
+                -6.5525935,
+                37.38300175
+              ],
+              [
+                -6.55257269,
+                37.38301977
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-jose-cepeda-rojas",
+        "nombre": "Bodegas José Cepeda Rojas",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JOSÉ CEPEDA ROJAS.shp",
+        "qgisZip": "public/qgis/bodegas-jose-cepeda-rojas-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55756052,
+                37.3891818
+              ],
+              [
+                -6.5574237,
+                37.38932462
+              ],
+              [
+                -6.55710434,
+                37.38940339
+              ],
+              [
+                -6.5570636,
+                37.38923682
+              ],
+              [
+                -6.55752578,
+                37.38902373
+              ],
+              [
+                -6.55756052,
+                37.3891818
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-julio-garcilaso",
+        "nombre": "Bodegas Julio Garcilaso",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JULIO GARCILASO.shp",
+        "qgisZip": "public/qgis/bodegas-julio-garcilaso-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55424358,
+                37.38393289
+              ],
+              [
+                -6.55396594,
+                37.38393983
+              ],
+              [
+                -6.55401767,
+                37.3842153
+              ],
+              [
+                -6.55373861,
+                37.38426602
+              ],
+              [
+                -6.55364966,
+                37.38393559
+              ],
+              [
+                -6.55380961,
+                37.38390431
+              ],
+              [
+                -6.55378506,
+                37.38381503
+              ],
+              [
+                -6.55394638,
+                37.38378609
+              ],
+              [
+                -6.55394366,
+                37.38373645
+              ],
+              [
+                -6.55423011,
+                37.38372509
+              ],
+              [
+                -6.55424358,
+                37.38393289
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-noguera",
+        "nombre": "Bodegas Noguera",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.NOGUERA.shp",
+        "qgisZip": "public/qgis/bodegas-noguera-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55308701,
+                37.38488281
+              ],
+              [
+                -6.55291418,
+                37.38492786
+              ],
+              [
+                -6.5528864,
+                37.38484523
+              ],
+              [
+                -6.5530703,
+                37.38481106
+              ],
+              [
+                -6.55308701,
+                37.38488281
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-teba",
+        "nombre": "Bodegas Teba",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "1925-1950",
+        "ubicacion": "Registro cartográfico QGIS: 1925-1950",
+        "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.TEBA.shp",
+        "qgisZip": "public/qgis/bodegas-teba-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55410325,
+                37.38289071
+              ],
+              [
+                -6.55415419,
+                37.38326005
+              ],
+              [
+                -6.55406154,
+                37.38327041
+              ],
+              [
+                -6.55406363,
+                37.38333518
+              ],
+              [
+                -6.55390104,
+                37.38334632
+              ],
+              [
+                -6.55389361,
+                37.38327363
+              ],
+              [
+                -6.55383284,
+                37.38325005
+              ],
+              [
+                -6.55385551,
+                37.38319807
+              ],
+              [
+                -6.55380635,
+                37.38316134
+              ],
+              [
+                -6.55410325,
+                37.38289071
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.55046001,
+                37.38675705
+              ],
+              [
+                -6.55029485,
+                37.38680384
+              ],
+              [
+                -6.55020838,
+                37.3866246
+              ],
+              [
+                -6.55027022,
+                37.38657232
+              ],
+              [
+                -6.55039855,
+                37.38666872
+              ],
+              [
+                -6.55046001,
+                37.38675705
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-garay",
+        "nombre": "Bodegas Garay",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Actuales",
+        "ubicacion": "Registro cartográfico QGIS: Actuales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.GARAY.shp",
+        "qgisZip": "public/qgis/bodegas-garay-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.54486699,
+                37.38907124
+              ],
+              [
+                -6.54470291,
+                37.38909299
+              ],
+              [
+                -6.5445426,
+                37.38877979
+              ],
+              [
+                -6.54471802,
+                37.38876171
+              ],
+              [
+                -6.54486699,
+                37.38907124
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-infante-mam",
+        "nombre": "Bodegas Infante MAM",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Actuales",
+        "ubicacion": "Registro cartográfico QGIS: Actuales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.INFANTE MAM.shp",
+        "qgisZip": "public/qgis/bodegas-infante-mam-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.54452248,
+                37.37252421
+              ],
+              [
+                -6.54440392,
+                37.37256405
+              ],
+              [
+                -6.5442234,
+                37.37228724
+              ],
+              [
+                -6.54435687,
+                37.3722336
+              ],
+              [
+                -6.54452248,
+                37.37252421
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -6.5442376,
+                37.37278751
+              ],
+              [
+                -6.54410924,
+                37.37283228
+              ],
+              [
+                -6.54392504,
+                37.37252077
+              ],
+              [
+                -6.54405356,
+                37.37247088
+              ],
+              [
+                -6.5442376,
+                37.37278751
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-magase",
+        "nombre": "Bodegas Magasé",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Actuales",
+        "ubicacion": "Registro cartográfico QGIS: Actuales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.MAGASÉ.shp",
+        "qgisZip": "public/qgis/bodegas-magase-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55076163,
+                37.38520321
+              ],
+              [
+                -6.55074696,
+                37.38552193
+              ],
+              [
+                -6.55052356,
+                37.3855173
+              ],
+              [
+                -6.55052326,
+                37.38519656
+              ],
+              [
+                -6.55076163,
+                37.38520321
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-millan",
+        "nombre": "Bodegas Millán",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Actuales",
+        "ubicacion": "Registro cartográfico QGIS: Actuales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.MILLÁN.shp",
+        "qgisZip": "public/qgis/bodegas-millan-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.5549015,
+                37.38985576
+              ],
+              [
+                -6.55453627,
+                37.38980552
+              ],
+              [
+                -6.55439092,
+                37.38910425
+              ],
+              [
+                -6.55474335,
+                37.389078
+              ],
+              [
+                -6.55483809,
+                37.38945501
+              ],
+              [
+                -6.55492079,
+                37.38985007
+              ],
+              [
+                -6.5549015,
+                37.38985576
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-vega-menacho",
+        "nombre": "Bodegas Vega Menacho",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Actuales",
+        "ubicacion": "Registro cartográfico QGIS: Actuales",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.VEGA MENACHO.shp",
+        "qgisZip": "public/qgis/bodegas-vega-menacho-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.54943375,
+                37.38646435
+              ],
+              [
+                -6.54926446,
+                37.38649228
+              ],
+              [
+                -6.54922996,
+                37.3863858
+              ],
+              [
+                -6.54941074,
+                37.38635696
+              ],
+              [
+                -6.54942572,
+                37.38640301
+              ],
+              [
+                -6.54943375,
+                37.38646435
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "bodegas-torrepalma",
+        "nombre": "Bodegas Torrepalma",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Cooperativas",
+        "ubicacion": "Registro cartográfico QGIS: Cooperativas",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Cooperativas. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/COOPERATIVAS/B.TORREPALMA.shp",
+        "qgisZip": "public/qgis/bodegas-torrepalma-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55407119,
+                37.39039737
+              ],
+              [
+                -6.55318664,
+                37.39036843
+              ],
+              [
+                -6.553307,
+                37.38977075
+              ],
+              [
+                -6.55412262,
+                37.38986968
+              ],
+              [
+                -6.55407119,
+                37.39039737
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "slug": "cooperativa-nuestra-senora-guia",
+        "nombre": "Cooperativa Nuestra Señora de Guía",
+        "estado": "cartografica",
+        "documentacion": "cartografica",
+        "periodo": "Cooperativas",
+        "ubicacion": "Registro cartográfico QGIS: Cooperativas",
+        "resumen": "Registro incorporado desde capas QGIS del periodo Cooperativas. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
+        "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/COOPERATIVAS/COOPERATIVA NUESTRA SEÑORA DE GUIA.shp",
+        "qgisZip": "public/qgis/cooperativa-nuestra-senora-guia-qgis.zip",
+        "crs_original": "ETRS89 / UTM zone 29N"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -6.55790943,
+                37.39030354
+              ],
+              [
+                -6.55746368,
+                37.3907775
+              ],
+              [
+                -6.55719478,
+                37.39073091
+              ],
+              [
+                -6.55699462,
+                37.39073741
+              ],
+              [
+                -6.55635152,
+                37.39054483
+              ],
+              [
+                -6.55689162,
+                37.38986314
+              ],
+              [
+                -6.55701733,
+                37.38980345
+              ],
+              [
+                -6.55711604,
+                37.38981308
+              ],
+              [
+                -6.5573625,
+                37.38996404
+              ],
+              [
+                -6.55790943,
+                37.39030354
               ]
             ]
           ]

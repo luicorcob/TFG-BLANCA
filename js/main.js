@@ -6,7 +6,19 @@
       .toLowerCase()
       .trim();
 
-  const formatStatus = (status) => (status === "activa" ? "Activa" : "Desaparecida");
+  const statusLabels = {
+    activa: "Activa",
+    desaparecida: "Desaparecida",
+    cartografica: "Registro cartográfico"
+  };
+
+  const documentationLabels = {
+    catalogacion: "Ficha de catalogación",
+    cartografica: "Capa QGIS"
+  };
+
+  const formatStatus = (status) => statusLabels[status] || "Sin clasificar";
+  const formatDocumentation = (value) => documentationLabels[value] || "Documentación";
 
   const escapeHtml = (value) =>
     String(value || "").replace(/[&<>"']/g, (char) => {
@@ -27,7 +39,7 @@
     const toggle = document.querySelector("[data-nav-toggle]");
     const menu = document.querySelector("[data-nav-menu]");
     const currentFile = location.pathname.split("/").pop() || "index.html";
-    const activeFile = currentFile.startsWith("bodegas-") ? "catalogo.html" : currentFile;
+    const activeFile = currentFile.startsWith("bodegas-") || currentFile === "bodega.html" ? "catalogo.html" : currentFile;
 
     document.querySelectorAll("[data-nav-link]").forEach((link) => {
       const hrefFile = link.getAttribute("href") || "";
@@ -195,7 +207,72 @@
     const root = document.querySelector("[data-catalog]");
     if (!root) return;
 
-    const cards = Array.from(root.querySelectorAll("[data-catalog-card]"));
+    const grid = root.querySelector(".catalog-grid");
+    const catalogItems = [...(window.BODEGAS || [])];
+
+    const cardSearchText = (item) =>
+      [
+        item.nombre,
+        item.ubicacion,
+        item.resumen,
+        item.lectura,
+        item.catastro,
+        item.anioConstruccion,
+        item.fundacion,
+        item.cierre,
+        item.desaparicion,
+        item.periodo,
+        item.documentacion
+      ]
+        .filter(Boolean)
+        .join(" ");
+
+    if (grid && catalogItems.length > 0) {
+      grid.innerHTML = catalogItems
+        .map((item) => {
+          const meta =
+            item.documentacion === "cartografica"
+              ? item.periodo || "Capa QGIS"
+              : item.fundacion
+                ? `Fundada en ${item.fundacion}`
+                : item.anioConstruccion || "Ficha documental";
+          const cardClass = [
+            "bodega-card",
+            item.estado === "desaparecida" ? "is-lost" : "",
+            item.estado === "cartografica" ? "is-cartographic" : ""
+          ]
+            .filter(Boolean)
+            .join(" ");
+
+          return `
+            <article
+              class="${cardClass}"
+              data-catalog-card
+              data-estado="${escapeHtml(item.estado)}"
+              data-documentacion="${escapeHtml(item.documentacion || "")}"
+              data-search="${escapeHtml(cardSearchText(item))}"
+              data-animate
+            >
+              <a class="card-media" href="${escapeHtml(item.href)}" aria-label="Abrir ficha de ${escapeHtml(item.nombre)}">
+                <img src="${escapeHtml(item.imagen)}" alt="Imagen de ${escapeHtml(item.nombre)}" loading="lazy" />
+              </a>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="status-pill ${escapeHtml(item.estado)}">${escapeHtml(formatStatus(item.estado))}</span>
+                  <span>${escapeHtml(meta)}</span>
+                </div>
+                <span class="catalog-level ${escapeHtml(item.documentacion || "")}">${escapeHtml(formatDocumentation(item.documentacion))}</span>
+                <h2>${escapeHtml(item.nombre)}</h2>
+                <p class="card-location">${escapeHtml(item.ubicacion)}</p>
+                <p>${escapeHtml(item.resumen)}</p>
+                <a class="card-link" href="${escapeHtml(item.href)}">Ver ficha</a>
+              </div>
+            </article>`;
+        })
+        .join("");
+    }
+
+    let cards = Array.from(root.querySelectorAll("[data-catalog-card]"));
     const search = root.querySelector("[data-catalog-search]");
     const buttons = Array.from(root.querySelectorAll("[data-filter-key]"));
     const reset = root.querySelector("[data-catalog-reset]");
@@ -205,6 +282,7 @@
 
     const state = {
       estado: params.get("estado") || "",
+      documentacion: params.get("documentacion") || "",
       busqueda: params.get("busqueda") || ""
     };
 
@@ -231,9 +309,10 @@
 
       cards.forEach((card) => {
         const matchesStatus = !state.estado || card.dataset.estado === state.estado;
+        const matchesDocumentation = !state.documentacion || card.dataset.documentacion === state.documentacion;
         const haystack = normalize(card.dataset.search);
         const matchesSearch = !query || haystack.includes(query);
-        const show = matchesStatus && matchesSearch;
+        const show = matchesStatus && matchesDocumentation && matchesSearch;
         card.hidden = !show;
         if (show) visible += 1;
       });
@@ -258,11 +337,13 @@
 
     reset?.addEventListener("click", () => {
       state.estado = "";
+      state.documentacion = "";
       state.busqueda = "";
       syncUrl();
       render();
     });
 
+    cards = Array.from(root.querySelectorAll("[data-catalog-card]"));
     render();
   }
 
@@ -357,16 +438,17 @@
   }
 
   function initFicha() {
-    const fichaPdfUrl = "public/fichas/ficha-ejemplo-maquetacion.pdf";
+    const slugParam = new URLSearchParams(location.search).get("slug") || "";
+    const currentFile = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
+    const currentBodega = (window.BODEGAS || []).find((item) => item.href === currentFile || item.slug === slugParam);
+    const fichaPdfUrl = currentBodega?.fichaPdf || "public/fichas/ficha-ejemplo-maquetacion.pdf";
+
     document.querySelector("[data-print-ficha]")?.addEventListener("click", () => {
       const pdfWindow = window.open(fichaPdfUrl, "_blank", "noopener");
       if (!pdfWindow) {
         window.location.href = fichaPdfUrl;
       }
     });
-
-    const currentFile = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
-    const currentBodega = (window.BODEGAS || []).find((item) => item.href === currentFile);
 
     const slideFromButton = (button) => {
       const image = button.querySelector("img");
@@ -462,6 +544,198 @@
         gallery.scrollBy({ left: gallery.clientWidth, behavior: "smooth" });
       });
     });
+  }
+
+  function initDynamicBodegaPage() {
+    const root = document.querySelector("[data-dynamic-bodega]");
+    if (!root) return;
+
+    const slug = new URLSearchParams(location.search).get("slug") || "";
+    const items = [...(window.BODEGAS || [])];
+    const item = items.find((entry) => entry.slug === slug);
+
+    if (!item) {
+      root.innerHTML = `
+        <section class="page-shell content-panel" data-animate>
+          <p class="eyebrow">Catálogo</p>
+          <h1 class="section-title">Ficha no encontrada</h1>
+          <p>No se ha encontrado un registro para el identificador solicitado.</p>
+          <a class="button-link primary" href="catalogo.html">Volver al catálogo</a>
+        </section>`;
+      return;
+    }
+
+    document.title = `${item.nombre} | Arquitectura y memoria perdida del vino`;
+
+    const images = item.imagenes?.length
+      ? item.imagenes
+      : [{ src: item.imagen, alt: `Imagen de ${item.nombre}`, caption: item.nombre }];
+    const heroImage = images[0];
+    const itemIndex = items.findIndex((entry) => entry.slug === item.slug);
+    const prev = itemIndex > 0 ? items[itemIndex - 1] : null;
+    const next = itemIndex >= 0 && itemIndex < items.length - 1 ? items[itemIndex + 1] : null;
+    const isCartographic = item.documentacion === "cartografica";
+
+    const technicalRows = [
+      ["Estado", formatStatus(item.estado)],
+      ["Documentación", formatDocumentation(item.documentacion)],
+      ["Ubicación", item.ubicacion],
+      ["Periodo", item.periodo],
+      ["Referencia catastral", item.catastro],
+      ["Coordenadas", item.coordenadas ? `${item.coordenadas.lat}, ${item.coordenadas.lng}` : ""],
+      ["Fundación", item.fundacion],
+      ["Año de construcción", item.anioConstruccion],
+      ["Cierre", item.cierre],
+      ["Desaparición", item.desaparicion],
+      ["Uso posterior", item.usoPosterior],
+      ["Bodegas anteriores", item.bodegasAnteriores],
+      ["Bodegas posteriores", item.bodegasPosteriores],
+      ["Ubicación anterior", item.ubicacionAnterior],
+      ["Propuesta", item.propuesta]
+    ]
+      .filter(([, value]) => value)
+      .map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`)
+      .join("");
+
+    const gallery = images
+      .map(
+        (imageItem) => `
+          <figure>
+            <button type="button" data-lightbox-trigger data-lightbox-src="${escapeHtml(imageItem.src)}" data-lightbox-alt="${escapeHtml(imageItem.alt || item.nombre)}" data-lightbox-caption="${escapeHtml(imageItem.caption || imageItem.alt || item.nombre)}">
+              <img src="${escapeHtml(imageItem.src)}" alt="${escapeHtml(imageItem.alt || item.nombre)}" loading="lazy" />
+            </button>
+            <figcaption>${escapeHtml(imageItem.caption || imageItem.alt || item.nombre)}</figcaption>
+          </figure>`
+      )
+      .join("");
+
+    const timeline = item.cronologia?.length
+      ? `
+        <section class="ficha-timeline" aria-labelledby="timeline-title" data-animate>
+          <div class="section-kicker">
+            <p class="eyebrow">Etapas</p>
+            <h2 id="timeline-title">Cronología de la bodega</h2>
+          </div>
+          <ol>
+            ${item.cronologia
+              .map(
+                ([date, title, text]) =>
+                  `<li><time>${escapeHtml(date)}</time><div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></div></li>`
+              )
+              .join("")}
+          </ol>
+        </section>`
+      : "";
+
+    const sources = (item.fuentes || [])
+      .map((source) => `<li>${escapeHtml(source)}</li>`)
+      .join("");
+
+    const qgisButton = item.qgisZip
+      ? `<a class="button-link ghost" href="${escapeHtml(item.qgisZip)}" download>Descargar QGIS</a>`
+      : "";
+    const pdfButton = item.fichaPdf
+      ? `<button class="button-link ghost" type="button" data-print-ficha>Descargar ficha PDF</button>`
+      : "";
+
+    root.innerHTML = `
+      <article class="ficha-completa">
+        <section class="bodega-hero">
+          <div class="page-shell hero-grid">
+            <div class="hero-copy" data-animate>
+              <a class="back-link" href="catalogo.html">Volver al catálogo</a>
+              <p class="eyebrow">${escapeHtml(formatDocumentation(item.documentacion))}</p>
+              <h1>${escapeHtml(item.nombre)}</h1>
+              <p class="lead">${escapeHtml(item.resumen)}</p>
+              <div class="status-row">
+                <span class="status-pill ${escapeHtml(item.estado)}">${escapeHtml(formatStatus(item.estado))}</span>
+                <span>${escapeHtml(item.ubicacion)}</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button-link primary" href="mapa.html?bodega=${escapeHtml(item.slug)}">Ver en el mapa</a>
+                ${qgisButton}
+                ${pdfButton}
+              </div>
+            </div>
+
+            <figure class="hero-media" data-animate>
+              <button
+                type="button"
+                data-lightbox-trigger
+                data-lightbox-src="${escapeHtml(heroImage.src)}"
+                data-lightbox-alt="${escapeHtml(heroImage.alt || item.nombre)}"
+                data-lightbox-caption="${escapeHtml(heroImage.caption || heroImage.alt || item.nombre)}"
+              >
+                <img src="${escapeHtml(heroImage.src)}" alt="${escapeHtml(heroImage.alt || item.nombre)}" />
+              </button>
+              <figcaption>${escapeHtml(heroImage.caption || heroImage.alt || item.nombre)}</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="page-shell ficha-grid" aria-label="Ficha técnica de ${escapeHtml(item.nombre)}">
+          <aside class="technical-panel" data-animate>
+            <h2>Datos técnicos</h2>
+            <dl>${technicalRows}</dl>
+
+            <div class="mini-map" aria-label="Estado de datos cartográficos">
+              <span>Mapa</span>
+              <p>${escapeHtml(isCartographic ? "Geometría incorporada desde capa QGIS como registro cartográfico." : "Polígono QGIS enlazado a la ficha de catalogación.")}</p>
+              <a href="mapa.html?bodega=${escapeHtml(item.slug)}">Abrir localización</a>
+            </div>
+
+            ${
+              item.qgisZip
+                ? `<section class="qgis-download" aria-labelledby="qgis-${escapeHtml(item.slug)}">
+                    <span>QGIS</span>
+                    <h3 id="qgis-${escapeHtml(item.slug)}">Archivos cartográficos</h3>
+                    <p>Paquete ZIP con la capa original de la bodega y sus archivos auxiliares.</p>
+                    <a href="${escapeHtml(item.qgisZip)}" download>Descargar ZIP QGIS</a>
+                  </section>`
+                : ""
+            }
+          </aside>
+
+          <div class="ficha-main">
+            <section class="visual-section" aria-labelledby="gallery-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Archivo visual</p>
+                <h2 id="gallery-title">Galería documental</h2>
+              </div>
+              <div class="gallery-track" data-gallery>
+                <div class="gallery-row">${gallery}</div>
+              </div>
+            </section>
+
+            <section class="content-panel" aria-labelledby="lectura-patrimonial" data-animate>
+              <p class="eyebrow">${escapeHtml(isCartographic ? "Lectura cartográfica" : "Historia documentada")}</p>
+              <h2 id="lectura-patrimonial">${escapeHtml(isCartographic ? "Registro de inventario" : "Lectura patrimonial")}</h2>
+              <p>${escapeHtml(item.lectura || item.resumen)}</p>
+              ${item.pendiente ? `<p>${escapeHtml(item.pendiente)}</p>` : ""}
+            </section>
+
+            ${timeline}
+
+            <section class="environment-section" aria-labelledby="environment-title" data-animate>
+              <div class="section-kicker">
+                <p class="eyebrow">Cartografía</p>
+                <h2 id="environment-title">Capas asociadas</h2>
+              </div>
+              <p>${escapeHtml((item.capas || []).join("; ") || "Sin capas asociadas.")}</p>
+            </section>
+
+            <section class="bodega-sources" aria-label="Fuentes bibliográficas" data-animate>
+              <h2>Fuentes</h2>
+              <ul>${sources}</ul>
+            </section>
+          </div>
+        </section>
+
+        <nav class="page-shell ficha-nav" aria-label="Navegación entre fichas">
+          ${prev ? `<a href="${escapeHtml(prev.href)}"><span>Anterior</span>${escapeHtml(prev.nombre)}</a>` : "<span></span>"}
+          ${next ? `<a href="${escapeHtml(next.href)}"><span>Siguiente</span>${escapeHtml(next.nombre)}</a>` : "<span></span>"}
+        </nav>
+      </article>`;
   }
 
   const collectCoordinatePairs = (coordinates, pairs = []) => {
@@ -629,6 +903,7 @@
     let activeBase = baseLayers.osm.addTo(map);
     const activeLayer = L.layerGroup().addTo(map);
     const lostLayer = L.layerGroup().addTo(map);
+    const cartographicLayer = L.layerGroup().addTo(map);
     const markerRecords = new Map();
     const areaRecords = new Map();
 
@@ -636,6 +911,7 @@
 
     const statusFor = (source) => {
       const raw = source?.estado || source?.properties?.estado || "";
+      if (normalize(raw).includes("cartograf")) return "cartografica";
       return normalize(raw).includes("activa") ? "activa" : "desaparecida";
     };
 
@@ -649,15 +925,18 @@
     };
 
     const mapPalette = (source) => {
+      const status = statusFor(source);
       const fallback =
-        statusFor(source) === "activa"
+        status === "activa"
           ? { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" }
-          : { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" };
+          : status === "cartografica"
+            ? { stroke: "#2f6f76", fill: "#67aab0", markerFill: "#2f6f76" }
+            : { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" };
 
       return {
         ...fallback,
         ...(slugPalettes[source?.slug] || {}),
-        markerStroke: statusFor(source) === "activa" ? "#efd47a" : "#fffdf8"
+        markerStroke: status === "activa" ? "#efd47a" : "#fffdf8"
       };
     };
 
@@ -735,7 +1014,7 @@
       const allowed = new Set(
         markerToggles.length
           ? markerToggles.filter((input) => input.checked).map((input) => input.value)
-          : ["activa", "desaparecida"]
+          : ["activa", "desaparecida", "cartografica"]
       );
       const query = normalize(search?.value);
       const matchesStatus = allowed.has(item.estado);
@@ -746,6 +1025,7 @@
     const renderMarkers = () => {
       activeLayer.clearLayers();
       lostLayer.clearLayers();
+      cartographicLayer.clearLayers();
       markerRecords.clear();
 
       items.filter(hasCoords).forEach((item) => {
@@ -791,10 +1071,12 @@
 
       activeLayer.clearLayers();
       lostLayer.clearLayers();
+      cartographicLayer.clearLayers();
       markerRecords.forEach(({ item, marker }) => {
         if (!matchesFilters(item)) return;
         marker.setStyle(markerStyle(item, selectedSlug === item.slug));
         if (item.estado === "activa") activeLayer.addLayer(marker);
+        else if (item.estado === "cartografica") cartographicLayer.addLayer(marker);
         else lostLayer.addLayer(marker);
         marker.bringToFront();
       });
@@ -873,7 +1155,11 @@
         const item = {
           slug,
           nombre: props.nombre || "Bodega sin nombre",
-          estado: normalize(props.estado).includes("desap") ? "desaparecida" : "activa",
+          estado: normalize(props.estado).includes("cartograf")
+            ? "cartografica"
+            : normalize(props.estado).includes("desap")
+              ? "desaparecida"
+              : "activa",
           ubicacion: props.ubicacion || "Ubicacion pendiente",
           resumen: props.resumen || "Ficha procedente de la capa QGIS.",
           imagen: "public/historia/portada-bodegas.jpg",
@@ -954,11 +1240,12 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
+    initCatalog();
+    initDynamicBodegaPage();
     initReveal();
     initProfessionalMotion();
     initHeroParallax();
     initCounters();
-    initCatalog();
     initHistoryIndex();
     initContactForm();
     initLightbox();
