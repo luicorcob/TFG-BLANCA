@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const qgisZipFor = (slug) => `public/qgis/${slug}-qgis.zip`;
-const fichaPdf = (page) => `public/fichas/fichas-catalogacion-4-07.pdf#page=${page}`;
+const fichaPdf = (page) => `docs/fuentes/TFG%20MAQUETACION%20PARA%20WEB.pdf#page=${page}`;
 
 const img = (name) => `IMAGENES/${name}`;
 const pub = (name) => `public/bodegas/${name}`;
@@ -34,7 +34,7 @@ const baseSources = {
 
 const fuenteTfg =
   "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.";
-const fuenteFichas = "Fichas de catalogación 4.07, archivo PDF incorporado al catálogo digital.";
+const fuenteFichas = "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.";
 const fuenteQgis = "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.";
 
 const image = (src, alt, caption = alt) => ({ src, alt, caption });
@@ -63,7 +63,7 @@ const records = [
     documentacion: "catalogacion",
     ubicacion: "Calle Palos de la Frontera nº 12, 14 y calle San Francisco nº 27",
     resumen:
-      "Fundada en 1946 por Antonio Rubio Gordillo; su sede actual integra tres naves y conserva restos de arquerías preindustriales.",
+      "Fundada en 1946 por Antonio Rubio Gordillo; en 1964 se trasladó a la calle Palos de la Frontera y consolidó su configuración actual con tres naves.",
     imagen: pub("rubio-fachada.jpg"),
     imagenes: [
       image(pub("rubio-fachada.jpg"), "Fachada de Bodegas Rubio 1893 SL"),
@@ -90,14 +90,14 @@ const records = [
       "1969 nave de calle Palos de la Frontera nº 14; 1997 nave de calle Palos de la Frontera nº 12; 2001 nave de calle San Francisco nº 27",
     fundacion: "1946",
     ubicacionAnterior: "Bodega El Cura Aguilar",
-    fichaPdf: fichaPdf(13),
+    fichaPdf: fichaPdf(53),
     layers: [{ periodo: "Actuales", source: catalogSources.rubio }],
     cronologia: [
       ["1946", "Fundación", "Antonio Rubio Gordillo funda la firma en la antigua Bodega El Cura Aguilar."],
       ["1964", "Traslado", "La actividad se traslada a la calle Palos de la Frontera nº 14."],
-      ["1965", "Soleras", "La familia adquiere las soleras y marcas Luis Felipe y La Rábida."],
-      ["1996", "Expansión", "La bodega inicia una proyección comercial internacional."],
-      ["2001", "Tercera nave", "Se incorpora la nave de la calle San Francisco nº 27."]
+      ["1966", "Soleras", "La familia adquiere las soleras y marcas Luis Felipe y La Rábida."],
+      ["1996", "Expansión", "Se adquiere parte del solar de la calle Palos de la Frontera nº 12."],
+      ["2000", "Tercera nave", "Se compra la nave de la calle San Francisco nº 27."]
     ],
     lectura:
       "Bodegas Rubio pasó de una primera etapa como cosechera local a referente internacional tras adquirir las soleras de Bodegas Morales. La ficha destaca la continuidad familiar, la incorporación de nuevas naves y la convivencia entre tradición bodeguera y modernización comercial.",
@@ -121,7 +121,7 @@ const records = [
     fundacion: "1891",
     desaparicion: "1970; urbanización La Moncloa en 1989",
     bodegasPosteriores: "Bodegas Espinosa y Domínguez Rivera",
-    fichaPdf: fichaPdf(1),
+    fichaPdf: fichaPdf(41),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.verdier }],
     cronologia: [
       ["1890", "Chimenea", "Se construye la primera chimenea de la comarca."],
@@ -155,7 +155,7 @@ const records = [
     fundacion: "1893",
     cierre: "1966",
     ubicacionAnterior: "Calle Carlos Mauricio Morales nº 44",
-    fichaPdf: fichaPdf(2),
+    fichaPdf: fichaPdf(42),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.morales }],
     cronologia: [
       ["1893", "Fundación", "Morales y Loewenthal inician la actividad."],
@@ -193,7 +193,7 @@ const records = [
     cierre: "1985",
     desaparicion: "2006; demolición de El Molino, La Nueva y parte de El Cine",
     bodegasPosteriores: "Cooperativa Nuestra Señora de Guía y Bodegas Torrepalma",
-    fichaPdf: fichaPdf(3),
+    fichaPdf: fichaPdf(43),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.pichardo }],
     cronologia: [
       ["1895", "Fundación", "Miguel Pichardo Lepe funda la bodega."],
@@ -228,9 +228,9 @@ const records = [
     anioConstruccion: "1890",
     fundacion: "1907",
     cierre: "1977",
-    desaparicion: "1970; urbanización La Moncloa en 1989 para la sede de Nicolás Gómez",
+    desaparicion: "1970; urbanización La Moncloa en 1989",
     usoPosterior: "La nave El Cortinal pasa a ser propiedad de Mosaicos Pino",
-    fichaPdf: fichaPdf(4),
+    fichaPdf: fichaPdf(44),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.espinosa }],
     cronologia: [
       ["1885", "Origen", "La firma nace con una destilería de alcoholes."],
@@ -266,7 +266,7 @@ const records = [
     fundacion: "1920",
     cierre: "1990",
     propuesta: "PGOU de 2005 para viviendas y museo del vino, no ejecutada",
-    fichaPdf: fichaPdf(5),
+    fichaPdf: fichaPdf(45),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.salas }],
     cronologia: [
       ["1920", "Fundación", "Rafael y Tomás Salas López fundan la firma."],
@@ -303,7 +303,7 @@ const records = [
     cierre: "1977",
     desaparicion: "1988; urbanización Las Palmeritas",
     bodegasAnteriores: "Bodegas Estenave y Bodegas García Cárdenas Lebrón",
-    fichaPdf: fichaPdf(6),
+    fichaPdf: fichaPdf(46),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.toro }],
     cronologia: [
       ["1898", "Origen del edificio", "El recinto pertenece inicialmente a Bodega Estenave."],
@@ -341,7 +341,7 @@ const records = [
     cierre: "Finales de la década de 1960",
     desaparicion: "1976; edificios residenciales",
     usoPosterior: "Antiguo Bodegón El Chocaíto",
-    fichaPdf: fichaPdf(7),
+    fichaPdf: fichaPdf(47),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.soldan }],
     cronologia: [
       ["1885", "Naves originales", "Antonio Soldán y Sotelo construye las naves de referencia."],
@@ -375,7 +375,7 @@ const records = [
     anioConstruccion: "1885",
     desaparicion: "1999; urbanización Maestro Juan Antonio Ríos",
     bodegasPosteriores: "Bodega José Mª y Juan Castizo Pinto",
-    fichaPdf: fichaPdf(8),
+    fichaPdf: fichaPdf(48),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.miguelCepeda }],
     cronologia: [
       ["1885", "Naves industriales", "Antonio Soldán y Sotelo construye el conjunto."],
@@ -412,7 +412,7 @@ const records = [
     fundacion: "1930",
     cierre: "1982",
     desaparicion: "1990; gasolinera Cepsa en Av. San Juan Bosco nº 8",
-    fichaPdf: fichaPdf(9),
+    fichaPdf: fichaPdf(49),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.genoves }],
     cronologia: [
       ["1930", "Fundación", "Agustín y Adolfo Genovés fundan la bodega."],
@@ -443,7 +443,7 @@ const records = [
     anioConstruccion: "Sin datos",
     fundacion: "1923 o 1930 según fuentes publicitarias",
     desaparicion: "1980; Distrito Sanitario Condado-Campiña",
-    fichaPdf: fichaPdf(10),
+    fichaPdf: fichaPdf(50),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.soriano }],
     cronologia: [
       ["1923", "Referencia publicitaria", "Los anuncios sitúan la fundación en torno a 1923."],
@@ -477,7 +477,7 @@ const records = [
     anioConstruccion: "1889",
     cierre: "1989",
     usoPosterior: "Bodegón El Chocaíto; torre alambique de Castizo Gourmet",
-    fichaPdf: fichaPdf(11),
+    fichaPdf: fichaPdf(51),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.alfredoRubio }],
     cronologia: [
       ["1889", "Construcción", "Se fecha el origen construido del inmueble."],
@@ -510,7 +510,7 @@ const records = [
     anioConstruccion: "1938",
     fundacion: "1940",
     usoPosterior: "Molino El Huertezuelo",
-    fichaPdf: fichaPdf(12),
+    fichaPdf: fichaPdf(52),
     layers: [{ periodo: "Bodegas catálogo", source: catalogSources.mamerto }],
     cronologia: [
       ["1938", "Construcción", "Se fecha el inmueble de la calle San Antonio."],
@@ -721,16 +721,16 @@ const cartographicRecords = [
     documentacion: record.documentacion || "cartografica",
     ubicacion: `Registro cartográfico QGIS: ${periodo}`,
     resumen:
-      `Registro incorporado desde capas QGIS del periodo ${periodo}. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.`,
+      `Registro incorporado desde la cartografía QGIS del periodo ${periodo}. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.`,
     imagen,
     imagenes: record.imagenes || [image(imagen, `Registro cartográfico de ${record.nombre}`)],
     href: `bodega.html?slug=${record.slug}`,
     qgisZip: qgisZipFor(record.slug),
     periodo,
     lectura:
-      `Este registro se incorpora como ficha cartográfica profesional: conserva el nombre normalizado de la capa, su periodo de procedencia y la geometría original para consulta en mapa y descarga QGIS. Queda diferenciado de las fichas de catalogación completas para no mezclar trazado cartográfico con interpretación histórica todavía pendiente.`,
+      `Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.`,
     pendiente:
-      "Pendiente de ficha de catalogación textual. La geometría procede de QGIS y funciona como testigo documental mínimo.",
+      "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
     fuentes: [fuenteQgis, fuenteTfg],
     ...record,
     estado,

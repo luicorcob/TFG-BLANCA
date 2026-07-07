@@ -2,7 +2,7 @@
 
 Publicación digital del Trabajo de Fin de Grado **"Arquitectura y memoria perdida del vino"**, centrado en el patrimonio bodeguero de La Palma del Condado, Huelva.
 
-El proyecto convierte una investigación académica en un archivo web consultable: relato histórico-territorial, catálogo de bodegas, fichas patrimoniales, mapa interactivo y descargas cartográficas preparadas desde QGIS.
+El proyecto integra los resultados del TFG en una página web de difusión: relato histórico-territorial, catálogo de bodegas, fichas patrimoniales, mapa interactivo y descargas cartográficas preparadas desde QGIS.
 
 ## Datos del proyecto
 
@@ -60,7 +60,7 @@ Aunque algunas páginas HTML pueden abrirse directamente, se recomienda usar el 
 | `sobre-el-proyecto.html` | Metodología, autoría y objetivos académicos. |
 | `contacto.html` | Canal de consulta y aportación documental. |
 
-## Estructura profesional del repositorio
+## Estructura del repositorio
 
 ```text
 .
@@ -98,13 +98,13 @@ Aunque algunas páginas HTML pueden abrirse directamente, se recomienda usar el 
 
 ### Carpetas clave
 
-- `public/`: materiales listos para publicarse en la web. Aquí viven las imágenes optimizadas, PDFs servidos al usuario, GeoJSON y ZIP QGIS descargables.
+- `public/`: materiales listos para publicarse en la web. Aquí viven las imágenes optimizadas, GeoJSON y ZIP QGIS descargables.
 - `js/data.js`: base de datos del catálogo en formato JavaScript. La consumen el catálogo, el mapa y la plantilla dinámica de ficha.
 - `js/main.js`: navegación, filtros, fichas dinámicas, lightbox, animaciones, contador, formularios y mapa Leaflet.
 - `scripts/build-catalog-assets.mjs`: script de generación de datos. Lee registros y capas QGIS, y reescribe `js/data.js` y `public/mapas/bodegas.geojson`.
 - `CAPAS DE QGIS TODO/`: fuente cartográfica original. No se mueve porque el script de generación depende de estas rutas.
 - `IMAGENES/`: archivo documental original usado todavía por algunas fichas. No se mueve porque varias rutas del catálogo apuntan aquí.
-- `docs/fuentes/`: material académico y documental original no servido directamente por la web.
+- `docs/fuentes/`: material académico y documental original. El PDF `TFG MAQUETACION PARA WEB.pdf` es la fuente principal enlazada desde las fichas.
 
 ## Flujo de datos
 
@@ -155,7 +155,7 @@ Dependencias externas cargadas desde CDN:
 4. Probar filtros del catálogo por estado, documentación y periodo.
 5. Probar `mapa.html?bodega=bodegas-rubio`.
 6. Descargar un ZIP QGIS desde una ficha o popup del mapa.
-7. Abrir `public/fichas/fichas-catalogacion-4-07.pdf`.
+7. Abrir una ficha y comprobar que el enlace PDF apunta a `docs/fuentes/TFG MAQUETACION PARA WEB.pdf`.
 
 Hay una guía más detallada en [`docs/ENTREGA.md`](docs/ENTREGA.md).
 

@@ -590,7 +590,7 @@
     const slugParam = new URLSearchParams(location.search).get("slug") || "";
     const currentFile = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
     const currentBodega = (window.BODEGAS || []).find((item) => item.href === currentFile || item.slug === slugParam);
-    const fichaPdfUrl = currentBodega?.fichaPdf || "public/fichas/ficha-ejemplo-maquetacion.pdf";
+    const fichaPdfUrl = currentBodega?.fichaPdf || "docs/fuentes/TFG%20MAQUETACION%20PARA%20WEB.pdf";
 
     document.querySelector("[data-print-ficha]")?.addEventListener("click", () => {
       const pdfWindow = window.open(fichaPdfUrl, "_blank", "noopener");

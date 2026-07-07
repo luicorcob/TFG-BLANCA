@@ -35,7 +35,7 @@ http://localhost:3000
 - El mapa permite cambiar la base cartográfica.
 - `mapa.html?bodega=bodegas-rubio` abre la bodega enfocada.
 - Los ZIP de `public/qgis/` se descargan.
-- Los PDFs de `public/fichas/` se abren desde el navegador.
+- Los enlaces de ficha abren `docs/fuentes/TFG MAQUETACION PARA WEB.pdf` en la página correspondiente.
 
 ## Checklist documental
 
@@ -56,7 +56,7 @@ docs/fuentes/
 
 Contenido previsto:
 
-- `ARCHIVO TFG 26.06.pdf`: documento académico original de trabajo.
+- `TFG MAQUETACION PARA WEB.pdf`: documento académico actualizado usado como fuente principal de la web.
 - `FICHAS CATALOGACION 4.07.pdf`: fichas de catalogación originales.
 - `PATRICK.png`: material gráfico original conservado fuera de la raíz.
 
