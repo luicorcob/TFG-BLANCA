@@ -1095,6 +1095,10 @@
     const activeLayer = L.layerGroup().addTo(map);
     const lostLayer = L.layerGroup().addTo(map);
     const cartographicLayer = L.layerGroup().addTo(map);
+    map.createPane("bodegaHitPane");
+    const hitPane = map.getPane("bodegaHitPane");
+    if (hitPane) hitPane.style.zIndex = "435";
+    const touchTargetLayer = L.layerGroup().addTo(map);
     const markerRecords = new Map();
     const areaRecords = new Map();
 
@@ -1133,6 +1137,7 @@
     const areaStyle = (source, selected = false) => {
       const palette = mapPalette(source);
       return {
+        bubblingMouseEvents: false,
         color: palette.stroke,
         fillColor: palette.fill,
         dashArray: selected ? "10 7" : null,
@@ -1147,6 +1152,7 @@
     const markerStyle = (item, selected = false) => {
       const palette = mapPalette(item);
       return {
+        bubblingMouseEvents: false,
         radius: selected ? 8 : 6.5,
         color: palette.markerStroke,
         fillColor: palette.markerFill,
@@ -1162,8 +1168,38 @@
       weight: 0
     };
 
+    const stopMapClick = (event) => {
+      if (event.originalEvent) L.DomEvent.stop(event.originalEvent);
+    };
+
+    const mapLayerGroupFor = (item) => {
+      const category = mapCategoryFor(item);
+      if (category === "activa") return activeLayer;
+      if (category === "cartografica") return cartographicLayer;
+      return lostLayer;
+    };
+
+    const setMarkerVisibility = (record, visible) => {
+      const { item, marker, touchTarget } = record;
+      const targetGroup = visible ? mapLayerGroupFor(item) : null;
+      [activeLayer, lostLayer, cartographicLayer].forEach((group) => {
+        if (group === targetGroup) {
+          if (!group.hasLayer(marker)) group.addLayer(marker);
+          return;
+        }
+        if (group.hasLayer(marker)) group.removeLayer(marker);
+      });
+
+      if (visible) {
+        if (!touchTargetLayer.hasLayer(touchTarget)) touchTargetLayer.addLayer(touchTarget);
+      } else if (touchTargetLayer.hasLayer(touchTarget)) {
+        touchTargetLayer.removeLayer(touchTarget);
+      }
+    };
+
     const overlays = {
       bodegas: L.geoJSON(undefined, {
+        bubblingMouseEvents: false,
         filter: (feature) => feature?.geometry?.type !== "Point",
         style: (feature) => areaStyle(feature?.properties),
         onEachFeature: (feature, layer) => {
@@ -1175,7 +1211,10 @@
           record.layers.push(layer);
           areaRecords.set(slug, record);
 
-          layer.on("click", () => focusBodega(slug));
+          layer.on("click", (event) => {
+            stopMapClick(event);
+            focusBodega(slug, { reveal: true });
+          });
         }
       }).addTo(map)
     };
@@ -1231,17 +1270,37 @@
       activeLayer.clearLayers();
       lostLayer.clearLayers();
       cartographicLayer.clearLayers();
+      touchTargetLayer.clearLayers();
       markerRecords.clear();
 
       items.filter(hasCoords).forEach((item) => {
         const latLng = L.latLng(item.coordenadas.lat, item.coordenadas.lng);
         const marker = L.circleMarker(latLng, markerStyle(item)).bindPopup(popupHtml(item), {
           className: "bodega-popup",
+          closeOnClick: false,
           maxWidth: 260
         });
+        const touchTarget = L.circleMarker(latLng, {
+          bubblingMouseEvents: false,
+          pane: "bodegaHitPane",
+          radius: L.Browser.mobile ? 24 : 15,
+          className: "bodega-hit-target",
+          color: "#000",
+          fillColor: "#000",
+          fillOpacity: 0.001,
+          opacity: 0.001,
+          weight: 1
+        });
 
-        marker.on("click", () => focusBodega(item.slug));
-        markerRecords.set(item.slug, { item, marker, latLng });
+        marker.on("click", (event) => {
+          stopMapClick(event);
+          focusBodega(item.slug);
+        });
+        touchTarget.on("click", (event) => {
+          stopMapClick(event);
+          focusBodega(item.slug);
+        });
+        markerRecords.set(item.slug, { item, marker, touchTarget, latLng });
       });
     };
 
@@ -1259,6 +1318,17 @@
     };
 
     let selectedSlug = initialSlug;
+    const isSingleColumnMap = () => window.matchMedia("(max-width: 959px)").matches;
+    const keepMapInView = () => {
+      if (isPreview || !isSingleColumnMap()) return;
+      const wrap = canvas.closest(".map-canvas-wrap");
+      if (!wrap) return;
+      const rect = wrap.getBoundingClientRect();
+      const fullyVisible = rect.top >= 76 && rect.bottom <= window.innerHeight;
+      if (!fullyVisible) {
+        wrap.scrollIntoView({ block: "start", behavior: prefersReducedMotion() ? "auto" : "smooth" });
+      }
+    };
 
     const paint = () => {
       areaRecords.forEach(({ item, layers }, slug) => {
@@ -1275,17 +1345,14 @@
         });
       });
 
-      activeLayer.clearLayers();
-      lostLayer.clearLayers();
-      cartographicLayer.clearLayers();
-      markerRecords.forEach(({ item, marker }) => {
-        if (!matchesFilters(item)) return;
-        const category = mapCategoryFor(item);
+      markerRecords.forEach((record) => {
+        const { item, marker, touchTarget } = record;
+        const visible = matchesFilters(item);
         marker.setStyle(markerStyle(item, selectedSlug === item.slug));
-        if (category === "activa") activeLayer.addLayer(marker);
-        else if (category === "cartografica") cartographicLayer.addLayer(marker);
-        else lostLayer.addLayer(marker);
+        setMarkerVisibility(record, visible);
+        if (!visible) return;
         marker.bringToFront();
+        touchTarget.bringToFront();
       });
 
       const bounds = map.getBounds();
@@ -1321,6 +1388,8 @@
         } else if (!isPreview) {
           record.marker.openPopup();
         }
+
+        if (options.keepMapInView) keepMapInView();
       }
     };
 
@@ -1432,7 +1501,7 @@
 
     root.addEventListener("click", (event) => {
       const button = event.target.closest("[data-focus-bodega]");
-      if (button?.dataset.focusBodega) focusBodega(button.dataset.focusBodega);
+      if (button?.dataset.focusBodega) focusBodega(button.dataset.focusBodega, { keepMapInView: true });
     });
 
     Promise.all([loadGeoJson("public/mapas/bodegas.geojson")]).then(([bodegasGeoJson]) => {

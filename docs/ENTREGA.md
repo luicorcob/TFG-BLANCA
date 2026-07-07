@@ -43,6 +43,7 @@ http://localhost:3000
 - Revisar que la tutora aparezca como Rocío Romero.
 - Confirmar que la institución figure como ETSA, Universidad de Sevilla.
 - Confirmar que el año académico visible sea 2026.
+- Confirmar que la carpeta entregada no incluya `.git/`, carpetas ocultas de herramientas locales, logs, cachés ni `node_modules/`.
 - Revisar permisos de publicación de imágenes históricas y mapas.
 - Revisar que las fuentes documentales citadas en fichas estén alineadas con la versión final del estudio.
 
@@ -58,9 +59,6 @@ Contenido previsto:
 
 - `TFG MAQUETACION PARA WEB.pdf`: documento académico actualizado usado como fuente principal de la web.
 - `FICHAS CATALOGACION 4.07.pdf`: fichas de catalogación originales.
-- `PATRICK.png`: material gráfico original conservado fuera de la raíz.
-
-El documento `docs/PLAN_DE_ACCION_WEB_TFG.md` queda como plan histórico de trabajo. El estado actual del proyecto lo describe el `README.md`.
 
 ## Carpetas que no deben moverse antes de entregar
 

@@ -2883,6 +2883,7 @@ textarea {
 .map-canvas-wrap {
   position: relative;
   min-height: 540px;
+  scroll-margin-top: 88px;
 }
 
 .map-canvas {
@@ -2927,6 +2928,10 @@ textarea {
 
 .leaflet-container {
   font-family: var(--ui);
+}
+
+.leaflet-interactive.bodega-hit-target {
+  cursor: pointer;
 }
 
 .leaflet-control-attribution {
@@ -3552,6 +3557,45 @@ textarea {
   }
 }
 
+@media (max-width: 959px) {
+  .map-shell {
+    row-gap: 1rem;
+    overflow: visible;
+  }
+
+  .map-sidebar {
+    display: contents;
+  }
+
+  .map-sidebar > * {
+    margin-inline: clamp(1rem, 3vw, 1.35rem);
+  }
+
+  .map-heading {
+    margin-top: clamp(1rem, 3vw, 1.35rem);
+  }
+
+  .map-canvas-wrap {
+    order: 20;
+    min-height: clamp(440px, 70vh, 620px);
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .map-canvas {
+    min-height: clamp(440px, 70vh, 620px);
+  }
+
+  .map-list-section {
+    order: 30;
+    margin-bottom: clamp(1rem, 3vw, 1.35rem);
+  }
+
+  .map-list:not(.compact) {
+    max-height: min(320px, 48vh);
+  }
+}
+
 @media (min-width: 960px) {
   .project-hero-grid,
   .contact-hero-grid {
@@ -3696,7 +3740,7 @@ textarea {
 
   .map-canvas-wrap,
   .map-canvas {
-    min-height: 420px;
+    min-height: clamp(420px, 72vh, 560px);
   }
 
   .bodega-popup .leaflet-popup-content {

@@ -24,6 +24,12 @@ El proyecto integra los resultados de la investigación en una página web de di
 - **41 paquetes QGIS descargables** desde `public/qgis/`.
 - **GeoJSON EPSG:4326** generado para Leaflet en `public/mapas/bodegas.geojson`.
 
+## Entrega limpia
+
+Para una entrega académica, compartir únicamente una copia limpia del proyecto sin historial Git ni archivos locales de trabajo. No incluir `.git/`, carpetas ocultas de herramientas locales, logs, cachés, `node_modules/`, `dist/` ni carpetas temporales.
+
+La autoría visible del proyecto debe aparecer como **Blanca Rubio García**. Si se comparte mediante repositorio, conviene crear un repositorio nuevo bajo la cuenta de la autora o reescribir el historial antes de publicarlo, porque el historial Git conserva autores, correos y URL remotas anteriores.
+
 ## Cómo verlo en local
 
 Requisito recomendado: Node.js 18 o superior.
@@ -90,7 +96,6 @@ Aunque algunas páginas HTML pueden abrirse directamente, se recomienda usar el 
 ├── IMAGENES/
 ├── docs/
 │   ├── ENTREGA.md
-│   ├── PLAN_DE_ACCION_WEB_TFG.md
 │   └── fuentes/
 ├── package.json
 └── server.js
