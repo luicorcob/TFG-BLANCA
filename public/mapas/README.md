@@ -1,13 +1,31 @@
-# Capas cartograficas
+# Capas cartográficas
 
-Los archivos de esta carpeta son semillas validas para el mapa interactivo.
+Esta carpeta contiene las capas publicables que consume el mapa interactivo.
 
-- `bodegas.geojson`: capa de bodegas convertida desde los shapefiles preparados en QGIS.
-- `bic.geojson`: sustituir por el poligono del conjunto historico BIC.
-- `ferrocarril.geojson`: sustituir por el trazado historico del ferrocarril.
+## Archivos
 
-Exportar siempre en GeoJSON con CRS `EPSG:4326` para que Leaflet pueda leer las coordenadas directamente.
+- `bodegas.geojson`: capa principal de bodegas convertida desde shapefiles preparados en QGIS.
+- `bic.geojson`: placeholder para el polígono del conjunto histórico BIC.
+- `ferrocarril.geojson`: placeholder para el trazado histórico del ferrocarril.
+- `silueta-condado.png` y `silueta-la-palma.png`: recursos gráficos usados por la interfaz.
 
-## Capas incorporadas
+## Criterio técnico
 
-Los shapefiles `B.VERDIER.shp`, `B.MORALES.shp`, `B.PICHARDO.shp`, `B.ESPINOSA.shp` y `B.SALAS.shp`, situados en `qgis ya listo/`, venian en `ETRS89 / UTM zone 29N`. Se han convertido a `EPSG:4326` y se han incorporado a `bodegas.geojson` como geometrias con `slug` normalizado para cada ficha.
+Exportar siempre a GeoJSON con CRS `EPSG:4326` para que Leaflet pueda leer las coordenadas directamente.
+
+La capa `bodegas.geojson` se genera desde:
+
+```text
+scripts/build-catalog-assets.mjs
+CAPAS DE QGIS TODO/
+```
+
+Después de modificar capas fuente o registros, ejecutar:
+
+```bash
+npm run build:catalog
+```
+
+## Nota de entrega
+
+`bic.geojson` y `ferrocarril.geojson` están preparados como semillas mínimas. Deben sustituirse por geometrías completas cuando se cierre la cartografía definitiva.
