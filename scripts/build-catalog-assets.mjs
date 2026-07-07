@@ -38,6 +38,22 @@ const fuenteFichas = "Fichas de catalogación 4.07, archivo PDF incorporado al c
 const fuenteQgis = "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.";
 
 const image = (src, alt, caption = alt) => ({ src, alt, caption });
+const normalizeText = (value) =>
+  String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+const periodFor = (record) => record.periodo || record.layers?.map((layer) => layer.periodo).filter(Boolean).join(" / ") || "";
+const publicPeriodFor = (record) => {
+  const periodo = periodFor(record);
+  return normalizeText(periodo) === "bodegas catalogo" ? "" : periodo;
+};
+const defaultCartographicStatus = (periodo) => {
+  const normalizedPeriod = normalizeText(periodo);
+  if (normalizedPeriod.includes("actual")) return "activa";
+  return "desaparecida";
+};
 
 const records = [
   {
@@ -697,11 +713,12 @@ const cartographicRecords = [
     layers: [{ periodo: "Cooperativas", source: `${baseSources.cooperativas}/COOPERATIVA NUESTRA SEÑORA DE GUIA.shp` }]
   }
 ].map((record) => {
-  const periodo = record.periodo || record.layers.map((layer) => layer.periodo).join(" / ");
+  const periodo = periodFor(record);
+  const estado = record.estado || defaultCartographicStatus(periodo);
   const imagen = record.imagen || pub("placeholder-bodega.svg");
   return {
-    estado: "cartografica",
-    documentacion: "cartografica",
+    estado,
+    documentacion: record.documentacion || "cartografica",
     ubicacion: `Registro cartográfico QGIS: ${periodo}`,
     resumen:
       `Registro incorporado desde capas QGIS del periodo ${periodo}. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.`,
@@ -715,15 +732,22 @@ const cartographicRecords = [
     pendiente:
       "Pendiente de ficha de catalogación textual. La geometría procede de QGIS y funciona como testigo documental mínimo.",
     fuentes: [fuenteQgis, fuenteTfg],
-    ...record
+    ...record,
+    estado,
+    documentacion: record.documentacion || "cartografica",
+    periodo
   };
 });
 
-const allRecords = [...records, ...cartographicRecords].map((record) => ({
-  ...record,
-  qgisZip: record.qgisZip || qgisZipFor(record.slug),
-  capas: record.layers?.map((layer) => layer.source) || []
-}));
+const allRecords = [...records, ...cartographicRecords].map((record) => {
+  const periodo = publicPeriodFor(record);
+  return {
+    ...record,
+    ...(periodo ? { periodo } : {}),
+    qgisZip: record.qgisZip || qgisZipFor(record.slug),
+    capas: record.layers?.map((layer) => layer.source) || []
+  };
+});
 
 function utm29ToLngLat(easting, northing) {
   const a = 6378137;

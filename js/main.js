@@ -34,6 +34,53 @@
 
   const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const LEAFLET_CSS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+  const LEAFLET_JS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+  let leafletLoader = null;
+
+  const ensureLeafletAssets = () => {
+    if (window.L) return Promise.resolve(window.L);
+
+    if (!document.querySelector(`link[href="${LEAFLET_CSS_URL}"]`)) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = LEAFLET_CSS_URL;
+      link.crossOrigin = "";
+      document.head.append(link);
+    }
+
+    if (leafletLoader) return leafletLoader;
+
+    leafletLoader = new Promise((resolve, reject) => {
+      const existingScript = document.querySelector(`script[src="${LEAFLET_JS_URL}"]`);
+      const script = existingScript || document.createElement("script");
+      const timeout = window.setTimeout(() => reject(new Error("Leaflet load timeout")), 8000);
+      const finish = () => {
+        window.clearTimeout(timeout);
+        return window.L ? resolve(window.L) : reject(new Error("Leaflet unavailable"));
+      };
+
+      script.addEventListener("load", finish, { once: true });
+      script.addEventListener(
+        "error",
+        () => {
+          window.clearTimeout(timeout);
+          reject(new Error("Leaflet failed to load"));
+        },
+        { once: true }
+      );
+
+      if (!existingScript) {
+        script.src = LEAFLET_JS_URL;
+        script.crossOrigin = "";
+        script.async = true;
+        document.head.append(script);
+      }
+    });
+
+    return leafletLoader;
+  };
+
   function initNavigation() {
     const header = document.querySelector("[data-nav-root]");
     const toggle = document.querySelector("[data-nav-toggle]");
@@ -241,7 +288,7 @@
           const cardClass = [
             "bodega-card",
             item.estado === "desaparecida" ? "is-lost" : "",
-            item.estado === "cartografica" ? "is-cartographic" : ""
+            item.documentacion === "cartografica" ? "is-cartographic" : ""
           ]
             .filter(Boolean)
             .join(" ");
@@ -749,9 +796,14 @@
             <h2>Datos técnicos</h2>
             <dl>${technicalRows}</dl>
 
-            <div class="mini-map" aria-label="Estado de datos cartográficos">
+            <div class="mini-map" data-bodega-map-preview data-preview-slug="${escapeHtml(item.slug)}" aria-label="Vista previa cartográfica de ${escapeHtml(item.nombre)}">
+              <div class="mini-map-frame">
+                <div class="map-canvas" data-map-canvas role="region" aria-label="Mini mapa de ${escapeHtml(item.nombre)}"></div>
+                <a class="map-preview-hitbox" href="mapa.html?bodega=${escapeHtml(item.slug)}" aria-label="Abrir localización de ${escapeHtml(item.nombre)} en el mapa completo"></a>
+                <div class="map-credit"><span>Leaflet</span><span>Vista previa</span></div>
+              </div>
               <span>Mapa</span>
-              <p>${escapeHtml(isCartographic ? "Geometría incorporada desde capa QGIS como registro cartográfico." : "Polígono QGIS enlazado a la ficha de catalogación.")}</p>
+              <p>${escapeHtml(isCartographic ? "Vista previa de la geometría QGIS incorporada al inventario." : "Vista previa del polígono QGIS en el mapa interactivo.")}</p>
               <a href="mapa.html?bodega=${escapeHtml(item.slug)}">Abrir localización</a>
             </div>
 
@@ -897,6 +949,25 @@
     const roots = Array.from(document.querySelectorAll("[data-bodega-map], [data-bodega-map-preview]"));
     if (roots.length === 0) return;
 
+    if (!window.L) {
+      roots.forEach((root) => {
+        const canvas = root.querySelector("[data-map-canvas]");
+        if (canvas) canvas.innerHTML = '<p class="map-fallback">Cargando vista cartográfica...</p>';
+      });
+
+      ensureLeafletAssets()
+        .then(() => roots.forEach(initBodegaMap))
+        .catch(() => {
+          roots.forEach((root) => {
+            const canvas = root.querySelector("[data-map-canvas]");
+            if (canvas) {
+              canvas.innerHTML = '<p class="map-fallback">No se ha podido cargar el mapa. Puedes abrir la localización desde el enlace.</p>';
+            }
+          });
+        });
+      return;
+    }
+
     roots.forEach(initBodegaMap);
   }
 
@@ -910,13 +981,23 @@
     const pendingList = root.querySelector("[data-map-pending-list]");
     const empty = root.querySelector("[data-map-empty]");
     const search = root.querySelector("[data-map-search]");
-    const markerToggles = Array.from(root.querySelectorAll("[data-marker-toggle]"));
-    const documentationToggles = Array.from(root.querySelectorAll("[data-documentation-toggle]"));
-    const overlayToggles = Array.from(root.querySelectorAll("[data-overlay-toggle]"));
+    const filterButtons = Array.from(root.querySelectorAll("[data-map-filter-key]"));
+    const reset = root.querySelector("[data-map-reset]");
     const baseButtons = Array.from(root.querySelectorAll("[data-base-layer]"));
-    const periodFilter = root.querySelector("[data-period-filter]");
     const items = [...(window.BODEGAS || [])];
-    const initialSlug = new URLSearchParams(location.search).get("bodega") || "";
+    const params = new URLSearchParams(location.search);
+    const initialSlug = params.get("bodega") || root.dataset.previewSlug || root.dataset.bodegaSlug || "";
+    const state = {
+      estado: params.get("estado") || "",
+      documentacion: params.get("documentacion") || "",
+      periodo: params.get("periodo") || "",
+      busqueda: params.get("busqueda") || ""
+    };
+
+    if (state.estado === "cartografica") {
+      state.estado = "";
+      state.documentacion = state.documentacion || "cartografica";
+    }
 
     if (!window.L || !canvas) {
       if (canvas) {
@@ -924,6 +1005,9 @@
       }
       return;
     }
+
+    if (root.dataset.mapReady === "true") return;
+    root.dataset.mapReady = "true";
 
     const hasCoords = (item) =>
       item.coordenadas &&
@@ -988,28 +1072,27 @@
       return normalize(raw).includes("activa") ? "activa" : "desaparecida";
     };
 
-    const slugPalettes = {
-      "bodegas-rubio": { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" },
-      "bodegas-verdier": { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" },
-      "bodegas-morales": { stroke: "#2f5648", fill: "#5f9d73", markerFill: "#2f5648" },
-      "bodegas-pichardo": { stroke: "#71550d", fill: "#c9a84c", markerFill: "#71550d" },
-      "bodegas-espinosa": { stroke: "#2f6f76", fill: "#67aab0", markerFill: "#2f6f76" },
-      "bodegas-salas": { stroke: "#5a3d6f", fill: "#9a7cb6", markerFill: "#5a3d6f" }
+    const mapPalettes = {
+      activa: { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" },
+      desaparecida: { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" },
+      cartografica: { stroke: "#2f6f76", fill: "#67aab0", markerFill: "#2f6f76" }
+    };
+
+    const mapCategoryFor = (source) => {
+      const status = statusFor(source);
+      const documentation = source?.documentacion || source?.properties?.documentacion || "";
+      if (status === "cartografica" || normalize(documentation).includes("cartograf")) return "cartografica";
+      return status === "activa" ? "activa" : "desaparecida";
     };
 
     const mapPalette = (source) => {
-      const status = statusFor(source);
-      const fallback =
-        status === "activa"
-          ? { stroke: "#1f5b43", fill: "#5f9d73", markerFill: "#2f5648" }
-          : status === "cartografica"
-            ? { stroke: "#2f6f76", fill: "#67aab0", markerFill: "#2f6f76" }
-            : { stroke: "#6b1a2b", fill: "#a93c50", markerFill: "#6b1a2b" };
+      const category = mapCategoryFor(source);
+      const palette = mapPalettes[category] || mapPalettes.desaparecida;
 
       return {
-        ...fallback,
-        ...(slugPalettes[source?.slug] || {}),
-        markerStroke: status === "activa" ? "#efd47a" : "#fffdf8"
+        ...palette,
+        category,
+        markerStroke: category === "activa" ? "#efd47a" : "#fffdf8"
       };
     };
 
@@ -1046,12 +1129,6 @@
     };
 
     const overlays = {
-      bic: L.geoJSON(undefined, {
-        style: { color: "#6b1a2b", fillColor: "#c9a84c", fillOpacity: 0.14, weight: 2 }
-      }),
-      rail: L.geoJSON(undefined, {
-        style: { color: "#2f6f76", opacity: 0.86, weight: 3, dashArray: "7 6" }
-      }),
       bodegas: L.geoJSON(undefined, {
         filter: (feature) => feature?.geometry?.type !== "Point",
         style: (feature) => areaStyle(feature?.properties),
@@ -1071,33 +1148,45 @@
 
     const popupHtml = (item) => {
       const palette = mapPalette(item);
+      const meta = [formatStatus(item.estado), item.documentacion ? formatDocumentation(item.documentacion) : ""]
+        .filter(Boolean)
+        .join(" · ");
       return `
         <article class="map-popup">
           <img src="${escapeHtml(item.imagen)}" alt="Imagen de ${escapeHtml(item.nombre)}">
           <div>
             <h3>${escapeHtml(item.nombre)}</h3>
-            <p><span class="popup-dot ${escapeHtml(item.estado)}" style="background: ${palette.markerFill}"></span>${escapeHtml(formatStatus(item.estado))}</p>
+            <p><span class="popup-dot ${escapeHtml(palette.category)}" style="background: ${palette.markerFill}"></span>${escapeHtml(meta)}</p>
             <a href="${escapeHtml(item.href)}">Ver ficha completa</a>
             ${item.qgisZip ? `<a href="${escapeHtml(item.qgisZip)}" download>Descargar QGIS</a>` : ""}
           </div>
         </article>`;
     };
 
+    const syncUrl = () => {
+      const next = new URL(location.href);
+      Object.entries(state).forEach(([key, value]) => {
+        if (value) next.searchParams.set(key, value);
+        else next.searchParams.delete(key);
+      });
+      history.replaceState({}, "", `${next.pathname}${next.search}${next.hash}`);
+    };
+
+    const syncFilterControls = () => {
+      if (search && search.value !== state.busqueda) search.value = state.busqueda;
+
+      filterButtons.forEach((button) => {
+        const key = button.dataset.mapFilterKey;
+        const value = button.dataset.mapFilterValue || "";
+        button.setAttribute("aria-pressed", String(state[key] === value));
+      });
+    };
+
     const matchesFilters = (item) => {
-      const allowed = new Set(
-        markerToggles.length
-          ? markerToggles.filter((input) => input.checked).map((input) => input.value)
-          : ["activa", "desaparecida"]
-      );
-      const allowedDocumentation = new Set(
-        documentationToggles.length
-          ? documentationToggles.filter((input) => input.checked).map((input) => input.value)
-          : ["catalogacion", "cartografica"]
-      );
-      const query = normalize(search?.value);
-      const selectedPeriod = normalize(periodFilter?.value);
-      const matchesStatus = item.documentacion === "cartografica" || allowed.has(item.estado);
-      const matchesDocumentation = allowedDocumentation.has(item.documentacion || "catalogacion");
+      const query = normalize(state.busqueda);
+      const selectedPeriod = normalize(state.periodo);
+      const matchesStatus = !state.estado || item.estado === state.estado;
+      const matchesDocumentation = !state.documentacion || (item.documentacion || "catalogacion") === state.documentacion;
       const matchesPeriod = !selectedPeriod || normalize(item.periodo).includes(selectedPeriod);
       const searchable = [item.nombre, item.ubicacion, item.resumen, item.periodo, item.documentacion, ...(item.capas || [])].join(" ");
       const matchesSearch = !query || normalize(searchable).includes(query);
@@ -1117,6 +1206,7 @@
           maxWidth: 260
         });
 
+        marker.on("click", () => focusBodega(item.slug));
         markerRecords.set(item.slug, { item, marker, latLng });
       });
     };
@@ -1125,7 +1215,7 @@
       const palette = mapPalette(item);
       return `
         <button class="map-list-item${selected === item.slug ? " is-selected" : ""}" type="button" data-focus-bodega="${escapeHtml(item.slug)}">
-          <span class="item-status ${escapeHtml(item.estado)}" style="background: ${palette.markerFill}" aria-hidden="true"></span>
+          <span class="item-status ${escapeHtml(palette.category)}" style="background: ${palette.markerFill}" aria-hidden="true"></span>
           <span>
             <strong>${escapeHtml(item.nombre)}</strong>
             <small>${escapeHtml(item.ubicacion)}</small>
@@ -1135,6 +1225,19 @@
     };
 
     let selectedSlug = initialSlug;
+
+    const isCompactMap = () => window.matchMedia("(max-width: 640px)").matches || canvas.clientWidth < 560;
+
+    const selectedZoom = () => {
+      if (!isCompactMap()) return Math.max(map.getZoom(), 18);
+      return Math.min(Math.max(map.getZoom(), 16), 17);
+    };
+
+    const selectedCenter = (latLng, zoom) => {
+      if (!isCompactMap()) return latLng;
+      const verticalOffset = Math.min(96, Math.max(56, canvas.clientHeight * 0.2));
+      return map.unproject(map.project(latLng, zoom).subtract([0, verticalOffset]), zoom);
+    };
 
     const paint = () => {
       areaRecords.forEach(({ item, layers }, slug) => {
@@ -1156,9 +1259,10 @@
       cartographicLayer.clearLayers();
       markerRecords.forEach(({ item, marker }) => {
         if (!matchesFilters(item)) return;
+        const category = mapCategoryFor(item);
         marker.setStyle(markerStyle(item, selectedSlug === item.slug));
-        if (item.estado === "activa") activeLayer.addLayer(marker);
-        else if (item.estado === "cartografica") cartographicLayer.addLayer(marker);
+        if (category === "activa") activeLayer.addLayer(marker);
+        else if (category === "cartografica") cartographicLayer.addLayer(marker);
         else lostLayer.addLayer(marker);
         marker.bringToFront();
       });
@@ -1188,8 +1292,16 @@
       const record = markerRecords.get(slug);
       paint();
       if (record) {
-        map.setView(record.latLng, Math.max(map.getZoom(), 18), { animate: true });
-        record.marker.openPopup();
+        const zoom = selectedZoom();
+        const center = selectedCenter(record.latLng, zoom);
+        const shouldMove = map.getZoom() !== zoom || map.getCenter().distanceTo(center) > 0.5;
+
+        if (shouldMove) {
+          if (!isPreview) map.once("moveend", () => record.marker.openPopup());
+          map.setView(center, zoom, { animate: true });
+        } else if (!isPreview) {
+          record.marker.openPopup();
+        }
       }
     };
 
@@ -1272,47 +1384,44 @@
       });
     });
 
-    markerToggles.forEach((input) => input.addEventListener("change", paint));
-    documentationToggles.forEach((input) => input.addEventListener("change", paint));
-    periodFilter?.addEventListener("change", paint);
-    search?.addEventListener("input", paint);
-    map.on("moveend zoomend", paint);
-
-    overlayToggles.forEach((input) => {
-      input.addEventListener("change", () => {
-        const layer = overlays[input.value];
-        if (!layer) return;
-        if (input.checked) layer.addTo(map);
-        else map.removeLayer(layer);
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state[button.dataset.mapFilterKey] = button.dataset.mapFilterValue || "";
+        syncUrl();
+        syncFilterControls();
+        paint();
       });
     });
+
+    reset?.addEventListener("click", () => {
+      state.estado = "";
+      state.documentacion = "";
+      state.periodo = "";
+      state.busqueda = "";
+      syncUrl();
+      syncFilterControls();
+      paint();
+    });
+
+    search?.addEventListener("input", () => {
+      state.busqueda = search.value.trim();
+      syncUrl();
+      syncFilterControls();
+      paint();
+    });
+    map.on("moveend zoomend", paint);
 
     root.addEventListener("click", (event) => {
       const button = event.target.closest("[data-focus-bodega]");
       if (button?.dataset.focusBodega) focusBodega(button.dataset.focusBodega);
     });
 
-    Promise.all([
-      loadGeoJson("public/mapas/bodegas.geojson"),
-      loadGeoJson("public/mapas/bic.geojson"),
-      loadGeoJson("public/mapas/ferrocarril.geojson")
-    ]).then(([bodegasGeoJson, bicGeoJson, railGeoJson]) => {
+    Promise.all([loadGeoJson("public/mapas/bodegas.geojson")]).then(([bodegasGeoJson]) => {
       mergeBodegaGeoJson(bodegasGeoJson);
-
-      [
-        ["bic", bicGeoJson],
-        ["rail", railGeoJson]
-      ].forEach(([key, geoJson]) => {
-        const input = overlayToggles.find((toggle) => toggle.value === key);
-        if (geoJson?.features?.length) overlays[key].addData(geoJson);
-        else {
-          input?.setAttribute("disabled", "disabled");
-          input?.closest("label")?.classList.add("is-disabled");
-        }
-      });
 
       updateSummary();
       renderMarkers();
+      syncFilterControls();
       paint();
       if (selectedSlug) focusBodega(selectedSlug);
       else fitMarkers();
@@ -1321,6 +1430,7 @@
 
     updateSummary();
     renderMarkers();
+    syncFilterControls();
     paint();
     fitMarkers();
   }

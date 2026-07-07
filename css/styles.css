@@ -362,31 +362,6 @@ button {
   transform: scaleX(1);
 }
 
-.site-nav .curious-link {
-  min-height: 38px;
-  padding: 0.28rem 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 999px;
-  background:
-    linear-gradient(var(--papel), var(--papel)) padding-box,
-    linear-gradient(90deg, #e94d5f, #f7a531, #f5e94b, #54c96f, #35a7ff, #7b61ff, #d84bc4) border-box;
-  box-shadow: 0 8px 20px rgba(107, 26, 43, 0.12);
-  color: var(--vino-oscuro);
-  white-space: nowrap;
-}
-
-.site-nav .curious-link::after {
-  display: none;
-}
-
-.site-nav .curious-link:hover {
-  background:
-    linear-gradient(90deg, #e94d5f, #f7a531, #f5e94b, #54c96f, #35a7ff, #7b61ff, #d84bc4) padding-box,
-    linear-gradient(90deg, #e94d5f, #f7a531, #f5e94b, #54c96f, #35a7ff, #7b61ff, #d84bc4) border-box;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
 .nav-toggle {
   display: inline-grid;
   width: 44px;
@@ -439,12 +414,6 @@ button {
   min-height: 52px;
   border-bottom: 1px solid rgba(107, 26, 43, 0.1);
   font-size: 1.05rem;
-}
-
-.site-header[data-open] .site-nav .curious-link {
-  justify-content: center;
-  margin-top: 0.35rem;
-  border: 1px solid transparent;
 }
 
 .site-header[data-open] .nav-toggle span:nth-child(2) {
@@ -1147,7 +1116,7 @@ button {
 .map-drawing,
 .map-preview-frame,
 .territory-diagram svg,
-.mini-map {
+.mini-map-frame {
   min-height: 280px;
   background:
     linear-gradient(90deg, rgba(47, 86, 72, 0.09) 1px, transparent 1px),
@@ -1187,6 +1156,46 @@ button {
 
 .map-preview-frame .leaflet-control-container {
   display: none;
+}
+
+.mini-map-frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 172px;
+  aspect-ratio: 5 / 3;
+  border: 1px solid rgba(107, 26, 43, 0.12);
+  border-radius: calc(var(--radio) - 2px);
+  background-color: #dde2d6;
+}
+
+.mini-map-frame .map-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.mini-map-frame .map-fallback {
+  min-height: 100%;
+  padding: 1rem;
+  font-size: 0.78rem;
+}
+
+.mini-map-frame .leaflet-control-container {
+  display: none;
+}
+
+.mini-map-frame .map-credit {
+  right: 0.5rem;
+  bottom: 0.5rem;
+  gap: 0.25rem;
+}
+
+.mini-map-frame .map-credit span {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.58rem;
 }
 
 .map-preview-hitbox {
@@ -2044,6 +2053,7 @@ button {
 .catalog-controls legend,
 .map-control-group legend,
 .map-search span,
+.map-legend-panel h2,
 .map-list-section h2 {
   color: var(--vino);
   font-family: var(--ui);
@@ -2491,6 +2501,10 @@ textarea {
   gap: 0.35rem;
 }
 
+.map-filter-buttons button {
+  flex: 1 1 112px;
+}
+
 .map-control-group label {
   display: grid;
   grid-template-columns: 18px minmax(0, 1fr);
@@ -2515,6 +2529,41 @@ textarea {
 
 .map-control-group .is-disabled {
   color: var(--gris);
+}
+
+.map-legend-panel {
+  display: grid;
+  gap: 0.65rem;
+  border: 1px solid rgba(107, 26, 43, 0.12);
+  border-radius: 6px;
+  padding: 0.75rem;
+  background: rgba(245, 240, 232, 0.62);
+}
+
+.map-legend-panel h2 {
+  margin: 0;
+}
+
+.map-legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.48rem 0.7rem;
+}
+
+.map-legend-items span {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.48rem;
+  color: var(--tinta);
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.map-legend-items .legend-dot {
+  flex: 0 0 auto;
 }
 
 .map-actions a,
@@ -2889,9 +2938,28 @@ textarea {
 
 .mini-map {
   display: grid;
-  align-content: end;
-  min-height: 190px;
-  gap: 0.5rem;
+  align-content: start;
+  min-height: 0;
+  gap: 0.6rem;
+  padding: 0.85rem;
+}
+
+.mini-map > span,
+.mini-map > p,
+.mini-map > a:not(.map-preview-hitbox) {
+  margin: 0;
+}
+
+.mini-map .map-preview-hitbox,
+.mini-map .map-preview-hitbox:hover {
+  width: auto;
+  color: inherit;
+  text-decoration: none;
+  transform: none;
+}
+
+.mini-map .map-preview-hitbox::after {
+  content: none;
 }
 
 .qgis-download {
@@ -3441,6 +3509,23 @@ textarea {
   .map-canvas {
     min-height: 420px;
   }
+
+  .bodega-popup .leaflet-popup-content {
+    width: min(220px, calc(100vw - 64px)) !important;
+  }
+
+  .map-popup img {
+    aspect-ratio: 2.35 / 1;
+  }
+
+  .map-popup div {
+    gap: 0.35rem;
+    padding: 0.62rem;
+  }
+
+  .map-popup h3 {
+    font-size: 0.92rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3451,6 +3536,14 @@ textarea {
 
   .map-preview-frame {
     height: clamp(190px, 58vw, 250px);
+  }
+
+  .mini-map {
+    padding: 0.75rem;
+  }
+
+  .mini-map-frame {
+    min-height: 148px;
   }
 }
 

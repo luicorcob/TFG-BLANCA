@@ -23,7 +23,7 @@
     <header class="site-header" data-nav-root>
       <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a></nav>
     </header>
 
     <main>
@@ -78,9 +78,14 @@
               <div><dt>Propuesta PGOU</dt><dd>Reorganización para viviendas y museo del vino en 2005, no ejecutada</dd></div>
             </dl>
 
-            <div class="mini-map" aria-label="Estado de datos cartográficos">
+            <div class="mini-map" data-bodega-map-preview data-preview-slug="bodegas-salas" aria-label="Vista previa cartográfica de Bodegas Salas">
+              <div class="mini-map-frame">
+                <div class="map-canvas" data-map-canvas role="region" aria-label="Mini mapa de Bodegas Salas"></div>
+                <a class="map-preview-hitbox" href="mapa.html?bodega=bodegas-salas" aria-label="Abrir localización de Bodegas Salas en el mapa completo"></a>
+                <div class="map-credit"><span>Leaflet</span><span>Vista previa</span></div>
+              </div>
               <span>Mapa</span>
-              <p>Polígono QGIS convertido desde la carpeta qgis ya listo.</p>
+              <p>Vista previa del polígono QGIS en el mapa interactivo.</p>
               <a href="mapa.html?bodega=bodegas-salas">Abrir localización</a>
             </div>
 

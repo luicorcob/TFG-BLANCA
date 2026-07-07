@@ -22,7 +22,7 @@
     <header class="site-header" data-nav-root>
       <a class="brand" href="index.html" aria-label="Arquitectura y memoria perdida del vino"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-text"><span>Arquitectura</span><strong>Memoria del vino</strong></span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a><a class="curious-link" href="PATRICK.png" target="_blank" rel="noopener" data-nav-link>Soy curioso</a></nav>
+      <nav id="site-menu" class="site-nav" aria-label="Navegación principal" data-nav-menu><a href="index.html" data-nav-link>Inicio</a><a href="historia.html" data-nav-link>Historia</a><a href="catalogo.html" data-nav-link>Catálogo</a><a href="mapa.html" data-nav-link>Mapa</a><a href="sobre-el-proyecto.html" data-nav-link>Proyecto</a><a href="contacto.html" data-nav-link>Contacto</a></nav>
     </header>
 
     <main class="map-stage" data-bodega-map>
@@ -32,8 +32,8 @@
             <p class="eyebrow">Cartografía</p>
             <h1>Mapa del patrimonio bodeguero</h1>
             <p>
-              La Palma del Condado como archivo urbano: bodegas activas, desapariciones documentadas y capas
-              territoriales preparadas para QGIS.
+              La Palma del Condado como archivo urbano: bodegas activas, desapariciones documentadas y registros QGIS
+              filtrables igual que en el catalogo.
             </p>
           </div>
 
@@ -58,30 +58,45 @@
           </fieldset>
 
           <fieldset class="map-control-group">
-            <legend>Capas patrimoniales</legend>
-            <label><input type="checkbox" data-marker-toggle value="activa" checked /><span>Bodegas actuales</span></label>
-            <label><input type="checkbox" data-marker-toggle value="desaparecida" checked /><span>Bodegas desaparecidas</span></label>
-            <label><input type="checkbox" data-overlay-toggle value="bic" /><span>Conjunto histórico BIC</span></label>
-            <label><input type="checkbox" data-overlay-toggle value="rail" /><span>Ferrocarril histórico</span></label>
+            <legend>Estado</legend>
+            <div class="segmented-control map-filter-buttons" role="group" aria-label="Filtrar por estado en el mapa">
+              <button type="button" data-map-filter-key="estado" data-map-filter-value="" aria-pressed="true">Todas</button>
+              <button type="button" data-map-filter-key="estado" data-map-filter-value="activa" aria-pressed="false">Activas</button>
+              <button type="button" data-map-filter-key="estado" data-map-filter-value="desaparecida" aria-pressed="false">Desaparecidas</button>
+            </div>
           </fieldset>
 
           <fieldset class="map-control-group">
             <legend>Tipo de registro</legend>
-            <label><input type="checkbox" data-documentation-toggle value="catalogacion" checked /><span>Fichas de catalogación</span></label>
-            <label><input type="checkbox" data-documentation-toggle value="cartografica" checked /><span>Solo capas QGIS</span></label>
+            <div class="segmented-control map-filter-buttons" role="group" aria-label="Filtrar por documentacion en el mapa">
+              <button type="button" data-map-filter-key="documentacion" data-map-filter-value="" aria-pressed="true">Todas</button>
+              <button type="button" data-map-filter-key="documentacion" data-map-filter-value="catalogacion" aria-pressed="false">Fichas de catalogacion</button>
+              <button type="button" data-map-filter-key="documentacion" data-map-filter-value="cartografica" aria-pressed="false">Solo capas QGIS</button>
+            </div>
           </fieldset>
 
           <fieldset class="map-control-group">
             <legend>Periodo QGIS</legend>
-            <select data-period-filter aria-label="Filtrar por periodo QGIS">
-              <option value="">Todos los periodos</option>
-              <option value="preindustriales">Bodegas preindustriales</option>
-              <option value="1870-1924">1870-1924</option>
-              <option value="1925-1950">1925-1950</option>
-              <option value="actuales">Actuales</option>
-              <option value="cooperativas">Cooperativas</option>
-            </select>
+            <div class="segmented-control map-filter-buttons" role="group" aria-label="Filtrar por periodo QGIS en el mapa">
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="" aria-pressed="true">Todos</button>
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="preindustriales" aria-pressed="false">Preindustriales</button>
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="1870-1924" aria-pressed="false">1870-1924</button>
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="1925-1950" aria-pressed="false">1925-1950</button>
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="actuales" aria-pressed="false">Actuales</button>
+              <button type="button" data-map-filter-key="periodo" data-map-filter-value="cooperativas" aria-pressed="false">Cooperativas</button>
+            </div>
           </fieldset>
+
+          <button class="reset-button map-reset" type="button" data-map-reset>Limpiar filtros</button>
+
+          <section class="map-legend-panel" aria-labelledby="map-legend-title">
+            <h2 id="map-legend-title">Leyenda</h2>
+            <div class="map-legend-items">
+              <span><i class="legend-dot activa" aria-hidden="true"></i>Bodegas actuales</span>
+              <span><i class="legend-dot desaparecida" aria-hidden="true"></i>Bodegas desaparecidas</span>
+              <span><i class="legend-dot cartografica" aria-hidden="true"></i>Solo capas QGIS</span>
+            </div>
+          </section>
 
           <div class="map-actions" aria-label="Descargas cartográficas">
             <a href="public/mapas/bodegas.geojson" download>GeoJSON bodegas</a>

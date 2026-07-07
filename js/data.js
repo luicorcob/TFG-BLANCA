@@ -88,6 +88,7 @@ window.BODEGAS = [
       "Fichas de catalogación 4.07, archivo PDF incorporado al catálogo digital.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
+    "periodo": "Actuales",
     "qgisZip": "public/qgis/bodegas-rubio-qgis.zip",
     "capas": [
       "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.RUBIO..shp"
@@ -1105,7 +1106,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
     "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1137,7 +1138,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
     "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1169,7 +1170,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
     "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1201,7 +1202,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales / 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo B. preindustriales / 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1234,7 +1235,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1266,7 +1267,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1298,7 +1299,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1330,7 +1331,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1362,7 +1363,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1394,7 +1395,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1426,7 +1427,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1458,7 +1459,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1490,7 +1491,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1522,7 +1523,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1870-1924. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1554,7 +1555,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1586,7 +1587,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1618,7 +1619,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1650,7 +1651,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1682,7 +1683,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1714,7 +1715,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1746,7 +1747,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
     "resumen": "Registro incorporado desde capas QGIS del periodo 1925-1950. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1778,7 +1779,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
     "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1810,7 +1811,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
     "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1842,7 +1843,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
     "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1874,7 +1875,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
     "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1906,7 +1907,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
     "resumen": "Registro incorporado desde capas QGIS del periodo Actuales. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1938,7 +1939,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Cooperativas",
     "resumen": "Registro incorporado desde capas QGIS del periodo Cooperativas. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
@@ -1970,7 +1971,7 @@ window.BODEGAS = [
     }
   },
   {
-    "estado": "cartografica",
+    "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Cooperativas",
     "resumen": "Registro incorporado desde capas QGIS del periodo Cooperativas. Se presenta como ficha cartográfica hasta completar una ficha de catalogación documental.",
