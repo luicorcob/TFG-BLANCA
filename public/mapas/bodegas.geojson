@@ -1105,7 +1105,7 @@
         "documentacion": "cartografica",
         "periodo": "B. preindustriales",
         "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B. DE LA VIGA.shp",
         "qgisZip": "public/qgis/bodegas-de-la-viga-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1261,7 +1261,7 @@
         "documentacion": "cartografica",
         "periodo": "B. preindustriales",
         "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.ACACIO LARIOS BEXARANO.shp",
         "qgisZip": "public/qgis/bodegas-acacio-larios-bexarano-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1317,7 +1317,7 @@
         "documentacion": "cartografica",
         "periodo": "B. preindustriales",
         "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.DEL CAMINO DE HINOJOS.shp",
         "qgisZip": "public/qgis/bodegas-del-camino-de-hinojos-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1361,7 +1361,7 @@
         "documentacion": "cartografica",
         "periodo": "B. preindustriales / 1870-1924",
         "ubicacion": "Registro cartográfico QGIS: B. preindustriales / 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales / 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales / 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/B. PREINDUSTRIALES/B.PÉREZ LAGARES.shp; CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.PÉREZ LAGARES.shp",
         "qgisZip": "public/qgis/bodegas-perez-lagares-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1429,7 +1429,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B. P Y J CÁRDENAS LEBRÓN.shp",
         "qgisZip": "public/qgis/bodegas-p-y-j-cardenas-lebron-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1485,7 +1485,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B. SOLIS DÍAZ.shp",
         "qgisZip": "public/qgis/bodegas-solis-diaz-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1541,7 +1541,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.CUEVA.shp",
         "qgisZip": "public/qgis/bodegas-cueva-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1585,7 +1585,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.CURA AGUILAR.shp",
         "qgisZip": "public/qgis/bodegas-cura-aguilar-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1677,7 +1677,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.ESTENAVE.shp",
         "qgisZip": "public/qgis/bodegas-estenave-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1733,7 +1733,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.FRANCISCO DOMÍNGUEZ DELGADO.shp",
         "qgisZip": "public/qgis/bodegas-francisco-dominguez-delgado-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1777,7 +1777,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.JUAN DOMÍNGUEZ MILLÁN.shp",
         "qgisZip": "public/qgis/bodegas-juan-dominguez-millan-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1837,7 +1837,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.NAVARRO.shp",
         "qgisZip": "public/qgis/bodegas-navarro-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1889,7 +1889,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.RAFAEL AYUDARTE.shp",
         "qgisZip": "public/qgis/bodegas-rafael-ayudarte-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -1937,7 +1937,7 @@
         "documentacion": "cartografica",
         "periodo": "1870-1924",
         "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1870-1924/B.RAFAEL DAZA ZARZA.shp",
         "qgisZip": "public/qgis/bodegas-rafael-daza-zarza-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2005,7 +2005,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.CALERO.shp",
         "qgisZip": "public/qgis/bodegas-calero-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2049,7 +2049,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.CASTIZO ROMERO Y HERMANOS.shp",
         "qgisZip": "public/qgis/bodegas-castizo-romero-hermanos-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2093,7 +2093,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JOSE Mª Y JUAN CASTIZO PINTO.shp",
         "qgisZip": "public/qgis/bodegas-jose-maria-juan-castizo-pinto-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2153,7 +2153,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JOSÉ CEPEDA ROJAS.shp",
         "qgisZip": "public/qgis/bodegas-jose-cepeda-rojas-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2201,7 +2201,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.JULIO GARCILASO.shp",
         "qgisZip": "public/qgis/bodegas-julio-garcilaso-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2269,7 +2269,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.NOGUERA.shp",
         "qgisZip": "public/qgis/bodegas-noguera-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2313,7 +2313,7 @@
         "documentacion": "cartografica",
         "periodo": "1925-1950",
         "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/1925-1950/B.TEBA.shp",
         "qgisZip": "public/qgis/bodegas-teba-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2405,7 +2405,7 @@
         "documentacion": "cartografica",
         "periodo": "Actuales",
         "ubicacion": "Registro cartográfico QGIS: Actuales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.GARAY.shp",
         "qgisZip": "public/qgis/bodegas-garay-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2449,7 +2449,7 @@
         "documentacion": "cartografica",
         "periodo": "Actuales",
         "ubicacion": "Registro cartográfico QGIS: Actuales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.INFANTE MAM.shp",
         "qgisZip": "public/qgis/bodegas-infante-mam-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2517,7 +2517,7 @@
         "documentacion": "cartografica",
         "periodo": "Actuales",
         "ubicacion": "Registro cartográfico QGIS: Actuales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.MAGASÉ.shp",
         "qgisZip": "public/qgis/bodegas-magase-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2561,7 +2561,7 @@
         "documentacion": "cartografica",
         "periodo": "Actuales",
         "ubicacion": "Registro cartográfico QGIS: Actuales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.MILLÁN.shp",
         "qgisZip": "public/qgis/bodegas-millan-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2613,7 +2613,7 @@
         "documentacion": "cartografica",
         "periodo": "Actuales",
         "ubicacion": "Registro cartográfico QGIS: Actuales",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/ACTUALES/B.VEGA MENACHO.shp",
         "qgisZip": "public/qgis/bodegas-vega-menacho-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2661,7 +2661,7 @@
         "documentacion": "cartografica",
         "periodo": "Cooperativas",
         "ubicacion": "Registro cartográfico QGIS: Cooperativas",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/COOPERATIVAS/B.TORREPALMA.shp",
         "qgisZip": "public/qgis/bodegas-torrepalma-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"
@@ -2705,7 +2705,7 @@
         "documentacion": "cartografica",
         "periodo": "Cooperativas",
         "ubicacion": "Registro cartográfico QGIS: Cooperativas",
-        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+        "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
         "fuente": "CAPAS DE QGIS TODO/CARTOGRAFÍA BODEGAS/COOPERATIVAS/COOPERATIVA NUESTRA SEÑORA DE GUIA.shp",
         "qgisZip": "public/qgis/cooperativa-nuestra-senora-guia-qgis.zip",
         "crs_original": "ETRS89 / UTM zone 29N"

@@ -85,7 +85,7 @@ window.BODEGAS = [
     "lectura": "Bodegas Rubio pasó de una primera etapa como cosechera local a referente internacional tras adquirir las soleras de Bodegas Morales. La ficha destaca la continuidad familiar, la incorporación de nuevas naves y la convivencia entre tradición bodeguera y modernización comercial.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "periodo": "Actuales",
@@ -145,7 +145,7 @@ window.BODEGAS = [
     "lectura": "La ficha sitúa a Verdier como una de las primeras grandes bodegas exportadoras del Condado, ligada al ferrocarril, a la destilación de vapor y a la arquitectura industrial de finales del siglo XIX.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-verdier-qgis.zip",
@@ -224,7 +224,7 @@ window.BODEGAS = [
     "lectura": "La ficha describe uno de los grandes emporios vinícolas del Condado, con cerchas metálicas, vigas Warren, chimenea de 20 metros y marcas como Luis Felipe, La Rábida y Fino Rociero.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-morales-qgis.zip",
@@ -324,7 +324,7 @@ window.BODEGAS = [
     "lectura": "El conjunto Pichardo ordenó la relación entre el casco histórico y la zona ferroviaria mediante naves como El Cine, El Molino, La Cerca, La Nueva y La Vinagrera.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-pichardo-qgis.zip",
@@ -409,7 +409,7 @@ window.BODEGAS = [
     "lectura": "La ficha distingue la nave heredada del recinto Verdier y la nave El Cortinal, de gran longitud, destinada al soleraje y posteriormente ocupada por Mosaicos Pino.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-espinosa-qgis.zip",
@@ -503,7 +503,7 @@ window.BODEGAS = [
     "lectura": "Bodegas Salas alcanzó 12.000 m2, naves de crianza, torre alambique, oficinas, embotellado y productos como Coñac Radiante, Soleras Salas, vermuts y amontillados.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-salas-qgis.zip",
@@ -593,7 +593,7 @@ window.BODEGAS = [
     "lectura": "La ficha destaca su patio central con palmeras, la fachada con detalles artísticos y el primer laboratorio enológico privado de la localidad, dirigido durante más de dos décadas por Pedro Ramírez Madrid.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-toro-qgis.zip",
@@ -687,7 +687,7 @@ window.BODEGAS = [
     "lectura": "El conjunto tuvo oficinas, laboratorio enológico, tonelería, almacén, fermentación y destilería. La ficha subraya una memoria oral especialmente valiosa por la escasez de documentación conservada.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-soldan-qgis.zip",
@@ -765,7 +765,7 @@ window.BODEGAS = [
     "lectura": "La ficha la vincula a la expansión urbana hacia Almonte y al Fino Rociero, cuyas soleras y marca fueron adquiridas por Hijos de Carlos Morales.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-miguel-cepeda-soldan-qgis.zip",
@@ -859,7 +859,7 @@ window.BODEGAS = [
     "lectura": "Genovés destaca por el sistema mecánico de rotación de toneles de vinagre, la fábrica de mostos Kestner, la planta de embotellado automático y el almacenamiento subterráneo de 600.000 litros.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-genoves-qgis.zip",
@@ -927,7 +927,7 @@ window.BODEGAS = [
     "lectura": "La ficha subraya su perfil de bodega de mercado regional, con mostos, mistelas, vinagres, Solera Soriano y maquinaria francesa Mabille Frères de Ambroise.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-soriano-qgis.zip",
@@ -1010,7 +1010,7 @@ window.BODEGAS = [
     "lectura": "La ficha describe una bodega de producción y crianza con vinagrera, chinero, almacenes, patios y torre alambique. El uso actual conserva techos artesonados, ventanas de ojo de buey y estructura principal.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-alfredo-rubio-ortega-qgis.zip",
@@ -1093,7 +1093,7 @@ window.BODEGAS = [
     "lectura": "La bodega se alejó del modelo de crianza y se especializó en vinos compuestos y licores, con productos como Vermut Corinto y Oro y Dulcamaro.",
     "fuentes": [
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.",
-      "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
+      "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.",
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO."
     ],
     "qgisZip": "public/qgis/bodegas-mamerto-de-la-vara-qgis.zip",
@@ -1109,7 +1109,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1122,7 +1122,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-de-la-viga-qgis.zip",
     "periodo": "B. preindustriales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1141,7 +1141,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1154,7 +1154,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-acacio-larios-bexarano-qgis.zip",
     "periodo": "B. preindustriales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1173,7 +1173,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1186,7 +1186,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-del-camino-de-hinojos-qgis.zip",
     "periodo": "B. preindustriales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1205,7 +1205,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: B. preindustriales / 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales / 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo B. preindustriales / 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1218,7 +1218,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-perez-lagares-qgis.zip",
     "periodo": "B. preindustriales / 1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1238,7 +1238,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1251,7 +1251,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-p-y-j-cardenas-lebron-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1270,7 +1270,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1283,7 +1283,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-solis-diaz-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1302,7 +1302,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1315,7 +1315,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-cueva-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1334,7 +1334,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1347,7 +1347,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-cura-aguilar-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1366,7 +1366,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1379,7 +1379,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-estenave-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1398,7 +1398,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1411,7 +1411,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-francisco-dominguez-delgado-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1430,7 +1430,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1443,7 +1443,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-juan-dominguez-millan-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1462,7 +1462,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1475,7 +1475,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-navarro-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1494,7 +1494,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1507,7 +1507,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-rafael-ayudarte-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1526,7 +1526,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1870-1924",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1870-1924. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1539,7 +1539,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-rafael-daza-zarza-qgis.zip",
     "periodo": "1870-1924",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1558,7 +1558,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "IMAGENES/B. CALERO.png",
     "imagenes": [
       {
@@ -1571,7 +1571,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-calero-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1590,7 +1590,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1603,7 +1603,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-castizo-romero-hermanos-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1622,7 +1622,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1635,7 +1635,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-jose-maria-juan-castizo-pinto-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1654,7 +1654,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "IMAGENES/ANUNCIO B.JOSÉ CEPEDA ROJAS EN REVISTA FIESTA DE LA VENDIMIA 1964.jpeg",
     "imagenes": [
       {
@@ -1667,7 +1667,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-jose-cepeda-rojas-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1686,7 +1686,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1699,7 +1699,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-julio-garcilaso-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1718,7 +1718,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1731,7 +1731,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-noguera-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1750,7 +1750,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: 1925-1950",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo 1925-1950. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "IMAGENES/BODEGAS TEBA (FACEBOOK ).jpg",
     "imagenes": [
       {
@@ -1763,7 +1763,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-teba-qgis.zip",
     "periodo": "1925-1950",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1782,7 +1782,7 @@ window.BODEGAS = [
     "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1795,7 +1795,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-garay-qgis.zip",
     "periodo": "Actuales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1814,7 +1814,7 @@ window.BODEGAS = [
     "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1827,7 +1827,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-infante-mam-qgis.zip",
     "periodo": "Actuales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1846,7 +1846,7 @@ window.BODEGAS = [
     "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1859,7 +1859,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-magase-qgis.zip",
     "periodo": "Actuales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1878,7 +1878,7 @@ window.BODEGAS = [
     "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1891,7 +1891,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-millan-qgis.zip",
     "periodo": "Actuales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1910,7 +1910,7 @@ window.BODEGAS = [
     "estado": "activa",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Actuales",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Actuales. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1923,7 +1923,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-vega-menacho-qgis.zip",
     "periodo": "Actuales",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1942,7 +1942,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Cooperativas",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "public/bodegas/placeholder-bodega.svg",
     "imagenes": [
       {
@@ -1955,7 +1955,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/bodegas-torrepalma-qgis.zip",
     "periodo": "Cooperativas",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."
@@ -1974,7 +1974,7 @@ window.BODEGAS = [
     "estado": "desaparecida",
     "documentacion": "cartografica",
     "ubicacion": "Registro cartográfico QGIS: Cooperativas",
-    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.",
+    "resumen": "Registro incorporado desde la cartografía QGIS del periodo Cooperativas. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.",
     "imagen": "IMAGENES/COOPERATIVA NA sRA DE GUIA.jpg",
     "imagenes": [
       {
@@ -1992,7 +1992,7 @@ window.BODEGAS = [
     "qgisZip": "public/qgis/cooperativa-nuestra-senora-guia-qgis.zip",
     "periodo": "Cooperativas",
     "lectura": "Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.",
-    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+    "pendiente": "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     "fuentes": [
       "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.",
       "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026."

@@ -44,7 +44,7 @@ http://localhost:3000
 - Confirmar que la institución figure como ETSA, Universidad de Sevilla.
 - Confirmar que el año académico visible sea 2026.
 - Revisar permisos de publicación de imágenes históricas y mapas.
-- Revisar que las fuentes documentales citadas en fichas estén alineadas con el TFG final.
+- Revisar que las fuentes documentales citadas en fichas estén alineadas con la versión final del estudio.
 
 ## Materiales fuente
 

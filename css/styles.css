@@ -539,6 +539,10 @@ button {
   font-size: clamp(3rem, 8vw, 6.8rem);
 }
 
+.page-hero h1 {
+  line-height: 1.04;
+}
+
 .home-hero .lead,
 .page-hero .lead,
 .project-hero .lead,
@@ -2096,6 +2100,173 @@ button {
   padding-top: calc(clamp(4rem, 8vw, 7rem) + 76px);
 }
 
+.catalog-full-panel {
+  position: relative;
+  display: grid;
+  gap: clamp(1rem, 2.6vw, 1.4rem);
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid rgba(201, 168, 76, 0.46);
+  border-radius: var(--radio);
+  padding: clamp(1rem, 3vw, 1.45rem);
+  background:
+    linear-gradient(135deg, rgba(53, 16, 24, 0.98), rgba(107, 26, 43, 0.93) 52%, rgba(47, 86, 72, 0.92)),
+    var(--vino-oscuro);
+  box-shadow: 0 24px 70px rgba(53, 16, 24, 0.18);
+  color: var(--blanco);
+}
+
+.catalog-full-panel::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(239, 212, 122, 0.13) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  content: "";
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.catalog-full-panel::after {
+  position: absolute;
+  right: clamp(-2.6rem, -7vw, -1.2rem);
+  bottom: clamp(-3.4rem, -8vw, -1.6rem);
+  width: clamp(8rem, 18vw, 13rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(239, 212, 122, 0.34);
+  border-radius: 50%;
+  content: "";
+  opacity: 0.72;
+}
+
+.catalog-full-copy,
+.catalog-full-button {
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-full-copy {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 700px;
+}
+
+.catalog-full-tag {
+  width: fit-content;
+  margin: 0;
+  border: 1px solid rgba(239, 212, 122, 0.34);
+  border-radius: 999px;
+  padding: 0.28rem 0.55rem;
+  background: rgba(255, 253, 248, 0.08);
+  color: var(--oro-luminoso);
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.catalog-full-copy h2,
+.catalog-full-copy p {
+  margin: 0;
+}
+
+.catalog-full-copy h2 {
+  color: var(--blanco);
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 3vw, 2.45rem);
+  line-height: 1;
+}
+
+.catalog-full-copy p:not(.catalog-full-tag) {
+  color: rgba(255, 253, 248, 0.78);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.catalog-full-button {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.72rem;
+  overflow: hidden;
+  border: 1px solid rgba(239, 212, 122, 0.72);
+  border-radius: 6px;
+  padding: 0.76rem 1rem 0.76rem 0.82rem;
+  background:
+    linear-gradient(135deg, var(--oro-luminoso), var(--oro)),
+    var(--oro);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+  color: var(--vino-oscuro);
+  font-family: var(--ui);
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.1;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.catalog-full-button::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 253, 248, 0.5) 46%, transparent 62%);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-120%);
+  transition:
+    opacity var(--motion-medium) ease,
+    transform var(--motion-slow) var(--ease-out);
+}
+
+.catalog-full-button:hover {
+  border-color: var(--oro-luminoso);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.26);
+  transform: translateY(-2px);
+}
+
+.catalog-full-button:hover::before {
+  opacity: 1;
+  transform: translateX(120%);
+}
+
+.catalog-full-button:active {
+  transform: translateY(0);
+}
+
+.catalog-full-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-full-button-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--vino-oscuro);
+  box-shadow: inset 0 0 0 1px rgba(239, 212, 122, 0.3);
+}
+
+.catalog-full-button-icon::before {
+  display: block;
+  width: 15px;
+  height: 18px;
+  border: 2px solid var(--oro-luminoso);
+  border-radius: 3px;
+  box-shadow:
+    0 5px 0 -3px var(--oro-luminoso),
+    0 10px 0 -3px var(--oro-luminoso);
+  content: "";
+}
+
 .catalog-controls label,
 .catalog-controls fieldset,
 .map-search,
@@ -3293,6 +3464,14 @@ textarea {
   .intro-section {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.65fr);
     align-items: end;
+  }
+
+  .catalog-full-panel {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .catalog-full-button {
+    justify-self: end;
   }
 }
 

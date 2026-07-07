@@ -2,7 +2,7 @@
   "name": "patrimonio-bodeguero-la-palma",
   "version": "1.0.0",
   "private": true,
-  "description": "Web estatica en HTML, CSS y JavaScript para el TFG Arquitectura y memoria perdida del vino.",
+  "description": "Web estatica en HTML, CSS y JavaScript para la investigación Arquitectura y memoria perdida del vino.",
   "scripts": {
     "build:catalog": "node scripts/build-catalog-assets.mjs",
     "start": "node server.js"

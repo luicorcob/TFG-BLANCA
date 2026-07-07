@@ -2,7 +2,7 @@
 
 Publicación digital del Trabajo de Fin de Grado **"Arquitectura y memoria perdida del vino"**, centrado en el patrimonio bodeguero de La Palma del Condado, Huelva.
 
-El proyecto integra los resultados del TFG en una página web de difusión: relato histórico-territorial, catálogo de bodegas, fichas patrimoniales, mapa interactivo y descargas cartográficas preparadas desde QGIS.
+El proyecto integra los resultados de la investigación en una página web de difusión: relato histórico-territorial, catálogo de bodegas, fichas patrimoniales, mapa interactivo y descargas cartográficas preparadas desde QGIS.
 
 ## Datos del proyecto
 

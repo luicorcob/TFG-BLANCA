@@ -34,7 +34,7 @@ const baseSources = {
 
 const fuenteTfg =
   "Rubio García, Blanca. Trabajo de Fin de Grado Arquitectura y memoria perdida del vino, ETSA Universidad de Sevilla, 2026.";
-const fuenteFichas = "TFG MAQUETACION PARA WEB, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.";
+const fuenteFichas = "Trabajo académico de referencia, capítulo 5: inventario y fichas de catalogación del patrimonio bodeguero.";
 const fuenteQgis = "Capas QGIS normalizadas desde la carpeta CAPAS DE QGIS TODO.";
 
 const image = (src, alt, caption = alt) => ({ src, alt, caption });
@@ -721,7 +721,7 @@ const cartographicRecords = [
     documentacion: record.documentacion || "cartografica",
     ubicacion: `Registro cartográfico QGIS: ${periodo}`,
     resumen:
-      `Registro incorporado desde la cartografía QGIS del periodo ${periodo}. Forma parte del inventario de bodegas históricas y actuales identificado en el TFG.`,
+      `Registro incorporado desde la cartografía QGIS del periodo ${periodo}. Forma parte del inventario de bodegas históricas y actuales identificado en la investigación.`,
     imagen,
     imagenes: record.imagenes || [image(imagen, `Registro cartográfico de ${record.nombre}`)],
     href: `bodega.html?slug=${record.slug}`,
@@ -730,7 +730,7 @@ const cartographicRecords = [
     lectura:
       `Registro procedente de la cartografía histórica elaborada en QGIS. Conserva el nombre normalizado de la capa, el periodo de procedencia y la geometría usada para consulta en mapa y descarga.`,
     pendiente:
-      "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del TFG.",
+      "Registro sin ficha de catalogación individual en el capítulo 5. La información procede de la cartografía QGIS y del inventario general del estudio.",
     fuentes: [fuenteQgis, fuenteTfg],
     ...record,
     estado,

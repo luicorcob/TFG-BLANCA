@@ -39,7 +39,7 @@ Esta web es la publicación digital de un Trabajo de Fin de Grado de Arquitectur
 
 ## 2. IDENTIDAD VISUAL
 
-### Paleta de color (extraída del propio TFG)
+### Paleta de color (extraída del propio trabajo académico)
 ```
 --color-vino:        #6B1A2B   /* Burdeos principal — titulares, fondos de sección */
 --color-vino-oscuro: #3D0F18   /* Fondos oscuros, footer */
@@ -99,7 +99,7 @@ Una **línea de tiempo animada vertical** que recorre toda la home al hacer scro
 Cuatro tarjetas con números que cuentan al entrar en viewport:
 - `6` Bodegas activas hoy
 - `+18` Bodegas históricas documentadas  
-- `1871` Año de la primera máquina de vapor en España (instalada en La Palma)
+- `1871` Año del primer sistema de destilación en España (instalado en La Palma)
 - `82%` Patrimonio bodeguero perdido en el s.XX
 
 #### LÍNEA DE TIEMPO — La columna vertebral
@@ -125,7 +125,7 @@ Grid de 3 columnas (móvil: 1 col) con las primeras 4-6 bodegas. Cada card:
 - Hover: overlay burdeos con "Ver ficha →"
 
 #### CITA HISTÓRICA
-Bloque tipográfico llamativo con la cita del TFG:
+Bloque tipográfico llamativo con la cita de la investigación:
 > *"el vino de La Palma del Condado es reconocido como muy bueno para la salud y nada nocivo por ser elaborado con las mejores uvas."*
 > — Carta al Gobernador de Santo Domingo, s.XVI
 
@@ -136,7 +136,7 @@ Logo/nombre del proyecto, créditos (ETSA-US, autora, tutora), enlace al Ayuntam
 
 ### 4.2 HISTORIA (`/historia`)
 
-Página de desplazamiento largo que desarrolla los capítulos 3 y 4 del TFG.
+Página de desplazamiento largo que desarrolla los capítulos 3 y 4 de la investigación.
 
 #### Estructura
 - Sticky sidebar izquierda (desktop) con índice de secciones que resalta la activa al hacer scroll
@@ -151,7 +151,7 @@ Página de desplazamiento largo que desarrolla los capítulos 3 y 4 del TFG.
 
 #### Elementos especiales
 - **Mapas QGIS exportados como PNG o SVG** insertados con zoom y leyenda
-- **Galería de cartografía histórica** (planos IGN que aparecen en el TFG) con Swiper
+- **Galería de cartografía histórica** (planos IGN que aparecen en la investigación) con Swiper
 - **Gráficas de datos** (evolución demográfica, sectores económicos) renderizadas con CSS puro o Chart.js minimalista, en paleta burdeos/dorado
 - **Notas al pie** flotantes (hover sobre número → aparece nota en tooltip elegante)
 
@@ -187,7 +187,7 @@ Grid completo de todas las bodegas catalogadas.
 
 ### 4.4 FICHA DE BODEGA (`/bodega/[slug]`)
 
-Esta es la página más importante. Replica y amplía la ficha del TFG en formato digital interactivo.
+Esta es la página más importante. Replica y amplía la ficha del trabajo académico en formato digital interactivo.
 
 #### Layout — Dos columnas en desktop
 **Columna izquierda (40%) — Datos técnicos:**
@@ -199,12 +199,12 @@ Esta es la página más importante. Replica y amplía la ficha del TFG en format
 - Año de desaparición (si aplica)
 - Bodegas anteriores/posteriores (si aplica)
 - **Mini-mapa Leaflet** centrado en la parcela de la bodega (con marcador)
-- **Plano de situación** (imagen del TFG) con zoom lightbox
+- **Plano de situación** (imagen de la investigación) con zoom lightbox
 - **Planimetría** (planta de la bodega si existe) con zoom lightbox y leyenda de espacios
 
 **Columna derecha (60%) — Narrativa y visual:**
 - Galería de imágenes Swiper (foto fachada, interior, imágenes históricas, vuelo americano CNIG)
-- **"Datos sobre la bodega"** — texto histórico completo del TFG
+- **"Datos sobre la bodega"** — texto histórico completo de la investigación
 - Timeline específica de la bodega si tiene varias etapas
 - Sección **"Entorno histórico"** — qué había antes, qué hay ahora
 
@@ -258,9 +258,9 @@ Añadir un enlace de descarga del proyecto QGIS en formato `.qgs` o `.gpkg` con 
 
 ### 4.6 SOBRE EL PROYECTO (`/sobre-el-proyecto`)
 
-- Resumen del TFG (Motivación, Relevancia, Hipótesis, Metodología)
+- Resumen de la investigación (Motivación, Relevancia, Hipótesis, Metodología)
 - Ficha académica: autora, tutora, escuela, año
-- Fuentes y bibliografía en formato académico (las del TFG)
+- Fuentes y bibliografía en formato académico (las del estudio)
 - Agradecimientos
 
 ---
@@ -471,7 +471,7 @@ new CountUp(element, targetNumber, { duration: 2.5, separator: "." }).start()
 
 ### FASE 2 — Sistema de contenido
 6. Configurar Astro Content Collections en `src/content/config.ts` con el esquema de Bodega
-7. Crear los archivos `.md` para **Bodegas Rubio** y **Bodegas Verdier** (las dos fichas que ya existen en el TFG) como plantilla para las demás
+7. Crear los archivos `.md` para **Bodegas Rubio** y **Bodegas Verdier** (las dos fichas que ya existen en la investigación) como plantilla para las demás
 8. Crear la página dinámica `/bodega/[slug].astro` que lee el Content Collection
 
 ### FASE 3 — HOME
@@ -497,7 +497,7 @@ new CountUp(element, targetNumber, { duration: 2.5, separator: "." }).start()
 24. Implementar filtros de capas en el panel lateral
 
 ### FASE 6 — Páginas secundarias
-25. Construir `/historia` con sticky sidebar y contenido del Capítulo 3 del TFG
+25. Construir `/historia` con sticky sidebar y contenido del Capítulo 3 de la investigación
 26. Construir `/sobre-el-proyecto` con información académica
 27. Construir `/contacto` con formulario Netlify Forms
 
@@ -529,12 +529,12 @@ new CountUp(element, targetNumber, { duration: 2.5, separator: "." }).start()
 Junto con este plan, entregar a la IA programadora:
 
 1. **Este documento** (plan de acción)
-2. **El PDF del TFG** (ARCHIVO_TFG_26_06.pdf) — para extraer textos de cada sección
+2. **El PDF del trabajo académico** (ARCHIVO_TFG_26_06.pdf) — para extraer textos de cada sección
 3. **El PDF de la ficha ejemplo** (FICHA_EJEMPLO_MAQUETACIO_N_28_06.pdf) — para el diseño de la ficha digital
-4. **Las imágenes/planos** del TFG (exportadas como PNG desde el PDF o desde QGIS)
+4. **Las imágenes/planos** de la investigación (exportadas como PNG desde el PDF o desde QGIS)
 5. **Los archivos GeoJSON** exportados desde QGIS con las capas de bodegas (cuando estén listos)
 6. **Las fotos** de cada bodega que vayan consiguiendo
 
 ---
 
-*Plan elaborado el 28 de junio de 2026. Actualizar según avance del TFG y disponibilidad de fichas.*
+*Plan elaborado el 28 de junio de 2026. Actualizar según avance del proyecto y disponibilidad de fichas.*

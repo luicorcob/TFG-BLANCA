@@ -1260,19 +1260,6 @@
 
     let selectedSlug = initialSlug;
 
-    const isCompactMap = () => window.matchMedia("(max-width: 640px)").matches || canvas.clientWidth < 560;
-
-    const selectedZoom = () => {
-      if (!isCompactMap()) return Math.max(map.getZoom(), 18);
-      return Math.min(Math.max(map.getZoom(), 16), 17);
-    };
-
-    const selectedCenter = (latLng, zoom) => {
-      if (!isCompactMap()) return latLng;
-      const verticalOffset = Math.min(96, Math.max(56, canvas.clientHeight * 0.2));
-      return map.unproject(map.project(latLng, zoom).subtract([0, verticalOffset]), zoom);
-    };
-
     const paint = () => {
       areaRecords.forEach(({ item, layers }, slug) => {
         const visible = item && matchesFilters(item);
@@ -1321,18 +1308,16 @@
       if (empty) empty.hidden = visible.length > 0 || pendingItems.length > 0;
     };
 
-    const focusBodega = (slug) => {
+    const focusBodega = (slug, options = {}) => {
       selectedSlug = slug;
       const record = markerRecords.get(slug);
       paint();
       if (record) {
-        const zoom = selectedZoom();
-        const center = selectedCenter(record.latLng, zoom);
-        const shouldMove = map.getZoom() !== zoom || map.getCenter().distanceTo(center) > 0.5;
+        const shouldReveal = Boolean(options.reveal);
 
-        if (shouldMove) {
+        if (shouldReveal && map.getCenter().distanceTo(record.latLng) > 0.5) {
           if (!isPreview) map.once("moveend", () => record.marker.openPopup());
-          map.setView(center, zoom, { animate: true });
+          map.setView(record.latLng, map.getZoom(), { animate: !isPreview });
         } else if (!isPreview) {
           record.marker.openPopup();
         }
@@ -1457,7 +1442,7 @@
       renderMarkers();
       syncFilterControls();
       paint();
-      if (selectedSlug) focusBodega(selectedSlug);
+      if (selectedSlug) focusBodega(selectedSlug, { reveal: true });
       else fitMarkers();
       requestAnimationFrame(() => map.invalidateSize());
     });

@@ -31,9 +31,28 @@
         </div>
         <p class="body-copy">
           Inventario de bodegas históricas y actuales elaborado a partir de la identificación documental, el trabajo de
-          campo y la cartografía QGIS del TFG.
+          campo y la cartografía QGIS de la investigación.
         </p>
       </div>
+
+      <section class="catalog-full-panel" aria-labelledby="catalog-full-title" data-animate>
+        <div class="catalog-full-copy">
+          <p class="catalog-full-tag">Vista general</p>
+          <h2 id="catalog-full-title">Matriz general de bodegas</h2>
+          <p>Una lectura completa del inventario para revisar de un vistazo el conjunto de registros documentados.</p>
+        </div>
+        <button
+          class="catalog-full-button"
+          type="button"
+          data-lightbox-trigger
+          data-lightbox-src="public/bodegas/check-list-bodegas.jpg"
+          data-lightbox-alt="Checklist general del catalogo de bodegas"
+          data-lightbox-caption="Cat&aacute;logo completo de bodegas documentadas"
+        >
+          <span class="catalog-full-button-icon" aria-hidden="true"></span>
+          <span>Cat&aacute;logo completo</span>
+        </button>
+      </section>
 
       <form class="catalog-controls" data-animate>
         <label>
@@ -207,6 +226,11 @@
 
       <p class="empty-state" data-catalog-empty hidden>No hay fichas que coincidan con esos filtros.</p>
     </main>
+
+    <div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar visor">Cerrar</button>
+      <figure><img src="" alt="" data-lightbox-image /><figcaption data-lightbox-caption></figcaption></figure>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-inner">
