@@ -2356,7 +2356,17 @@ textarea {
 .consent-control input {
   width: 18px;
   height: 18px;
+  min-width: 18px;
   margin-top: 0.1rem;
+  padding: 0;
+  accent-color: var(--vino);
+  cursor: pointer;
+  transform: none;
+}
+
+.consent-control input:focus {
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+  transform: none;
 }
 
 .consent-control span {
