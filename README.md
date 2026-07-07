@@ -165,7 +165,7 @@ Hay una guía más detallada en [`docs/ENTREGA.md`](docs/ENTREGA.md).
 - Mantener los datos cartográficos exportados en `EPSG:4326` para Leaflet.
 - Usar rutas relativas, porque el proyecto está preparado para funcionar como sitio estático.
 - Las fichas completas destacadas existen como `bodegas-*.html`; el resto se resuelve con `bodega.html?slug=...`.
-- El formulario de contacto es demostrativo y no envía correo real sin conectar un servicio externo.
+- El formulario de contacto abre Gmail con los datos ya preparados en el mensaje, sin backend. Para fijar el destinatario, completar `data-contact-recipient` en `contacto.html`.
 
 ## Derechos y fuentes
 

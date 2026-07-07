@@ -506,10 +506,44 @@
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const formData = new FormData(form);
+      const nombre = String(formData.get("nombre") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const motivoSelect = form.elements.motivo;
+      const motivo =
+        motivoSelect instanceof HTMLSelectElement
+          ? motivoSelect.selectedOptions[0]?.textContent.trim() || ""
+          : String(formData.get("motivo") || "").trim();
+      const mensaje = String(formData.get("mensaje") || "").trim();
+      const subject = `${form.dataset.contactSubject || "Consulta desde la web"} - ${nombre}`;
+      const body = [
+        `Nombre: ${nombre}`,
+        `Email de contacto: ${email}`,
+        `Motivo: ${motivo}`,
+        "",
+        "Mensaje:",
+        mensaje,
+        "",
+        "---",
+        "Mensaje generado desde el formulario de contacto de Arquitectura y memoria perdida del vino."
+      ].join("\n");
+      const recipient = (form.dataset.contactRecipient || "").trim();
+      const gmailUrl =
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        `&to=${encodeURIComponent(recipient)}` +
+        `&su=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+
       feedback.hidden = false;
       feedback.textContent =
-        "Mensaje preparado. En una version publicada se conectara este formulario al correo o a un servicio de envio.";
-      form.reset();
+        "Se esta abriendo Gmail con el mensaje preparado. Revisa el contenido y pulsa enviar desde tu cuenta.";
+      window.location.href = gmailUrl;
     });
   }
 
